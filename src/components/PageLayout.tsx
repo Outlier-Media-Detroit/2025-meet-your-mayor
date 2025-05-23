@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import TheCityLogo from "../assets/logo.svg";
+import OutlierLogo from "../assets/logo.png";
 import GothamistLogo from "../assets/logo-gothamist.svg";
 import { Helmet } from "react-helmet";
 import { OutboundLink } from "./Links";
@@ -37,14 +37,8 @@ const Header = () => (
   <nav className="nav has-color-background">
     <div className="nav-container">
       <div className="nav-logo" style={{ width: "80px" }}>
-        <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="THE CITY">
-          <TheCityLogo />
-        </OutboundLink>
-      </div>
-      <div className="eyebrow ml-2 mt-1 is-size-4">×</div>
-      <div className="nav-logo ml-2 mt-1" style={{ width: "90px" }}>
-        <OutboundLink to={GOTHAMIST_SITE_LINKS.website} aria-label="Gothamist">
-          <GothamistLogo />
+        <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="Outlier Media">
+          <OutlierLogo />
         </OutboundLink>
       </div>
       <div className="nav-title"></div>

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link as AnchorLink } from "react-scroll";
 
-const DEFAULT_GOTHAMIST_UTM_PARAMS =
-  "?utm_medium=partnersite&utm_source=the-city&utm_campaign=meet-your-mayor";
+// TODO: Potentially re-add
+// const DEFAULT_GOTHAMIST_UTM_PARAMS =
+//   "?utm_medium=partnersite&utm_source=the-city&utm_campaign=meet-your-mayor";
 
-const DEFAULT_THE_CITY_UTM_PARAMS =
-  "?utm_source=button&utm_medium=website&utm_campaign=meet%20your%20mayor%202025";
+// const DEFAULT_THE_CITY_UTM_PARAMS =
+//   "?utm_source=button&utm_medium=website&utm_campaign=meet%20your%20mayor%202025";
 
 export const OutboundLink: React.FC<{
   to: string;
@@ -13,21 +14,11 @@ export const OutboundLink: React.FC<{
   className?: string;
   style?: React.CSSProperties;
 }> = ({ to, children, className, style }) => {
-  const isGothamistLink =
-    to.includes("gothamist.com") || to.includes("wnyc.org");
-  const isTheCityLink = to.includes("www.thecity.nyc");
   return (
     <a
       className={className}
       style={style}
-      href={
-        to +
-        (isGothamistLink
-          ? DEFAULT_GOTHAMIST_UTM_PARAMS
-          : isTheCityLink
-          ? DEFAULT_THE_CITY_UTM_PARAMS
-          : "")
-      }
+      href={to}
       target="_blank"
       rel="noopener noreferrer"
     >

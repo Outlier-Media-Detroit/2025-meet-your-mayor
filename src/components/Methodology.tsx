@@ -1,6 +1,7 @@
 import React from "react";
 import { OutboundLink } from "./Links";
 
+// TODO: Update
 export const Methodology = () => (
   <div className="copy">
     <p className="mt-2">

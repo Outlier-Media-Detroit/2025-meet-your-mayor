@@ -45,7 +45,7 @@ $tablet-breakpoint: 1025px;
 }
 
 .article {
-  background-color: colors.$city-white;
+  background-color: colors.$outlier-white;
 }
 
 // TEXT:
@@ -57,7 +57,7 @@ $tablet-breakpoint: 1025px;
 .label,
 .copyright,
 .button-link {
-  color: colors.$city-black;
+  color: colors.$outlier-black;
   font-family: fonts.$sans;
 }
 
@@ -89,11 +89,11 @@ $tablet-breakpoint: 1025px;
 p,
 span,
 .label {
-  color: colors.$city-black;
+  color: colors.$outlier-black;
   a,
   &.is-link {
     cursor: pointer;
-    color: colors.$city-black;
+    color: colors.$outlier-black;
     text-decoration: underline;
     &:hover {
       text-decoration: none;
@@ -102,8 +102,8 @@ span,
 }
 
 input.input {
-  background-color: colors.$city-white;
-  color: colors.$city-black;
+  background-color: colors.$outlier-white;
+  color: colors.$outlier-black;
 
   &.is-small {
     font-size: 0.85rem;
@@ -163,7 +163,7 @@ details {
 // FORMS:
 
 .newsletter-signup {
-  background-color: colors.$city-green-dark;
+  background-color: colors.$outlier-yellow;
 }
 
 // BUTTONS:
@@ -177,16 +177,16 @@ details {
   padding: 0.15rem 2rem;
   border-radius: 45px;
   transition: all 0.2s ease-in-out;
-  color: colors.$city-black;
+  color: colors.$outlier-black;
   border: none;
-  background-color: colors.$city-green-dark;
-  border: 1px solid colors.$city-black;
+  background-color: colors.$outlier-yellow;
+  border: 1px solid colors.$outlier-black;
   box-shadow: 2px 4px 0px
-    color.adjust($color: colors.$city-green-dark, $lightness: -60%);
+    color.adjust($color: colors.$outlier-yellow, $lightness: -60%);
   transform: translate(-2px, -4px);
 
   a {
-    color: colors.$city-black;
+    color: colors.$outlier-black;
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
@@ -198,13 +198,13 @@ details {
   }
 
   &.is-white {
-    background-color: colors.$city-white;
-    color: colors.$city-black;
-    box-shadow: 2px 4px 0px colors.$city-black;
+    background-color: colors.$outlier-white;
+    color: colors.$outlier-black;
+    box-shadow: 2px 4px 0px colors.$outlier-black;
   }
 
   &.is-icon {
-    background-color: colors.$city-black;
+    background-color: colors.$outlier-black;
     box-shadow: 2px 4px 0px
       color.adjust($color: colors.$city-grey, $lightness: -10%);
   }
@@ -215,19 +215,19 @@ details {
   }
 
   &.is-extra-dark {
-    background-color: colors.$city-green-dark;
+    background-color: colors.$outlier-yellow;
   }
 
   &:hover {
     box-shadow: 1px 2px 0px
-      color.adjust($color: colors.$city-green-dark, $lightness: -60%);
+      color.adjust($color: colors.$outlier-yellow, $lightness: -60%);
     transform: translate(-1px, -2px);
     &.is-icon {
       box-shadow: 1px 2px 0px
         color.adjust($color: colors.$city-grey, $lightness: -10%);
     }
     &.is-white {
-      box-shadow: 1px 2px 0px colors.$city-black;
+      box-shadow: 1px 2px 0px colors.$outlier-black;
     }
   }
 
@@ -245,17 +245,17 @@ details {
     box-shadow: inset 2px 1px 0px
       color.adjust($color: colors.$city-green, $lightness: -60%);
     &.is-white {
-      box-shadow: inset 2px 1px 0px colors.$city-black;
+      box-shadow: inset 2px 1px 0px colors.$outlier-black;
     }
   }
 
   &.is-selected {
-    background-color: colors.$city-green;
+    background-color: colors.$outlier-yellow-light;
     box-shadow: inset 2px 1px 0px
-      color.adjust($color: colors.$city-green-dark, $lightness: -10%);
+      color.adjust($color: colors.$outlier-yellow, $lightness: -10%);
     &.is-white {
       box-shadow: inset 2px 1px 0px
-        color.adjust($color: colors.$city-green-dark, $lightness: -10%);
+        color.adjust($color: colors.$outlier-yellow, $lightness: -10%);
     }
   }
 
@@ -388,13 +388,13 @@ $full-color-image-filter: contrast(1);
 .quiz-selection-oval {
   background-color: transparent;
   display: inline-block;
-  border: 2px solid colors.$city-black;
+  border: 2px solid colors.$outlier-black;
   border-radius: 50%;
   width: 40px;
   height: 25px;
 
   &.is-filled {
-    background-color: colors.$city-black;
+    background-color: colors.$outlier-black;
   }
 }
 
@@ -419,7 +419,7 @@ $full-color-image-filter: contrast(1);
     font-weight: 600;
     pointer-events: none;
     .quiz-selection-oval {
-      background-color: colors.$city-black;
+      background-color: colors.$outlier-black;
     }
   }
 
@@ -463,8 +463,8 @@ $full-color-image-filter: contrast(1);
   position: absolute;
   transform: translate(-40px, 5px);
   border-radius: 100%;
-  background-color: colors.$city-black;
-  color: colors.$city-white;
+  background-color: colors.$outlier-black;
+  color: colors.$outlier-white;
   @media screen and (max-width: $mobile-breakpoint) {
     position: relative;
     transform: translate(0px, -5px);
@@ -477,7 +477,7 @@ $full-color-image-filter: contrast(1);
     position: sticky;
     bottom: 0;
     padding: 0.5rem 0;
-    background-color: colors.$city-white;
+    background-color: colors.$outlier-white;
   }
 }
 
@@ -581,7 +581,7 @@ $full-color-image-filter: contrast(1);
       }
     }
     a.is-active {
-      border: 1px dashed colors.$city-black;
+      border: 1px dashed colors.$outlier-black;
       border-radius: 5px;
     }
     a:hover img {
@@ -694,11 +694,11 @@ hr {
 }
 
 .has-color-background {
-  background-color: colors.$city-green-light;
+  background-color: colors.$outlier-yellow-light;
 }
 
 .has-white-background {
-  background-color: colors.$city-white;
+  background-color: colors.$outlier-white;
 }
 
 .has-light-grey-background {

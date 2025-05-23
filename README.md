@@ -1,6 +1,6 @@
 # Meet Your Mayor 2025
 
-**A multi-page Gatsby-powered news application by [THE CITY](https://www.thecity.nyc) and [Gothamist](https://gothamist.com/), designed to inform New Yorkers about the 2025 NYC mayoral candidates.**
+**A multi-page Gatsby-powered news application by [Outlier Media](https://outliermedia.org/) adapted from a project by [THE CITY](https://www.thecity.nyc) and [Gothamist](https://gothamist.com/), designed to inform Detroiters about the 2025 Detroit mayoral candidates.**
 
 ## 🛠️ Technologies Used
 

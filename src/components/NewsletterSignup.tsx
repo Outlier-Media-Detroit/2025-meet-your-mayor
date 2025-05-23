@@ -2,6 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { OutboundLink } from "./Links";
 import { useLocation } from "@reach/router";
 
+// TODO: Customize
 const GOTHAMIST_EMAIL_LIST_NAME =
   "Gothamist Membership++Politics Brief Newsletter";
 

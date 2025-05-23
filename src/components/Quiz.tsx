@@ -58,6 +58,7 @@ const Quiz = () => {
   const democraticCandidates = generateListOfCandidatesByParty("democrat");
   const otherCandidates = generateListOfCandidatesByParty("other");
 
+  // TODO: Remove party selector because there's only one
   type PartySelectorButton = {
     label: string;
     party: Party;

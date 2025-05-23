@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 
-import OutlierLogo from "../assets/logo.png";
 import GothamistLogo from "../assets/logo-gothamist.svg";
 import { Helmet } from "react-helmet";
 import { OutboundLink } from "./Links";
 import { SocialButton } from "./SocialShareButtons";
+import { StaticImage } from "gatsby-plugin-image";
 
 import "../styles/app.scss";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -38,7 +38,7 @@ const Header = () => (
     <div className="nav-container">
       <div className="nav-logo" style={{ width: "80px" }}>
         <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="Outlier Media">
-          <OutlierLogo />
+          <StaticImage src={"../assets/logo.png"} alt="Outlier Media logo" />
         </OutboundLink>
       </div>
       <div className="nav-title"></div>

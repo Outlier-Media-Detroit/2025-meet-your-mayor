@@ -102,13 +102,13 @@ jobs:
         name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/outlier-terraform-github-role
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/outlier-s3-projects-github-role
           aws-region: us-east-1
 
       - name: Invalidate CloudFront (clear cache)
         uses: chetan/invalidate-cloudfront-action@v2
         env:
-          DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
+          DISTRIBUTION: ${{ env.environment == 'production' && vars.CLOUDFRONT_DISTRIBUTION_PRODUCTION || vars.CLOUDFRONT_DISTRIBUTION_STAGING }}
           PATHS: ${{ format('/{0}/*', steps.get-slug.outputs.result) }}
 
       # TODO: Add Slack notification back in?
@@ -116,7 +116,7 @@ jobs:
         name: Upload the prepared files
         uses: datadesk/delivery-deploy-action@v1
         with:
-          bucket: ${{ secrets.AWS_S3_PRODUCTION_BUCKET }}
+          bucket: ${{ env.ENVIRONMENT == 'production' && vars.S3_BUCKET_PRODUCTION || vars.S3_BUCKET_STAGING }}
           base-path: ${{ steps.get-slug.outputs.result }}
           dir: build
           should-cache: true

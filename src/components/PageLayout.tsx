@@ -46,7 +46,7 @@ const Header = () => (
     <div className="nav-container">
       <div className="nav-logo" style={{ width: "80px" }}>
         <OutboundLink
-          to={THE_CITY_SITE_LINKS.website}
+          to={OUTLIER_SITE_LINKS.website}
           aria-label="Outlier Media"
         >
           <StaticImage src={"../assets/logo.png"} alt="Outlier Media logo" />

@@ -106,7 +106,7 @@ jobs:
         name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/outlier-s3-projects-github-role
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/${{ vars.AWS_IAM_ROLE }}
           aws-region: us-east-1
 
       - name: Invalidate CloudFront (clear cache)

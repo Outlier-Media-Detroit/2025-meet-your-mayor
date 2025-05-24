@@ -1,12 +1,22 @@
 name: Deploy
 
-# TODO: Select item on workflow dispatch
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        description: Which environment to publish to
+        options:
+          - staging
+          - production
+        required: true
 
 jobs:
   lint:
@@ -46,6 +56,15 @@ jobs:
         name: Checkout the repo
         uses: actions/checkout@v3
 
+      - id: set-env
+        name: Determine deployment environment
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "ENVIRONMENT=${{ github.event.inputs.env }}" >> $GITHUB_ENV
+          else
+            echo "ENVIRONMENT=staging" >> $GITHUB_ENV
+          fi
+
       - name: Load .env file
         uses: xom9ikk/dotenv@v2
 
@@ -73,15 +92,6 @@ jobs:
             // If we get this far, we're good to go.
             return slug.trim();
 
-      - id: slack
-        name: Create Slack notification
-        uses: datadesk/notify-slack-on-build@v3
-        with:
-          slack-token: ${{ secrets.BAKER_BOT_SLACK_TOKEN }}
-          channel-id: ${{ secrets.BAKER_BOT_SLACK_CHANNEL_ID }}
-          status: in_progress
-          url: https://projects.thecity.nyc/${{ steps.get-slug.outputs.result }}/
-
       - id: npm-build
         name: Build project distribution
         run: PREFIX=/${{ env.GATSBY_SLUG }} npm run build
@@ -89,12 +99,11 @@ jobs:
           PATH_PREFIX: ${{ steps.get-slug.outputs.result }}
 
       - id: configure-aws
-        name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_S3_PRODUCTION_REGION }}
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/outlier-terraform-github-role
+          aws-region: us-east-1
 
       - name: Invalidate CloudFront (clear cache)
         uses: chetan/invalidate-cloudfront-action@v2
@@ -102,6 +111,7 @@ jobs:
           DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION }}
           PATHS: ${{ format('/{0}/*', steps.get-slug.outputs.result) }}
 
+      # TODO: Add Slack notification back in?
       - id: npm-deploy
         name: Upload the prepared files
         uses: datadesk/delivery-deploy-action@v1
@@ -112,23 +122,3 @@ jobs:
           should-cache: true
           use-accelerate-endpoint: false
           public: true
-
-      - name: Update Slack notification (success)
-        if: success()
-        uses: datadesk/notify-slack-on-build@v3
-        with:
-          slack-token: ${{ secrets.BAKER_BOT_SLACK_TOKEN }}
-          channel-id: ${{ steps.slack.outputs.channel-id }}
-          status: success
-          url: https://projects.thecity.nyc/${{ steps.get-slug.outputs.result }}/
-          message-id: ${{ steps.slack.outputs.message-id }}
-
-      - name: Update Slack notification (failure)
-        if: failure()
-        uses: datadesk/notify-slack-on-build@v3
-        with:
-          slack-token: ${{ secrets.BAKER_BOT_SLACK_TOKEN }}
-          channel-id: ${{ steps.slack.outputs.channel-id }}
-          status: failure
-          url: https://projects.thecity.nyc/${{ steps.get-slug.outputs.result }}/
-          message-id: ${{ steps.slack.outputs.message-id }}

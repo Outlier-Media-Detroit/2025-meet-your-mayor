@@ -49,13 +49,6 @@ export const SocialShareButtons: React.FC<{
   return (
     <>
       <SocialButton
-        url={`https://x.com/intent/post?text=${getShareText(
-          "x",
-          results
-        )}&url=${shareUrl}`}
-        ariaLabel="Share on X"
-      />
-      <SocialButton
         url={`https://bsky.app/intent/compose?text=${getShareText(
           "bluesky",
           results

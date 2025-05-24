@@ -29,24 +29,14 @@ export const SocialButton: React.FC<{ url: string; ariaLabel?: string }> = ({
 );
 
 const getShareText = (
-  platform: "x" | "bluesky" | "email",
+  platform: "bluesky" | "email",
   results?: ScoreShareDetails
 ) => {
-  const theCityHandle =
-    platform === "x"
-      ? "@THECITYNY"
-      : platform === "bluesky"
-      ? "@thecity.nyc"
-      : "THE CITY";
-  const gothamistHandle =
-    platform === "x"
-      ? "@Gothamist"
-      : platform === "bluesky"
-      ? "@gothamist.com"
-      : "Gothamist";
+  const outlierHandle =
+    platform === "bluesky" ? "@outliermedia.org" : "Outlier Media";
   return !!results
-    ? `I'm a ${results.matchScore}%25 match with ${results.topCandidate} on the Meet Your Mayor quiz! Find your own match, powered by ${theCityHandle} and ${gothamistHandle}:`
-    : `Check out the Meet Your Mayor quiz from ${theCityHandle} and ${gothamistHandle}!`;
+    ? `I'm a ${results.matchScore}%25 match with ${results.topCandidate} on the Meet Your Mayor quiz! Find your own match, powered by ${outlierHandle}:`
+    : `Check out the Meet Your Mayor quiz from ${outlierHandle}!`;
 };
 
 export const SocialShareButtons: React.FC<{

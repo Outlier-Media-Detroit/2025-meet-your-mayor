@@ -1,5 +1,5 @@
 import React from "react";
-import { generateListOfCandidatesByParty } from "./QuizContent";
+import { generateListOfCandidates } from "./QuizContent";
 import { Link } from "gatsby";
 import classnames from "classnames";
 import { Bobblehead } from "./Illustration";
@@ -10,7 +10,7 @@ import { track } from "@amplitude/analytics-browser";
  * A menu of buttons that link to each candidate page.
  */
 export const CandidateSelectorMenu: React.FC = () => {
-  const candidates = generateListOfCandidatesByParty(); // All Candidates
+  const candidates = generateListOfCandidates();
   const isCandidatePage = useIsCandidatePage();
   return (
     <div

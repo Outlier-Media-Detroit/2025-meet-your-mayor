@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-import GothamistLogo from "../assets/logo-gothamist.svg";
 import { Helmet } from "react-helmet";
 import { OutboundLink } from "./Links";
 import { SocialButton } from "./SocialShareButtons";
@@ -12,6 +11,15 @@ import { Script } from "gatsby";
 import { init } from "@amplitude/analytics-browser";
 
 const AMPLITUDE_PUBLIC_KEY = "cd8c6e9c6e26111a843bec73acf6fc28";
+
+const OUTLIER_SITE_LINKS = {
+  website: "https://outliermedia.org/",
+  instagram: "https://www.instagram.com/media_outlier",
+  facebook: "https://www.facebook.com/mediaoutlier",
+  threads: "https://www.threads.net/@media_outlier",
+  bluesky: "https://bsky.app/profile/outliermedia.org",
+  tiktok: "https://www.tiktok.com/@media_outlier",
+};
 
 const THE_CITY_SITE_LINKS = {
   website: "https://www.thecity.nyc/",
@@ -37,7 +45,10 @@ const Header = () => (
   <nav className="nav has-color-background">
     <div className="nav-container">
       <div className="nav-logo" style={{ width: "80px" }}>
-        <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="Outlier Media">
+        <OutboundLink
+          to={THE_CITY_SITE_LINKS.website}
+          aria-label="Outlier Media"
+        >
           <StaticImage src={"../assets/logo.png"} alt="Outlier Media logo" />
         </OutboundLink>
       </div>
@@ -55,6 +66,26 @@ const Footer = () => {
         className="container is-flex is-flex-direction-column is-align-items-center p-0"
         style={{ maxWidth: "750px" }}
       >
+        <div className="eyebrow">Adapted for Detroit by</div>
+        <div className="eyebrow mb-5">
+          <OutboundLink
+            to={OUTLIER_SITE_LINKS.website}
+            aria-label="Outlier Media"
+          >
+            Outlier Media
+          </OutboundLink>{" "}
+        </div>
+        <div className="eyebrow mb-5">
+          {Object.entries(OUTLIER_SITE_LINKS)
+            .filter((link) => link[0] !== "website")
+            .map((link, i) => (
+              <SocialButton
+                url={link[1]}
+                key={i}
+                ariaLabel={`Share on ${link[0]}`}
+              />
+            ))}
+        </div>
         <div className="eyebrow">Made with ♥ in NYC by</div>
         <div className="eyebrow mb-5">
           <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="THE CITY">
@@ -115,8 +146,8 @@ const Footer = () => {
           <OutboundLink to="https://www.thecity.nyc/author/ben-fractenberg/">
             Ben Fractenberg
           </OutboundLink>{" "}
-          and courtesy of the Curtis Sliwa and Jim Walden campaigns. Design support from Tember
-          Hopkins. Development support from Sam Guzik.
+          and courtesy of the Curtis Sliwa and Jim Walden campaigns. Design
+          support from Tember Hopkins. Development support from Sam Guzik.
         </div>
 
         <div className="eyebrow mt-5 has-text-centered">
@@ -153,6 +184,7 @@ const Footer = () => {
   );
 };
 
+// TODO: Update
 const Analytics = () => (
   <>
     {/* Google Analytics & Google Tag Manager: */}

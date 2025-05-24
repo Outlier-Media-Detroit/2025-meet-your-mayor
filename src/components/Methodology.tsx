@@ -39,7 +39,7 @@ export const Methodology = () => (
     </p>
     <p className="mt-2">
       As in 2021, we are pleased to make our code available on{" "}
-      <OutboundLink to="https://github.com/thecityny/2025-meet-your-mayor">
+      <OutboundLink to="https://github.com/Outlier-Media-Detroit/2025-meet-your-mayor">
         Github
       </OutboundLink>{" "}
       for use by other organizations. So far our project has been adapted for

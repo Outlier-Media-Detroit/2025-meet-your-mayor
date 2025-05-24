@@ -4,8 +4,6 @@ import { QuizInput, ScoreCard } from "./components/QuizContent";
 import { questionContent } from "./question-content";
 import { track } from "@amplitude/analytics-browser";
 
-export type Party = "democrat" | "other" | null;
-
 /**
  * A blank template to keep track of user's
  * responses to quiz questions.
@@ -18,8 +16,6 @@ export const blankAnswersList = Object.entries(questionContent).map(
 );
 
 type AppState = {
-  party: Party;
-  setParty: (party: Party, delay?: number) => void;
   favoriteTopics: string[];
   setFavoriteTopics: (favoriteTopics: string[]) => void;
   answers: QuizInput[];
@@ -38,20 +34,6 @@ type AppState = {
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
-      party: null,
-      setParty: (party, delay) => {
-        track(`Selected party`, {
-          party: party,
-        });
-        const highestVisibleQuestion = get().highestVisibleQuestion;
-        const setHighestVisibleQuestion = get().setHighestVisibleQuestion;
-        if (highestVisibleQuestion === 0 && !!party) {
-          setHighestVisibleQuestion(1);
-        }
-        setTimeout(() => {
-          set({ party });
-        }, delay || 0);
-      },
       favoriteTopics: [],
       setFavoriteTopics: (favoriteTopics) => {
         set({ favoriteTopics });
@@ -71,7 +53,6 @@ export const useAppStore = create<AppState>()(
           answers: blankAnswersList,
           favoriteTopics: [],
           highestVisibleQuestion: 0,
-          party: null,
         });
       },
     }),

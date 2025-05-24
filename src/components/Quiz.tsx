@@ -2,18 +2,14 @@ import React, { FC, useState } from "react";
 import classnames from "classnames";
 import Results, { getQuestionsLeftToAnswer } from "./Results";
 import { formatContent, smoothScrollToCenter } from "../utils";
-import {
-  formatQuestionContent,
-  generateListOfCandidatesByParty,
-} from "./QuizContent";
+import { formatQuestionContent } from "./QuizContent";
 import {
   ANCHOR_LINK_DURATION,
   QUESTION_ANCHOR_LINK_OFFSET,
   SmoothScroll,
 } from "./Links";
-import { abbreviateName, MatchingCandidates } from "./MatchingCandidates";
-import { Bobblehead } from "./Illustration";
-import { Party, useAppStore } from "../useAppStore";
+import { MatchingCandidates } from "./MatchingCandidates";
+import { useAppStore } from "../useAppStore";
 import { Methodology } from "./Methodology";
 import { scroller } from "react-scroll";
 import { track } from "@amplitude/analytics-browser";
@@ -32,9 +28,6 @@ export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
 );
 
 const Quiz = () => {
-  const party = useAppStore((state) => state.party);
-  const setParty = useAppStore((state) => state.setParty);
-
   const answers = useAppStore((state) => state.answers);
   const setAnswers = useAppStore((state) => state.setAnswers);
 
@@ -54,29 +47,6 @@ const Quiz = () => {
     const currentVisibility = methodologyVisible;
     setMethodologyVisible(!currentVisibility);
   };
-
-  const democraticCandidates = generateListOfCandidatesByParty("democrat");
-  const otherCandidates = generateListOfCandidatesByParty("other");
-
-  // TODO: Remove party selector because there's only one
-  type PartySelectorButton = {
-    label: string;
-    party: Party;
-    candidates: { name: string; slug: string }[];
-  };
-
-  const partySelectorButtons: PartySelectorButton[] = [
-    {
-      label: "Democratic Primary",
-      party: "democrat",
-      candidates: democraticCandidates,
-    },
-    {
-      label: "All Candidates",
-      party: "other",
-      candidates: otherCandidates,
-    },
-  ];
 
   const recordAnswer = (questionNumber: number, answer: string | null) => {
     const updatedAnswers = answers.map((answerObj) => {
@@ -112,12 +82,12 @@ const Quiz = () => {
                 The Meet Your Mayor Quiz
               </h1>
               <p className="copy has-text-left mt-5">
-                Voters of New York City: Can’t decide who to put on your ballot
-                for mayor? This quiz will help you decide by matching your
-                responses to 18 questions with how candidates answered the same
-                questions on urgent issues facing New Yorkers. The primary is on
-                June 24, and early voting starts on June 14. The general
-                election is on November 4, 2025.
+                Voters of Detroit: Can’t decide who to put on your ballot for
+                mayor? This quiz will help you decide by matching your responses
+                to 18 questions with how candidates answered the same questions
+                on urgent issues facing Detroiters. The primary is on June 24,
+                and early voting starts on June 14. The general election is on
+                November 4, 2025.
               </p>
 
               <div
@@ -143,7 +113,8 @@ const Quiz = () => {
                       </SmoothScroll>
                     </div>
                   </div>
-                ) : !!party ? (
+                ) : // TODO: Logic needs to be fixed here, off by one
+                questionsLeftToAnswer.length < answers.length ? (
                   <div className="my-4">
                     <>
                       <h2 className="deck has-text-left">
@@ -166,66 +137,28 @@ const Quiz = () => {
                     </>
                   </div>
                 ) : (
-                  <>
-                    <h2 className="deck has-text-left">Choose a contest:</h2>
-
-                    {partySelectorButtons.map((button, i) => (
-                      <div key={i} className="mt-5 mb-4">
-                        <button
-                          className="control"
-                          onClick={() => {
-                            setMethodologyVisible(false);
-
-                            setTimeout(() => {
-                              scroller.scrollTo("question-1", {
-                                duration: ANCHOR_LINK_DURATION,
-                                delay: 0,
-                                smooth: true,
-                                offset: QUESTION_ANCHOR_LINK_OFFSET, // optional, to adjust for headers etc.
-                              });
-                            }, 100); // wait until content has re-rendered
-
-                            // If the user is selecting a party, we want to scroll to the first question
-                            // after a short delay, so that the user doesn't see the content change
-                            // inside the quiz intro section
-
-                            setParty(button.party, ANCHOR_LINK_DURATION);
-                          }}
-                        >
-                          <div
-                            className="button"
-                            onClick={() => setMethodologyVisible(false)}
-                          >
-                            {button.label}
-                          </div>
-                          <div className="is-flex is-flex-wrap-wrap is-flex-direction-row is-align-items-center my-3">
-                            {button.party === "other" && (
-                              <span className="copy is-inline-block m-0 mr-2">
-                                Add
-                              </span>
-                            )}
-                            {button.candidates.map((candidate, i) => (
-                              <div key={i}>
-                                <div
-                                  key={i}
-                                  className="is-flex is-flex-direction-column is-align-items-center mr-1"
-                                >
-                                  <Bobblehead
-                                    candidateName={candidate.name}
-                                    size="is-48x48"
-                                    showBustOnly
-                                  />
-                                  <span className="label has-text-centered">
-                                    {abbreviateName(candidate.name)}
-                                  </span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </button>
-                      </div>
-                    ))}
-                  </>
+                  <div className="my-4">
+                    <h2 className="deck has-text-left">Start the quiz:</h2>
+                    <div className="field is-grouped">
+                      <button
+                        className="button mb-1"
+                        onClick={() => {
+                          setMethodologyVisible(false);
+                          setHighestVisibleQuestion(1);
+                          setTimeout(() => {
+                            scroller.scrollTo("question-1", {
+                              duration: ANCHOR_LINK_DURATION,
+                              delay: 0,
+                              smooth: true,
+                              offset: QUESTION_ANCHOR_LINK_OFFSET, // optional, to adjust for headers etc.
+                            });
+                          }, 100); // wait until content has re-rendered
+                        }}
+                      >
+                        Start
+                      </button>
+                    </div>
+                  </div>
                 )}
                 <div className="mb-5">
                   <button

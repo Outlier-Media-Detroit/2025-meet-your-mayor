@@ -1,23 +1,14 @@
 import { questionContent } from "../question-content";
 import { candidateContent } from "../candidate-content";
 import { groupBy, kebabCase } from "../utils";
-import { Party, useAppStore } from "../useAppStore";
 
 /**
  * This function takes our raw JSON content from `candidate-content.js`
  * and formats it into a organized JS object that keeps track of all
  * candidates' responses to quiz questions, with explanations.
  */
-export const formatCandidateContent = (party?: Party) => {
-  // Filter candidates by party (if selected):
-  const candidates =
-    party === "democrat"
-      ? Object.fromEntries(
-          Object.entries(candidateContent).filter(
-            (candidate) => candidate[1].party === "democrat"
-          )
-        )
-      : candidateContent;
+export const formatCandidateContent = () => {
+  const candidates = candidateContent;
 
   const splitCandidateInfo = (text: string) => text.split("|");
 
@@ -66,16 +57,9 @@ export const testCandidateContentFormat = () => {
   }
 };
 
-export const generateListOfCandidatesByParty = (party?: Party) => {
+export const generateListOfCandidates = () => {
   return Object.values(candidateContent)
     .sort((a, b) => (a.name > b.name ? 1 : -1)) // Sort alphabetically by name
-    .filter((candidate) =>
-      party === "democrat"
-        ? candidate.party === "democrat"
-        : party === "other"
-        ? candidate.party !== "democrat"
-        : true
-    ) // Filter by party, if specified
     .map((candidate) => ({
       name: candidate.name,
       slug: kebabCase(candidate.name),
@@ -89,8 +73,7 @@ export const generateListOfCandidatesByParty = (party?: Party) => {
  * quiz question responses.
  */
 export const formatQuestionContent = () => {
-  const party = useAppStore((state) => state.party);
-  const candidates = formatCandidateContent(party);
+  const candidates = formatCandidateContent();
   const findMatchingCandidates = (questionIndex: number, quizOption: string) =>
     candidates
       .filter((c) => c.responses[questionIndex].optionNumber === quizOption)

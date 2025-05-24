@@ -45,8 +45,8 @@ const Homepage = () => {
                   Updated: {getDateUpdated()}
                 </p>
                 <p className="deck has-text-left" style={{ maxWidth: "600px" }}>
-                  Who should you rank on your ballot to be the next mayor of New
-                  York City? Take the same quiz the candidates did and find your
+                  Who should you rank on your ballot to be the next mayor of
+                  Detroit? Take the same quiz the candidates did and find your
                   closest match.
                 </p>
                 <div className="is-flex is-flex-direction-column my-6">

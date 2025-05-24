@@ -11,7 +11,7 @@
     "validate": "node validate.mjs",
     "download-content": "node -e 'require(\"./src/scripts\").downloadGoogleDocContent()'",
     "generate-sitemap": "node -e 'require(\"./src/scripts\").generateSitemapXML()'",
-    "format": "prettier --write \"**/*.{js,jsx,tsx,ts}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,tsx,ts}\""
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^2.17.4",

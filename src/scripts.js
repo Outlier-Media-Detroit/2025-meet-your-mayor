@@ -26,9 +26,19 @@ const downloadGoogleDocContent = () => {
           `export const ${fileName}Content = ${JSON.stringify(
             Object.fromEntries(
               // Remove element ending in X
-              Object.entries(json).filter(
-                (element) => !element[0].endsWith("X")
-              )
+              Object.entries(json)
+                .filter((element) => !element[0].endsWith("X"))
+                .sort(([a, _a], [b, _b]) => {
+                  if (fileName !== "question") return 0;
+                  // Custom sorting to handle question order
+                  const aNum = parseInt(a.replace("question", ""));
+                  const bNum = parseInt(b.replace("question", ""));
+                  if (aNum !== bNum) {
+                    return aNum - bNum;
+                  }
+
+                  return a.localeCompare(b);
+                })
             )
           )}`,
           (err) => {

@@ -52,7 +52,19 @@ export const questionContent = {
     tellMeMore:
       "The state-run Metropolitan Transportation Authority estimated that in 2022 it lost $600 million in revenue due to subway and bus fare evasion. The MTA reported a modest decrease in fare evasion during the last three months of 2024, even as fare evasion arrests more than doubled compared with the same period a year earlier.",
     option1:
-      "Consistent summonses for violators — maintain or expand fare enforcement option2: Fewer summonses for violators — enforcement is too aggressive option3: Do not issue summonses for fare nonpayment",
+      "Consistent summonses for violators — maintain or expand fare enforcement",
+    option2: "Fewer summonses for violators — enforcement is too aggressive",
+    option3: "Do not issue summonses for fare nonpayment",
+    option4: "",
+    option5: "",
+  },
+  question5a: {
+    title: "PLACEHOLDER RIKERS",
+    subject: "Public Safety",
+    tellMeMore: "PLACEHOLDER RIKERS",
+    option1: "YES",
+    option2: "NO",
+    option3: "",
     option4: "",
     option5: "",
   },
@@ -76,9 +88,10 @@ export const questionContent = {
     tellMeMore:
       "The New York City Housing Authority operates under a federal monitor who is overseeing repairs. Dozens of developments now operate under private management via programs that invest in upgrades, including Rental Assistance Demonstration, or “RAD.”",
     option1:
-      "Public housing is public. Stop bringing in private management to take over option2: Consider private management for existing public housing",
-    option3:
-      "Pursue new development on NYCHA property with private landlords option4:",
+      "Public housing is public. Stop bringing in private management to take over",
+    option2: "Consider private management for existing public housing",
+    option3: "Pursue new development on NYCHA property with private landlords",
+    option4: "",
     option5: "",
   },
   question8: {
@@ -113,8 +126,10 @@ export const questionContent = {
     subject: "Schools",
     tellMeMore:
       "All public elementary schools are now teaching students how to read using city-mandated curricula, aimed at improving literacy rates among the youngest students.",
-    option1:
-      "Stay on the current course, since scores are gradually improving option2: Only promote children to the next grade once they can pass the reading test option3: Reduce standardized testing in city public schools",
+    option1: "Stay on the current course, since scores are gradually improving",
+    option2:
+      "Only promote children to the next grade once they can pass the reading test",
+    option3: "Reduce standardized testing in city public schools",
     option4: "",
     option5: "",
   },
@@ -147,11 +162,15 @@ export const questionContent = {
   },
   question14: {
     title:
-      "What is your spending priority for $500 million in opioid settlement funds? subject: Health",
+      "What is your spending priority for $500 million in opioid settlement funds?",
+    subject: "Health",
     tellMeMore:
       "Under settlements reached with pharmaceutical companies, the state and city have amassed funds to aid people with substance use disorders. By 2040, the city anticipates that it will receive a total of $500 million.",
     option1:
-      "Supportive housing services for people with substance use disorders option2: Safe injection facilities and needle exchanges to limit fatalities among users option3: Law enforcement efforts to crack down on drug dealers",
+      "Supportive housing services for people with substance use disorders",
+    option2:
+      "Safe injection facilities and needle exchanges to limit fatalities among users",
+    option3: "Law enforcement efforts to crack down on drug dealers",
     option4: "",
     option5: "",
   },
@@ -174,7 +193,12 @@ export const questionContent = {
     subject: "Leadership",
     tellMeMore: "",
     option1:
-      "The Decider — centralize decision-making with the mayor and close advisers option2: The Partner — make decisions in coordination with the City Council option3: option3: The Delegator — hire top talent to run agencies and rely on their judgment option4:",
+      "The Decider — centralize decision-making with the mayor and close advisers",
+    option2:
+      "The Partner — make decisions in coordination with the City Council",
+    option3:
+      "The Delegator — hire top talent to run agencies and rely on their judgment",
+    option4: "",
     option5: "",
   },
   question18: {
@@ -183,14 +207,16 @@ export const questionContent = {
     subject: "Leadership",
     tellMeMore: "",
     option1:
-      "They expanded opportunities for poor and working-class New Yorkers option2: They created lasting public works",
-    option3:
-      "They imposed fiscal discipline and cleaned up government option4: They curbed disorder and improved neighborhood quality of life",
+      "They expanded opportunities for poor and working-class New Yorkers",
+    option2: "They created lasting public works",
+    option3: "They imposed fiscal discipline and cleaned up government",
+    option4: "They curbed disorder and improved neighborhood quality of life",
     option5: "",
   },
   question19: {
     title:
-      "What kind of early-career experience is most important for the next mayor to have? subject: Leadership",
+      "What kind of early-career experience is most important for the next mayor to have?",
+    subject: "Leadership",
     tellMeMore: "",
     option1: "Led a nonprofit",
     option2: "Served as a community or labor organizer",

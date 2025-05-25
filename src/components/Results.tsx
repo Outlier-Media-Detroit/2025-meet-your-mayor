@@ -82,7 +82,8 @@ const Results: React.FC = () => {
       }
 
       questions.forEach((question) => {
-        const { number, option1, option2, option3, option4, option5 } = question;
+        const { number, option1, option2, option3, option4, option5 } =
+          question;
         const userAnswer = answers.find(
           (answer) => answer.questionNumber === number
         );
@@ -132,7 +133,12 @@ const Results: React.FC = () => {
               subject,
               points: pointValue,
             });
-          } else if (userAnswer?.answer === "5" && option5.matchingCandidates.find((c) => c.name === candidate.candidateName)) {
+          } else if (
+            userAnswer?.answer === "5" &&
+            option5.matchingCandidates.find(
+              (c) => c.name === candidate.candidateName
+            )
+          ) {
             scorecard[i].scoreList.push({
               questionNumber: number,
               subject,

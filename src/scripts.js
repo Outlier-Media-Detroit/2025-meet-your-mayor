@@ -1,16 +1,20 @@
 require("dotenv").config();
 const fs = require("fs");
-const fetch = require("node-fetch");
+const { google } = require("googleapis");
+const { docToArchieML } = require("@newswire/doc-to-archieml");
 
 const downloadGoogleDocContent = () => {
+  const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
+  const auth = new google.auth.GoogleAuth({
+    credentials,
+    scopes: [
+      "https://www.googleapis.com/auth/drive.readonly",
+      "https://www.googleapis.com/auth/documents.readonly",
+    ],
+  });
+
   const fileName = process.env.FILENAME || "page";
-  fetch(`http://127.0.0.1:6006/${process.env.DOCID}`, {
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-  })
-    .then((resp) => resp.json())
+  docToArchieML({ documentId: process.env.DOCID, auth })
     .then((json) => {
       if (json.code === 404) {
         console.log(

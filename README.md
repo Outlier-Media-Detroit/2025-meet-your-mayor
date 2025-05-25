@@ -76,26 +76,7 @@ Runs the `downloadGoogleDocContent` function inside `src/scripts.js`. This funct
 
 This current iteration of the project downloads from two different google docs via the two options: `FILENAME = candidate` and `FILENAME = questions`. However, you can edit the `downloadGoogleDocContent` function inside `src/scripts.js` to work with whatever set of documents makes sense for your project. Using this integration is totally optional — feel free to edit the content in `candidate-content.js`, `question-content.js`, and `candidate-list.json` directly.
 
-NOTE: before running this command, you must globally install the AML Google Doc Server on your computer by running:
-
-```
-npm install -g aml-gdoc-server
-```
-
-Once installed, you then must log in to google by running:
-
-```
-aml-gdoc-server
-```
-
-and following the steps in the terminal. Once that's running, you should see a message that says "The aml-gdoc-server is up and listening at http://127.0.0.1:6006." Keep this terminal window open and start a new terminal to run further commands.
-
-Lastly, find what google doc you want to pull content from and copy the "Document ID" from the URL, which is the long string of characters
-at the end of the URL. Use this ID in the above command where it says `DOCID=XXXXXX`.
-
-#### Common Error: Refreshing Google Access token
-
-Every few weeks or so, depending on your account settings, you may get an error like `GaxiosError: invalid_grant`, which means you need to refresh your Google Doc API access. What you need to do is find the `.aml-gdoc-credentials` file you created when you first initiated this integration, delete it, and start over as if setting things up as if for the first time.
+NOTE: Before you run this command you'll need to create a Google Service Account, store the JSON credentials in the environment variable `GOOGLE_SERVICE_ACCOUNT`, and grant the service account user access to all docs you'll be downloading.
 
 ### `npm run build`
 

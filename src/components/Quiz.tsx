@@ -41,6 +41,7 @@ const Quiz = () => {
   );
 
   const questions = formatQuestionContent();
+  const hasStartedQuestions = answers.some(({ answer }) => answer !== null);
 
   const [methodologyVisible, setMethodologyVisible] = useState(false);
   const toggleMethodology = () => {
@@ -113,8 +114,7 @@ const Quiz = () => {
                       </SmoothScroll>
                     </div>
                   </div>
-                ) : // TODO: Logic needs to be fixed here, off by one
-                questionsLeftToAnswer.length < answers.length ? (
+                ) : hasStartedQuestions ? (
                   <div className="my-4">
                     <>
                       <h2 className="deck has-text-left">

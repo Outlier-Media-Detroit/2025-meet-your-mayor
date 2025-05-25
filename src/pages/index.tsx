@@ -27,7 +27,8 @@ const getDateUpdated = () => {
 };
 
 const Homepage = () => {
-  const party = useAppStore((state) => state.party);
+  const answers = useAppStore((state) => state.answers);
+  const hasStartedQuestions = answers.some(({ answer }) => answer !== null);
   const questionsLeftToAnswer = getQuestionsLeftToAnswer();
 
   return (
@@ -55,7 +56,7 @@ const Homepage = () => {
                     to={
                       questionsLeftToAnswer.length === 0
                         ? "results"
-                        : !!party
+                        : !!hasStartedQuestions
                         ? `question-${questionsLeftToAnswer[0]}`
                         : "quiz"
                     }
@@ -66,7 +67,7 @@ const Homepage = () => {
                     >
                       {questionsLeftToAnswer.length === 0
                         ? "View my results"
-                        : !!party
+                        : !!hasStartedQuestions
                         ? "Continue the quiz"
                         : "Take the quiz"}
                     </button>

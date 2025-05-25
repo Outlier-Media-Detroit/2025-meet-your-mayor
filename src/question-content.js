@@ -1,44 +1,42 @@
 export const questionContent = {
   question1: {
-    title: "What is your preferred model for outdoor dining?",
-    subject: "Streets",
+    title: "Who should be the most responsible for violence intervention?",
+    subject: "Safety",
     tellMeMore:
-      'Owners of cafes and restaurants say they are <a href="https://www.nytimes.com/2025/04/14/nyregion/nyc-restaurants-outdoor-seating.html">struggling to participate</a> in a new seasonal outdoor dining program advanced by the City Council, which requires city permits and operates under stricter rules than those that prevailed during the COVID emergency.',
-    option1:
-      "Bring back year-round outdoor dining as it existed during the pandemic",
-    option2: "Maintain the current permit program approved by the City Council",
-    option3:
-      "Consult with restaurant owners and propose a new permit program tailored to their needs",
+      'Police have traditionally been responsible for addressing violence, but Detroit and other cities are experimenting with civilian programs known as Community Violence Intervention. In Detroit, they’re called ShotStoppers, and the city says early data suggests <a href="https://outliermedia.org/detroit-shotstoppers-crime-stats-shootings-homicides/">they’ve been successful</a> in reducing homicides and shootings.',
+    option1: "Police",
+    option2: "Sanctioned community groups supported with government funding",
+    option3: "Family and neighbors",
     option4: "",
+    option5: "",
   },
   question2: {
-    title: "Which best describes your approach to bike lanes?",
-    subject: "Streets",
+    title: "Who should respond to mental health calls?",
+    subject: "Safety",
     tellMeMore:
-      '<a href="https://ibo.nyc.ny.us/iboreports/local-law-195-explainer-february-2025.pdf">Local Law 195</a> mandates that the Department of Transportation install 250 miles of protected bike lanes by 2026. The agency has yet to install enough lanes to meet its own 50-mile annual target, often falling short by some 20 miles each year.',
-    option1:
-      "Continue to expand the bike lane network and provide more protected lanes",
-    option2: "Keep the bike lane network as is",
-    option3: "Remove bike lanes where they are not heavily used",
+      'Detroit <a href="https://www.michiganpublic.org/criminal-justice-legal-system/2024-12-24/detroit-police-got-16-000-mental-health-calls-this-year-heres-how-theyre-responding">police responded</a> to thousands of mental health calls in 2024 — and the police department is making efforts to train officers and ensure that response calls are <a href="https://outliermedia.org/what-is-bolawrap-detroit-police-lasso-tether-restraint-mental-health-calls/">less deadly</a>. Still, some advocates insist police should not be the people responding to mental health crises.',
+    option1: "Police only",
+    option2: "Police accompanied by trained mental health professionals",
+    option3: "Trained mental health professionals without police",
     option4: "",
+    option5: "",
   },
   question3: {
-    title: "Do you support trash containerization?",
-    subject: "Streets",
+    title: "Which approach do you think would make Detroit safer?",
+    subject: "Safety",
     tellMeMore:
-      'The Department of Sanitation is <a href="https://www.thecity.nyc/2024/12/04/trash-bin-questions-answered-garbage/">rolling out rules</a> requiring household trash to be put into containers for curbside collection. Residences with fewer than 10 apartments must place garbage inside individual bins for pickup, and an upper Manhattan pilot is underway of big bins for larger buildings.',
-    option1:
-      "Requiring property owners to use standard containers is overreach and should be rolled back",
-    option2: "Only small properties should use standardized containers",
-    option3:
-      "Following the test pilot, roll out standardized containerization for larger buildings but reverse the requirement for small properties",
-    option4: "Promote containerization for all residential buildings",
+      'Among Detroiters for whom crime and safety is <a href="https://outliermedia.org/detroit-community-concerns-public-safety-neighborhood-conditions/">a top concern</a>, the vast majority say they want more police or community safety patrols. But trust in police is less strong among Detroiters at large. In a recent survey only a slim majority (55%) “somewhat agreed” or neither agreed nor disagreed with the statement, “The police in my neighborhood can be trusted.”',
+    option1: "More police",
+    option2: "More youth programs",
+    option3: "Stricter gun laws",
+    option4: "Better job opportunities",
+    option5: "The city is safe enough as it is",
   },
   question4: {
     title: "Which statement best reflects your preferred approach to policing?",
     subject: "Public Safety",
     tellMeMore:
-      'All major categories of crime are far above <a href="https://www.vitalcitynyc.org/articles/vital-signs-state-of-the-city-on-crime-2024">pre-pandemic levels</a>, especially felony assaults, while the number of NYPD officers has declined below the department’s budgeted headcount. The current mayor has intensified <a href="https://www.thecity.nyc/2023/09/12/nypd-quality-of-life-crackdown-enforcement-skyrockets-criminal-court/">criminal enforcement</a> of quality-of-life offenses.',
+      "All major categories of crime are far above pre-pandemic levels, especially felony assaults, while the number of NYPD officers has declined below the department’s budgeted headcount. The current mayor has intensified criminal enforcement of quality-of-life offenses.",
     option1:
       "Increase the size of the police force and ramp up enforcement of quality-of-life violations as well as more serious crimes",
     option2:
@@ -46,37 +44,23 @@ export const questionContent = {
     option3:
       "Scale back the police force and focus on improving New Yorkers’ economic prosperity and access to public goods",
     option4: "",
+    option5: "",
   },
   question5: {
     title: "How should the NYPD enforce transit fares?",
     subject: "Public Safety",
     tellMeMore:
-      'The state-run Metropolitan Transportation Authority estimated that in 2022 it lost $600 million in revenue due to subway and bus fare evasion. The MTA reported a <a href="https://gothamist.com/news/mta-reports-dip-in-fare-evasion-as-nypd-arrests-skyrocket-in-subway-system?gad_source=1&gbraid=0AAAAAD9J8hHe2SwLleiW8C4K41XuGz8JL&gclid=Cj0KCQjw2ZfABhDBARIsAHFTxGzF0WiI-DTRimsPaPfQRnN2MaHiJddO3eByk6nKll3DQbIjFdgZZ4waAnzeEALw_wcB">modest decrease</a> in fare evasion during the last three months of 2024, even as fare evasion arrests <a href="https://www.nyc.gov/site/nypd/stats/reports-analysis/subway-fare-evasion.page">more than doubled</a> compared with the same period a year earlier.',
+      "The state-run Metropolitan Transportation Authority estimated that in 2022 it lost $600 million in revenue due to subway and bus fare evasion. The MTA reported a modest decrease in fare evasion during the last three months of 2024, even as fare evasion arrests more than doubled compared with the same period a year earlier.",
     option1:
-      "Consistent summonses for violators — maintain or expand fare enforcement",
-    option2: "Fewer summonses for violators — enforcement is too aggressive",
-    option3: "Do not issue summonses for fare nonpayment",
+      "Consistent summonses for violators — maintain or expand fare enforcement option2: Fewer summonses for violators — enforcement is too aggressive option3: Do not issue summonses for fare nonpayment",
     option4: "",
-  },
-  question5a: {
-    title:
-      "The number of people incarcerated at Rikers Island is approaching double the capacity of planned new jails. What should the next mayor do?",
-    subject: "Public Safety",
-    tellMeMore:
-      'The four new borough-based jails – meant to replace the Rikers Island complex and place incarcerated folks in areas closer to their families and courts — will have 4,160 beds. As of March, 7,067 people were <a href="https://www.thecity.nyc/2025/03/20/rikers-population-tops-7000/">incarcerated at Rikers</a>.',
-    option1:
-      "Stay on course with the Rikers Island shutdown, work with DAs to release more people pretrial or divert them from prosecution entirely",
-    option2:
-      "Stay on course with the Rikers Island shutdown, work with the City Council to keep a Rikers facility open to maintain continued capacity",
-    option3:
-      "Pause planning for jails still in the design phase, work with the City Council to reinvest in Rikers facilities",
-    option4: "",
+    option5: "",
   },
   question6: {
     title: "What is your preferred path to creating more affordable housing?",
     subject: "Housing",
     tellMeMore:
-      'New York City is short by half a million homes <a href="https://rpa.org/work/reports/city-of-yes-and-missing-middle-housing">by some estimates</a>, and over half of the city’s households are rent-burdened –— spending more than 30% of their income on housing.',
+      "New York City is short by half a million homes by some estimates, and over half of the city’s households are rent-burdened –— spending more than 30% of their income on housing.",
     option1:
       "Push to expand development rights in every community district, with existing affordable housing set-asides",
     option2:
@@ -84,6 +68,7 @@ export const questionContent = {
     option3: "Lower taxes and other development costs",
     option4:
       "Promote policies that give renters more control over their housing and curb real estate speculation",
+    option5: "",
   },
   question7: {
     title: "How should the next mayor manage decaying public housing?",
@@ -91,27 +76,28 @@ export const questionContent = {
     tellMeMore:
       "The New York City Housing Authority operates under a federal monitor who is overseeing repairs. Dozens of developments now operate under private management via programs that invest in upgrades, including Rental Assistance Demonstration, or “RAD.”",
     option1:
-      "Public housing is public. Stop bringing in private management to take over",
-    option2: "Consider private management for existing public housing",
-    option3: "Pursue new development on NYCHA property with private landlords",
-    option4: "",
+      "Public housing is public. Stop bringing in private management to take over option2: Consider private management for existing public housing",
+    option3:
+      "Pursue new development on NYCHA property with private landlords option4:",
+    option5: "",
   },
   question8: {
     title: "What should the Rent Guidelines Board do next year?",
     subject: "Housing",
     tellMeMore:
-      'Each June, a panel selected by the mayor, representing property owners, tenants and the public, votes on whether to increase the rent on <a href="https://rentguidelinesboard.cityofnewyork.us/resources/faqs/rent-control/#:~:text=Yes.,on%20their%20Rent%20Control%20page:">some 960,000 rent-stabilized units</a> and by how much. The board <a href="https://rentguidelinesboard.cityofnewyork.us/2025-summary-of-proposed-apartment-loft-hotel-guidelines/">proposed</a> in April to increase rents of one-year leases by as much as 4.75% and two-year leases by as much as 7.75%.',
+      "Each June, a panel selected by the mayor, representing property owners, tenants and the public, votes on whether to increase the rent on some 960,000 rent-stabilized units and by how much. The board proposed in April to increase rents of one-year leases by as much as 4.75% and two-year leases by as much as 7.75%.",
     option1: "Freeze rents, period",
     option2: "Freeze rents if economic analysis determines it's feasible",
     option3:
       "The Rent Guidelines Board should set rent increases, in line with landlords' actual costs",
     option4: "",
+    option5: "",
   },
   question9: {
     title: "What’s the best way to admit students to specialized high schools?",
     subject: "Schools",
     tellMeMore:
-      'State <a href="https://nebula.wsimg.com/75694f5e724770756e3a1c3e229c2616?AccessKeyId=45A6F09DA41DB93D9538&disposition=0&alloworigin=1">law</a> requires three coveted specialized high schools to admit students based solely on a single exam’s scores. (Five other schools have adopted the same admissions procedure.) But the results are inequitable: less than 5% of offers last year <a href="https://www.chalkbeat.org/newyork/2024/06/18/specialized-high-school-offers-to-black-and-latino-students-increase-but-remain-low/">went to Black students</a>, while 7.6% went to Latino students, far lower than their population share.',
+      "State law requires three coveted specialized high schools to admit students based solely on a single exam’s scores. (Five other schools have adopted the same admissions procedure.) But the results are inequitable: less than 5% of offers last year went to Black students, while 7.6% went to Latino students, far lower than their population share.",
     option1:
       "Maintain the SHSAT as the exclusive test for all of the eight schools where it’s currently used for admission",
     option2:
@@ -119,18 +105,18 @@ export const questionContent = {
     option3:
       "Demand state lawmakers remove the SHSAT as the sole path to admissions to the three schools",
     option4: "",
+    option5: "",
   },
   question10: {
     title:
       "Just 28% of fourth graders are proficient in reading. What should the next mayor do to improve learning?",
     subject: "Schools",
     tellMeMore:
-      "All public elementary schools are now teaching students how to read using city-mandated curricula, aimed at improving literacy rates among the youngest students. Educators typically promote students to the next grade level after a review of their work from the current school year.",
-    option1: "Stay on the current course, since scores are gradually improving",
-    option2:
-      "Only promote children to the next grade once they can pass the reading test",
-    option3: "Reduce standardized testing in city public schools",
+      "All public elementary schools are now teaching students how to read using city-mandated curricula, aimed at improving literacy rates among the youngest students.",
+    option1:
+      "Stay on the current course, since scores are gradually improving option2: Only promote children to the next grade once they can pass the reading test option3: Reduce standardized testing in city public schools",
     option4: "",
+    option5: "",
   },
   question12: {
     title: "What is your position on NYC’s sanctuary city laws?",
@@ -145,6 +131,7 @@ export const questionContent = {
       "Change the laws: City authorities should cooperate with ICE as demanded regardless of a person's history with the justice system",
     option4:
       "Change the laws: City authorities should further restrict cooperation with federal authorities",
+    option5: "",
   },
   question13: {
     title: "How should the next mayor deal with President Trump?",
@@ -156,19 +143,17 @@ export const questionContent = {
     option3:
       "Neutrality: focus on the city and let the governor and congressional delegation deal with the White House",
     option4: "",
+    option5: "",
   },
   question14: {
     title:
-      "What is your spending priority for $500 million in opioid settlement funds?",
-    subject: "Health",
+      "What is your spending priority for $500 million in opioid settlement funds? subject: Health",
     tellMeMore:
-      'Under settlements reached with pharmaceutical companies, the state and city have <a href="https://www.nyc.gov/office-of-the-mayor/news/683-24/mayor-adams-ramp-up-annual-support-50-million-opioid-prevention-treatment-major">amassed funds</a> to aid people with substance use disorders. By 2040, the city anticipates that it will receive a total of $500 million.',
+      "Under settlements reached with pharmaceutical companies, the state and city have amassed funds to aid people with substance use disorders. By 2040, the city anticipates that it will receive a total of $500 million.",
     option1:
-      "Supportive housing services for people with substance use disorders",
-    option2:
-      "Safe injection facilities and needle exchanges to limit fatalities among users",
-    option3: "Law enforcement efforts to crack down on drug dealers",
+      "Supportive housing services for people with substance use disorders option2: Safe injection facilities and needle exchanges to limit fatalities among users option3: Law enforcement efforts to crack down on drug dealers",
     option4: "",
+    option5: "",
   },
   question15: {
     title:
@@ -182,18 +167,15 @@ export const questionContent = {
       "I oppose the law’s premise: People’s rights to make their own mental health care decisions should not be compromised",
     option3: "I support the bill's premise but it does not go far enough",
     option4: "",
+    option5: "",
   },
   question17: {
     title: "What kind of manager should the next mayor be?",
     subject: "Leadership",
     tellMeMore: "",
     option1:
-      "The Decider — centralize decision-making with the mayor and close advisers",
-    option2:
-      "The Partner — make decisions in coordination with the City Council",
-    option3:
-      "The Delegator — hire top talent to run agencies and rely on their judgment",
-    option4: "",
+      "The Decider — centralize decision-making with the mayor and close advisers option2: The Partner — make decisions in coordination with the City Council option3: option3: The Delegator — hire top talent to run agencies and rely on their judgment option4:",
+    option5: "",
   },
   question18: {
     title:
@@ -201,19 +183,19 @@ export const questionContent = {
     subject: "Leadership",
     tellMeMore: "",
     option1:
-      "They expanded opportunities for poor and working-class New Yorkers",
-    option2: "They created lasting public works",
-    option3: "They imposed fiscal discipline and cleaned up government",
-    option4: "They curbed disorder and improved neighborhood quality of life",
+      "They expanded opportunities for poor and working-class New Yorkers option2: They created lasting public works",
+    option3:
+      "They imposed fiscal discipline and cleaned up government option4: They curbed disorder and improved neighborhood quality of life",
+    option5: "",
   },
   question19: {
     title:
-      "What kind of early-career experience is most important for the next mayor to have?",
-    subject: "Leadership",
+      "What kind of early-career experience is most important for the next mayor to have? subject: Leadership",
     tellMeMore: "",
     option1: "Led a nonprofit",
     option2: "Served as a community or labor organizer",
     option3: "Worked in the private sector",
     option4: "Career-long work in government or politics",
+    option5: "",
   },
 };

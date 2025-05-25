@@ -101,6 +101,10 @@ export const formatQuestionContent = () => {
       text: question.option4,
       matchingCandidates: findMatchingCandidates(i, "4"),
     },
+    option5: {
+      text: question.option5,
+      matchingCandidates: findMatchingCandidates(i, "5"),
+    },
     skipped: {
       matchingCandidates: findMatchingCandidates(i, "0").concat(
         candidates

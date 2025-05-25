@@ -236,6 +236,7 @@ const Quiz = () => {
                             option2,
                             option3,
                             option4,
+                            option5,
                             skipped,
                           } = question;
 
@@ -296,6 +297,7 @@ const Quiz = () => {
                                   option2,
                                   option3,
                                   option4,
+                                  option5,
                                   optionSkipped,
                                 ].map((optionInfo, i) => {
                                   const optionNumber =

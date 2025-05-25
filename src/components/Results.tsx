@@ -82,10 +82,11 @@ const Results: React.FC = () => {
       }
 
       questions.forEach((question) => {
-        const { number, option1, option2, option3, option4 } = question;
+        const { number, option1, option2, option3, option4, option5 } = question;
         const userAnswer = answers.find(
           (answer) => answer.questionNumber === number
         );
+        // TODO: Simplify
         scorecard.forEach((candidate, i) => {
           if (
             userAnswer?.answer === "1" &&
@@ -126,6 +127,12 @@ const Results: React.FC = () => {
               (c) => c.name === candidate.candidateName
             )
           ) {
+            scorecard[i].scoreList.push({
+              questionNumber: number,
+              subject,
+              points: pointValue,
+            });
+          } else if (userAnswer?.answer === "5" && option5.matchingCandidates.find((c) => c.name === candidate.candidateName)) {
             scorecard[i].scoreList.push({
               questionNumber: number,
               subject,

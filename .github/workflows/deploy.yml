@@ -96,6 +96,7 @@ jobs:
             // If we get this far, we're good to go.
             return slug.trim();
 
+      # TODO: Rebuild candidate, question content as well?
       - id: npm-build
         name: Build project distribution
         run: PREFIX=/${{ env.GATSBY_SLUG }} npm run build

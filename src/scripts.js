@@ -21,8 +21,10 @@ const downloadGoogleDocContent = () => {
           `src/${fileName}-content.js`,
           `export const ${fileName}Content = ${JSON.stringify(
             Object.fromEntries(
-              // Remove first element (which is always example)
-              Object.entries(json).filter((element, i) => i > 0)
+              // Remove element ending in X
+              Object.entries(json).filter(
+                (element) => !element[0].endsWith("X")
+              )
             )
           )}`,
           (err) => {

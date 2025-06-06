@@ -60,7 +60,8 @@ $tablet-breakpoint: 1025px;
   font-family: fonts.$sans;
 }
 
-.headline {
+.headline,
+.subhed {
   color: colors.$outlier-black;
   font-family: fonts.$title;
 }

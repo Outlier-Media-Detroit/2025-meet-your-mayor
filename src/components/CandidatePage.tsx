@@ -113,9 +113,18 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         </div>
       </div>
       <div className="container" style={{ maxWidth: "600px" }}>
+        <div className="eyebrow has-text-left my-2 is-flex is-align-items-center">
+          <div className="mr-3 is-flex-shrink-2">
+            Contact:
+          </div>{" "}
+          <SocialShareButtons />
+        </div>
         <div className="copy my-5 py-5">{formatContent(bio)}</div>
       </div>
-      <div className="container">
+      <div className="container" style={{maxWidth: "600px", margin: "auto"}}>
+        <h2 className="subhed">Notable responses</h2>
+      </div>
+      <div className="container mb-5">
         <div className="columns">
           {quotes.map((quoteInfo, i) => {
             const { subject, quote, source } = quoteInfo;
@@ -150,6 +159,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         </div>
       </div>
       <div className="container pt-5 mb-5" style={{ maxWidth: "600px" }}>
+        <h2 className="subhed">Favorite song with a Detroit connection</h2>
         {/* TODO: Update this */}
         <SpotifyEmbed
           title="Signed, Sealed, Delivered"

@@ -14,7 +14,7 @@ export type CandidateName = {
 export const kebabCase = (string: string) => {
   return string
     .replace(/\d+/g, " ")
-    .split(/ |\B(?=[A-Z])/)
+    .split(" ")
     .map((word) => word.toLowerCase())
     .join("-");
 };

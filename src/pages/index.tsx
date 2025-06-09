@@ -120,7 +120,7 @@ const Homepage = () => {
                 </a>
               </div>
               <h1
-                className="headline has-text-left mt-2"
+                className="headline has-text-left mt-2 mb-4"
                 style={{ maxWidth: "500px" }}
               >
                 About the Candidates

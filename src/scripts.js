@@ -28,6 +28,15 @@ const downloadGoogleDocContent = () => {
               // Remove element ending in X
               Object.entries(json)
                 .filter((element) => !element[0].endsWith("X"))
+                .map((rec) => {
+                  if (fileName !== "question") return rec;
+                  [1, 2, 3, 4, 5, 6].forEach((num) => {
+                    if (!rec[`option${num}`]) {
+                      rec[`option${num}`] = null;
+                    }
+                  });
+                  return rec;
+                })
                 .sort(([a, _a], [b, _b]) => {
                   if (fileName !== "question") return 0;
                   // Custom sorting to handle question order

@@ -10,7 +10,7 @@ const candidateList = require("./src/candidate-list.json");
 const kebabCase = (string) => {
   return string
     .replace(/\d+/g, " ")
-    .split(/ |\B(?=[A-Z])/)
+    .split(" ")
     .map((word) => word.toLowerCase())
     .join("-");
 };

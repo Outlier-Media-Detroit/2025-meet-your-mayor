@@ -39,7 +39,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
 
   if (!candidateInfo) return <></>;
 
-  const { website, bio, quotes } = candidateInfo;
+  const { bio, quotes } = candidateInfo;
 
   return (
     <PageLayout
@@ -92,9 +92,6 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
                 <b>{candidateScore}% match</b>
               </div>
             )}
-            <OutboundLink to={website}>
-              <button className="button mb-5">Campaign Website</button>
-            </OutboundLink>
             <Link to="/">
               <button className="button is-white mb-1">
                 {questionsLeftToAnswer.length === 0
@@ -114,14 +111,12 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
       </div>
       <div className="container" style={{ maxWidth: "600px" }}>
         <div className="eyebrow has-text-left my-2 is-flex is-align-items-center">
-          <div className="mr-3 is-flex-shrink-2">
-            Contact:
-          </div>{" "}
+          <div className="mr-3 is-flex-shrink-2">Contact:</div>{" "}
           <SocialShareButtons />
         </div>
         <div className="copy my-5 py-5">{formatContent(bio)}</div>
       </div>
-      <div className="container" style={{maxWidth: "600px", margin: "auto"}}>
+      <div className="container" style={{ maxWidth: "600px", margin: "auto" }}>
         <h2 className="subhed">Notable responses</h2>
       </div>
       <div className="container mb-5">
@@ -160,11 +155,23 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
       </div>
       <div className="container pt-5 mb-5" style={{ maxWidth: "600px" }}>
         <h2 className="subhed">Favorite song with a Detroit connection</h2>
-        {/* TODO: Update this */}
-        <SpotifyEmbed
-          title="Signed, Sealed, Delivered"
-          id="0kzhMZZNmxiLG7qyJhVBHB"
-        />
+        {candidateInfo.spotifyId && (
+          <SpotifyEmbed
+            title="Signed, Sealed, Delivered"
+            id={candidateInfo.spotifyId}
+          />
+        )}
+        {candidateInfo.youtubeId && (
+          <iframe
+            width="100%"
+            height="315"
+            src={`https://youtube.com/embed/${candidateInfo.youtubeId}`}
+            title=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        )}
       </div>
       <div className="container pt-5 is-flex is-flex-direction-column is-align-items-center">
         <CandidateSelectorMenu />

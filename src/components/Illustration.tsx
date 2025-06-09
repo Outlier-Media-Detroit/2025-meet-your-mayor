@@ -62,7 +62,12 @@ export const Bobblehead: React.FC<{
         <LazyLoadImage
           src={`${imgPathPrefix}-head-back.png`}
           className={classnames("illustration", candidatePath)}
-          wrapperClassName={classnames("image-wrapper", "top", candidatePath, "background")}
+          wrapperClassName={classnames(
+            "image-wrapper",
+            "top",
+            candidatePath,
+            "background"
+          )}
           style={{
             animationDelay: animationDelay,
           }}

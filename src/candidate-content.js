@@ -9,6 +9,7 @@ export const candidateContent = {
       "Water affordability | Barlow said the city should never shut off residents’ water, no matter what it costs taxpayers.{newParagraph}“Water is a basic human right, not a privilege tied to income,” he wrote. “My administration would prioritize structural solutions — such as income-based water rates, green infrastructure and public ownership models — to ensure long-term affordability and dignity for all Detroiters.”",
     quote3:
       "Transit | As mayor, Barlow wants to increase the frequency of all bus routes. “Frequency is the core driver of trust and usability in public transit,” he wrote. “Reliable, frequent transit is essential to equitable access to jobs, health care and education — especially Detroiters without a vehicle.”",
+    spotifyId: "5RKQ5NdjSh2QzD4MaunT91",
     quizResponse1: "2",
     quizResponse2: "3",
     quizResponse3: "1",
@@ -40,6 +41,7 @@ export const candidateContent = {
       "Immigration | Landin believes the city should limit cooperation with federal immigration authorities.{newParagraph}“My response is confined to our current situation,” he wrote for Outlier Media’s candidate questionnaire. “This is a complex matrix of variables, and there is no one answer applicable to every case. In the case of our current environment, we are undermining our own laws, specifically those as relate to due process as provided for in the 5th and 14th amendments.”",
     quote3:
       "Electricity affordability | Landin wants to explore publicly owned renewable energy initiatives to reduce the cost of electricity.{newParagraph}“The city could contribute to the entire scope of promoting innovation in alternative energy and sustainability, while creating a competitive environment for existing providers. This would impact education, workforce training, entrepreneurship, and make the city a very real partner in our new innovation economy.”",
+    spotifyId: "0WfMlP2YNlbQZBxtyYVJO5",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "1",
@@ -71,6 +73,7 @@ export const candidateContent = {
       "Immigration | Jenkins thinks the city should not dedicate resources to immigration enforcement, but should cooperate with federal officials who have a valid warrant.{newParagraph}“Detroit should be a welcoming city, and we should work with nonprofits to ensure immigrants know their rights (in the correct language) and have resources if or when confronted by immigration officials,” she wrote.",
     quote3:
       "Affordable housing | “More affordable housing is essential, but as cost of living rises, we have to consider rent control,” Jenkins wrote. “More affordable housing is a long-term solution, but rent control is doable in the near term.”",
+    youtubeId: "gcZf2CLxbgA",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -102,6 +105,7 @@ export const candidateContent = {
       "Water affordability | “As mayor, I will prioritize expanding Detroit’s water affordability program with a stable city-funded reserve and partnerships with philanthropic organizations, working with state and federal partners to unlock grant funding and modernizing billing systems to provide better transparency,” Perkins wrote in response to Outlier Media’s candidate questionnaire.",
     quote3:
       "Transit | “Improving frequency and reliability across all bus routes is the most immediate way to restore trust in the city’s transit system and ensure Detroiters can access work, school, health care and daily needs without delay or hardship,” Perkins wrote.",
+    spotifyId: "3qvuhGBr6BSdGPQsdf2gLr",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -133,6 +137,7 @@ export const candidateContent = {
       "Electricity affordability | Haashiim wants to explore publicly owned renewable energy initiatives to reduce the cost of electricity. “Detroit must expand its lighting department and use alternative sources of power, such as a solar tax credit, to compete with DTE,” Haashiim wrote.",
     quote3:
       "Water affordability | “Having water is a right, not an option!” Haashiim wrote. “Residents should only pay for sewage.”",
+    spotifyId: "687YZan9Gol1UVvbpUSO6Y",
     quizResponse1: "1",
     quizResponse2: "3",
     quizResponse3: "3",
@@ -164,6 +169,7 @@ export const candidateContent = {
       "Neighborhood improvement | “I will prioritize neighborhood development by targeting legacy institutions with technical and funding assistance,” Sheffield wrote.{newParagraph}“Motor City Match expansion and an Office of Small Business Development will support our entrepreneurs. By focusing on anchored development and empowering small businesses, we’ll achieve strong neighborhood revitalization, ending the ‘tale of two cities.’”",
     quote3:
       "Community benefits ordinance | “CBA enforcement is lacking. Developers rarely comply, and tracking is poor,” Sheffield wrote{newParagraph}“My administration will create a dedicated Mayor’s Office capacity to track compliance. We won’t prioritize development ‘at all costs.’ Developers will understand that incentives must balance with realistic, trackable community benefits developed with neighborhoods, avoiding overpromising.”",
+    youtubeId: "f9kiXtK2-vw",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -195,6 +201,7 @@ export const candidateContent = {
       "Safety | “No-guns signs should be posted at bars, schools, parks and more public places. It’s the law, but it’s mandatory to post it, because some people can’t own guns and the law still protects them, and everyone doesn’t know it’s the law and can’t read,” Simpson wrote.",
     quote3:
       "Right to renew | Simpson supports a requirement for landlords to offer lease renewals, with some protections for landlords. “Some tenants do not deserve right to renew,” Simpson said.",
+    youtubeId: "f9kiXtK2-vw",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "3",
@@ -226,6 +233,7 @@ export const candidateContent = {
       "Affordable housing | “I will convene philanthropy, business, labor and community partnerships to set up a housing strike force to build 10,000 affordable housing units,” Kinloch wrote. “We will build the largest down-payment assistance program in city history and provide low-interest loans to help teachers, police officers, first responders and working families live in Detroit.”",
     quote3:
       "Sidewalk repair | “We have to make Detroit walkable,” Kinloch wrote. “Last year, Detroit was named one of the most dangerous cities in the country for pedestrians.{newParagraph}“My administration will identify hotspots for pedestrian accidents and fatalities and improve the walking infrastructure in those areas, things like expanding sidewalks and increasing the frequency of crosswalks. We will also prioritize sidewalks used the most.”",
+    spotifyId: "62aEe7mLn8wdWr0o26shwx",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -257,6 +265,7 @@ export const candidateContent = {
       "Immigration | Craig said the city should not dedicate resources to immigration enforcement but should cooperate with federal officials when there is a valid warrant for a specific individual.{newParagraph}“Detroit should remain a welcoming city to legal immigrants who contribute to our community,” he wrote. “At the same time, I support working with federal authorities to address illegal immigrants who commit violent crimes. Public safety must come first, while treating all people with dignity and fairness.”",
     quote3:
       "Community benefits ordinance | “It’s a valuable tool for ensuring that large-scale developments contribute positively to our neighborhoods. I support its goal of fostering community engagement and delivering tangible benefits,” Craig wrote.{newParagraph}“However, to maintain Detroit’s appeal to developers and ensure projects proceed smoothly, we must strike a balance that supports both community interests and economic growth.”",
+    spotifyId: "4N0TP4Rmj6QQezWV88ARNJ",
     quizResponse1: "3",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -288,6 +297,7 @@ export const candidateContent = {
       "Detroit Land Bank Authority | “The Land Bank needs a complete overhaul. It’s too difficult for residents to access properties, and too many sit vacant for too long,” Boyd stated. “We must create a system that puts Detroiters first — making ownership affordable, transparent, and focused on stabilizing neighborhoods.”",
     quote3:
       "Water affordability | Boyd said the city should devote more of its money to helping people pay for water if they can’t afford it; however, he said it should not ban shut-offs.{newParagraph}“Water is a basic human right. The city must invest more in helping residents afford their bills while balancing fiscal responsibility. Shut-offs should be the last resort, with strong assistance programs ensuring no family goes without water due to poverty,” he said.",
+    spotifyId: "2w5fsswM1MlJu5rV44Qsf1",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -319,6 +329,7 @@ export const candidateContent = {
       "Property speculation | “Speculators and negligent landowners are holding Detroit back. As mayor, I’ll deliver comprehensive tax reform — raising taxes on blight and lowering them for families and small businesses,” Durhal wrote. “My plan will unlock vacant land for safe, walkable neighborhoods with thriving main streets, all while balancing the budget and improving quality of life citywide.”",
     quote3:
       "Overassessments | “Although making direct payments or reimbursements to overassessed residents is unconstitutional, I will create a Detroit Property Tax Relief Fund to develop a trust that would allow for reimbursement and/or tax rebates in some form,” Durhal wrote.{newParagraph}“Reimbursement will take legislative action in Lansing which my administration will make a priority to ensure residents who were overassessed are made whole.”",
+    spotifyId: "3LwwCSGgp8QkLsSgmx5iRf",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",

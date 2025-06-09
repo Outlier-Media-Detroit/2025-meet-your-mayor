@@ -62,61 +62,62 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             Meet your mayor
           </Link>
         </div>
-        <h1 className="headline has-text-left mt-1">{candidateName}</h1>
-        <div className="columns candidate-page-intro">
-          <div className="column is-two-fifths-desktop is-half-tablet">
-            <figure
-              className="image"
+        <div className="candidate-page-intro candidate-page-content">
+          <h1 className="headline has-text-left my-2">{candidateName}</h1>
+          <figure
+            className="image"
+            style={{
+              // This reduces the flickr affect when the photo is still loading
+              // by maintaining a certain height on the container
+              minHeight: "275px",
+            }}
+          >
+            <LazyLoadImage
+              src={`../photos/${kebabCase(candidateName)}-square.jpg`}
+              effect="blur"
+              alt={candidateName}
               style={{
-                // This reduces the flickr affect when the photo is still loading
-                // by maintaining a certain height on the container
-                minHeight: "275px",
+                maxWidth: "275px",
+                maxHeight: "275px",
+                borderRadius: "100%",
               }}
-            >
-              <LazyLoadImage
-                src={`../photos/${kebabCase(candidateName)}-square.jpg`}
-                effect="blur"
-                alt={candidateName}
-                style={{
-                  maxWidth: "275px",
-                  maxHeight: "275px",
-                  borderRadius: "100%",
-                }}
-              />
-            </figure>
-          </div>
-          <div className="column is-flex-direction-column is-align-items-center">
-            {questionsLeftToAnswer.length === 0 && (
-              <div className="eyebrow is-align-items-center mb-5">
-                Based on your quiz results, you're a{" "}
-                <b>{candidateScore}% match</b>
-              </div>
-            )}
-            <Link to="/">
-              <button className="button is-white mb-1">
-                {questionsLeftToAnswer.length === 0
-                  ? `Revisit the quiz`
-                  : "See if you're a match"}
-              </button>
-            </Link>
-
-            <div className="eyebrow has-text-left mt-5 mb-2 is-flex is-align-items-center">
-              <div className="mr-3 is-flex-shrink-2">
-                Share Meet Your Mayor:
-              </div>{" "}
-              <SocialShareButtons />
+            />
+          </figure>
+          {questionsLeftToAnswer.length === 0 && (
+            <div className="eyebrow is-align-items-center mb-5">
+              Based on your quiz results, you're a{" "}
+              <b>{candidateScore}% match</b>
             </div>
+          )}
+          <Link to="/">
+            <button className="button is-white mb-1">
+              {questionsLeftToAnswer.length === 0
+                ? `Revisit the quiz`
+                : "See if you're a match"}
+            </button>
+          </Link>
+
+          <div className="eyebrow has-text-left mt-5 mb-2 is-flex is-align-items-center">
+            <div className="mr-3 is-flex-shrink-2">Share Meet Your Mayor:</div>{" "}
+            <SocialShareButtons />
           </div>
         </div>
       </div>
-      <div className="container" style={{ maxWidth: "600px" }}>
-        <div className="eyebrow has-text-left my-2 is-flex is-align-items-center">
+      <div className="container candidate-page-content">
+        <div className="copy mt-5 pt-5">
+          <span className="has-text-weight-bold">Age:</span> 37 &bull;{" "}
+          <span className="has-text-weight-bold">Lives in:</span> Lafayette Park
+        </div>
+        <div className="copy">{formatContent(bio)}</div>
+        <div className="eyebrow has-text-left mt-5 is-flex is-align-items-center">
           <div className="mr-3 is-flex-shrink-2">Contact:</div>{" "}
           <SocialShareButtons />
         </div>
-        <div className="copy my-5 py-5">{formatContent(bio)}</div>
       </div>
-      <div className="container" style={{ maxWidth: "600px", margin: "auto" }}>
+      <div
+        className="container candidate-page-content mt-5 pt-5"
+        style={{ margin: "auto" }}
+      >
         <h2 className="subhed">Notable responses</h2>
       </div>
       <div className="container mb-5">

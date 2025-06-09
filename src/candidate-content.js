@@ -2,7 +2,9 @@ export const candidateContent = {
   candidateJonathan: {
     name: "Jonathan Barlow",
     website: "",
-    bio: 'Age: 40 · Lives in: Southwest Detroit{newParagraph}Jonathan Barlow grew up all over Detroit and graduated from Renaissance High School. He’s the founder of entertainment business The WKND Co. and Let’s Talk Roundtable. This is Barlow’s second time running for public office; he also ran for Detroit City Council in 2009.{newParagraph}Barlow is <a href="https://www.votebarlow.com/platform/">running on a platform</a> of starting a $500 million fund for businesses in the city, creating jobs and building affordable housing.{newParagraph}Contact: <a href="https://www.votebarlow.com/platform/">Website</a> · <a href="https://www.instagram.com/votebarlow/">Instagram</a> · <a href="mailto:info@votebarlow.com">Email</a>',
+    bio: 'Jonathan Barlow grew up all over Detroit and graduated from Renaissance High School. He’s the founder of entertainment business The WKND Co. and Let’s Talk Roundtable. This is Barlow’s second time running for public office; he also ran for Detroit City Council in 2009.{newParagraph}Barlow is <a href="https://www.votebarlow.com/platform/">running on a platform</a> of starting a $500 million fund for businesses in the city, creating jobs and building affordable housing.{newParagraph}Contact: <a href="https://www.votebarlow.com/platform/">Website</a> · <a href="https://www.instagram.com/votebarlow/">Instagram</a> · <a href="mailto:info@votebarlow.com">Email</a>',
+    age: "40",
+    neighborhood: "Southwest Detroit",
     quote1:
       "Electricity affordability | Barlow said, as mayor, he would explore publicly owned renewable energy initiatives to reduce the cost of electricity. “By investing in community-owned renewable energy, Detroit can create long-term resilience, energy independence and affordability,” he stated in response to Outlier Media’s candidate questionnaire.",
     quote2:
@@ -34,7 +36,9 @@ export const candidateContent = {
   },
   candidateRogelio: {
     name: "Rogelio Landin",
-    bio: 'Age: 71 · Lives in: Downtown{newParagraph}Rogelio Landin is running as a write-in candidate for mayor. The Southwest Detroit native graduated from Cass Technical High School and now lives downtown.{newParagraph}He’s a longtime activist and businessman who in recent years has served on five neighborhood advisory councils — which are responsible for negotiating with developers on major projects. He’s also on the newly formed Tenants’ Rights Commission.{newParagraph}Landin is <a href="https://landinformayor.com/vision">running on a platform</a> of annexing 28 “distressed” communities surrounding Detroit, giving the mayor greater control over the city’s public school district, and building a World Trade Center in Detroit.{newParagraph}Contact: <a href="https://landinformayor.com/">Website</a> · <a href="mailto:landinformayor@gmail.com">Email</a>',
+    bio: 'Rogelio Landin is running as a write-in candidate for mayor. The Southwest Detroit native graduated from Cass Technical High School and now lives downtown.{newParagraph}He’s a longtime activist and businessman who in recent years has served on five neighborhood advisory councils — which are responsible for negotiating with developers on major projects. He’s also on the newly formed Tenants’ Rights Commission.{newParagraph}Landin is <a href="https://landinformayor.com/vision">running on a platform</a> of annexing 28 “distressed” communities surrounding Detroit, giving the mayor greater control over the city’s public school district, and building a World Trade Center in Detroit.{newParagraph}Contact: <a href="https://landinformayor.com/">Website</a> · <a href="mailto:landinformayor@gmail.com">Email</a>',
+    age: "71",
+    neighborhood: "Downtown",
     quote1:
       "Community benefits ordinance | Landin says the community benefits ordinance does not need any changes.{newParagraph}“As the most experienced person in the city having been elected and appointed to five NACs and supporting two others, I have been involved in over $12 billion in development projects downtown and the Gordie Howe (International Bridge),” he wrote. “It’s working as it was designed to and voted for by the citizens of Detroit.”",
     quote2:
@@ -66,7 +70,9 @@ export const candidateContent = {
   },
   candidateSaunteel: {
     name: "Saunteel Jenkins",
-    bio: 'Age: 54 · Lives in: Elmwood Park{newParagraph}Saunteel Jenkins grew up on Detroit’s westside and graduated from Cass Technical High School. She now lives on the eastside.{newParagraph}She served as chief of staff for former City Council President Maryann Mahaffey and later became council president herself. She resigned during her second term, as the city was emerging from bankruptcy, to become CEO of The Heat and Warmth Fund, where she worked for 10 years.{newParagraph}Jenkins is <a href="https://www.saunteeljenkins.com/saunteel-six">running on a platform</a> of a master plan for each of the city’s seven districts and providing resources for jobs, apprenticeships and businesses.{newParagraph}Contact: <a href="https://www.saunteeljenkins.com/">Website</a> · <a href="mailto:info@saunteeljenkins.com">Email</a>',
+    bio: 'Saunteel Jenkins grew up on Detroit’s westside and graduated from Cass Technical High School. She now lives on the eastside.{newParagraph}She served as chief of staff for former City Council President Maryann Mahaffey and later became council president herself. She resigned during her second term, as the city was emerging from bankruptcy, to become CEO of The Heat and Warmth Fund, where she worked for 10 years.{newParagraph}Jenkins is <a href="https://www.saunteeljenkins.com/saunteel-six">running on a platform</a> of a master plan for each of the city’s seven districts and providing resources for jobs, apprenticeships and businesses.{newParagraph}Contact: <a href="https://www.saunteeljenkins.com/">Website</a> · <a href="mailto:info@saunteeljenkins.com">Email</a>',
+    age: "54",
+    neighborhood: "Elmwood Park",
     quote1:
       "Violence intervention | Jenkins believes sanctioned community groups, supported with government funding, are the best way to handle violence in the community.{newParagraph}“Because prevention is the most effective crime reduction strategy. You need safe spaces for kids, positive educational enrichment opportunities and career pathways for hope,” Jenkins wrote in response to Outlier Media’s candidate questionnaire. “Policing is part of the solution, but by the time police respond, it is reactive. We need to prevent violence in the first place.”",
     quote2:
@@ -98,7 +104,9 @@ export const candidateContent = {
   },
   candidateTodd: {
     name: "Todd Perkins",
-    bio: 'Age: 55 · Lives in: North End{newParagraph}Todd Perkins grew up on the eastside and still lives there. He graduated from University of Detroit Jesuit High School. Perkins is a lawyer and plans to step down from the law firm he runs if he’s elected mayor.{newParagraph}Perkins is <a href="https://perkinsforthepeople.com/vision/">running on a platform</a> of fiscal responsibility and accountability.{newParagraph}Contact: <a href="https://perkinsforthepeople.com/">Website</a> · <a href="mailto:info@perkinsforthepeople.com">Email</a>',
+    bio: 'Todd Perkins grew up on the eastside and still lives there. He graduated from University of Detroit Jesuit High School. Perkins is a lawyer and plans to step down from the law firm he runs if he’s elected mayor.{newParagraph}Perkins is <a href="https://perkinsforthepeople.com/vision/">running on a platform</a> of fiscal responsibility and accountability.{newParagraph}Contact: <a href="https://perkinsforthepeople.com/">Website</a> · <a href="mailto:info@perkinsforthepeople.com">Email</a>',
+    age: "55",
+    neighborhood: "North End",
     quote1:
       "Immigration | Perkins said the city should not dedicate resources to immigration enforcement, but should cooperate with federal officials when there is a valid warrant for a specific individual.{newParagraph}As mayor, he said he would “ensure Detroit Police and city agencies prioritize local safety over federal immigration priorities, protect immigrant families from unlawful targeting or profiling and work with community organizations to support access to services, housing and legal protection.”",
     quote2:
@@ -130,7 +138,9 @@ export const candidateContent = {
   },
   candidateJoel: {
     name: "Joel Haashiim",
-    bio: 'Age: 75 · Lives in: Northwest Detroit{newParagraph}Joel Haashiim is an entrepreneur and wholesaler who graduated from Thomas M. Cooley High School. He grew up on the city’s eastside.{newParagraph}Haashiim is <a href="https://joelhformayor.com/issues.html">running on a platform</a> of ordering a forensic audit of city finances and budget, creating a “true” policy for community benefits agreements and restoring citizen’s district councils.{newParagraph}Contact: <a href="https://joelhformayor.com/">Website</a> · <a href="mailto:info@joelhformayor.com">Email</a>',
+    bio: 'Joel Haashiim is an entrepreneur and wholesaler who graduated from Thomas M. Cooley High School. He grew up on the city’s eastside.{newParagraph}Haashiim is <a href="https://joelhformayor.com/issues.html">running on a platform</a> of ordering a forensic audit of city finances and budget, creating a “true” policy for community benefits agreements and restoring citizen’s district councils.{newParagraph}Contact: <a href="https://joelhformayor.com/">Website</a> · <a href="mailto:info@joelhformayor.com">Email</a>',
+    age: "75",
+    neighborhood: "Northwest Detroit",
     quote1:
       "Property speculation | Haashiim said he would push for tax changes such as the land value tax to disincentivize speculation.{newParagraph}“Give purchasers a land use agreement with time frames ... to develop the property purchase. If the land is not developed within the time frame, then the city will foreclose on the property,” he wrote in response to Outlier Media’s candidate questionnaire.",
     quote2:
@@ -162,7 +172,9 @@ export const candidateContent = {
   },
   candidateMary: {
     name: "Mary Sheffield",
-    bio: 'Age: 37 · Lives in: Lafayette Park{newParagraph}Mary Sheffield is the Detroit City Council president, representing District 5. She grew up on the westside and graduated from Southfield-Lathrup High School.{newParagraph}Sheffield is <a href="https://www.marysheffield.com/vision">running on a platform</a> of addressing root causes of crime, restoring neighborhoods through development and homeownership, and creating more opportunities for jobs and entrepreneurship.{newParagraph}Contact: <a href="https://www.marysheffield.com/background">Website</a> · <a href="https://www.instagram.com/marysheffield/">Instagram</a> · <a href="mailto:mary@marysheffield.com">Email</a>',
+    bio: 'Mary Sheffield is the Detroit City Council president, representing District 5. She grew up on the westside and graduated from Southfield-Lathrup High School.{newParagraph}Sheffield is <a href="https://www.marysheffield.com/vision">running on a platform</a> of addressing root causes of crime, restoring neighborhoods through development and homeownership, and creating more opportunities for jobs and entrepreneurship.{newParagraph}Contact: <a href="https://www.marysheffield.com/background">Website</a> · <a href="https://www.instagram.com/marysheffield/">Instagram</a> · <a href="mailto:mary@marysheffield.com">Email</a>',
+    age: "37",
+    neighborhood: "Lafayette Park",
     quote1:
       "Traffic safety | “Low-income Detroiters face high insurance; more penalties will worsen poverty,” Sheffield wrote in response to Outlier Media’s candidate questionnaire. “I’ll assess driver’s education access to understand if cost is a barrier, launch a speeding awareness campaign and add signage and monitors to problem areas.{newParagraph}“We need speed bumps and redesigned streets due to dangerous layouts. I’ll support targeted speed patrols only with community and DPD agreement on stop procedures.”",
     quote2:
@@ -194,7 +206,9 @@ export const candidateContent = {
   },
   candidateDanetta: {
     name: "DaNetta Simpson",
-    bio: 'Age: 53 · Lives in: Eastside{newParagraph}DaNetta Simpson grew up on the eastside and graduated from Kettering High School. She’s a retired cosmetologist. This is her third time running for mayor.{newParagraph}Simpson is running on a platform of neighborhood development and stricter gun laws.{newParagraph}Contact: <a href="mailto:danettasimpson1552@gmail.com">Email</a>',
+    bio: 'DaNetta Simpson grew up on the eastside and graduated from Kettering High School. She’s a retired cosmetologist. This is her third time running for mayor.{newParagraph}Simpson is running on a platform of neighborhood development and stricter gun laws.{newParagraph}Contact: <a href="mailto:danettasimpson1552@gmail.com">Email</a>',
+    age: "53",
+    neighborhood: "Eastside",
     quote1:
       "Violence intervention | In response to Outlier Media’s candidate questionnaire, Simpson said police should be most responsible for violence intervention, “because community groups will conspire with community criminals and commit crimes just to receive funds.”",
     quote2:
@@ -226,7 +240,9 @@ export const candidateContent = {
   },
   candidateSolomon: {
     name: "Solomon Kinloch",
-    bio: 'Age: 51 · Lives in: Downtown{newParagraph}Solomon Kinloch is the pastor of Triumph Church. He intends to step down from day-to-day operations if elected mayor, but said he would continue to preach on Sundays. He grew up on Detroit’s westside and graduated from Northwestern High School.{newParagraph}Kinloch is <a href="https://www.kinlochformayor.com/">running on a platform</a> of creating workforce training and new jobs, helping open 10 new grocery stores and building 10,000 affordable housing units.{newParagraph}Contact: <a href="https://www.kinlochformayor.com/">Website</a> · <a href="https://www.instagram.com/kinloch4mayor/">Instagram</a> · <a href="mailto:info@kinlochformayor.com">Email</a>',
+    bio: 'Solomon Kinloch is the pastor of Triumph Church. He intends to step down from day-to-day operations if elected mayor, but said he would continue to preach on Sundays. He grew up on Detroit’s westside and graduated from Northwestern High School.{newParagraph}Kinloch is <a href="https://www.kinlochformayor.com/">running on a platform</a> of creating workforce training and new jobs, helping open 10 new grocery stores and building 10,000 affordable housing units.{newParagraph}Contact: <a href="https://www.kinlochformayor.com/">Website</a> · <a href="https://www.instagram.com/kinloch4mayor/">Instagram</a> · <a href="mailto:info@kinlochformayor.com">Email</a>',
+    age: "51",
+    neighborhood: "Downtown",
     quote1:
       "Safety | “For too long, politicians have treated poverty as something to manage instead of something we solve,” Kinloch wrote in response to Outlier Media’s candidate questionnaire.{newParagraph}“Full employment and increased opportunity for everyone, is the best way to reduce crime. A Kinloch administration would prioritize training for unemployed residents, with dedicated outreach in high-unemployment ZIP codes.”",
     quote2:
@@ -258,7 +274,9 @@ export const candidateContent = {
   },
   candidateJames: {
     name: "James Craig",
-    bio: 'Age: 68 · Lives in: Marina District{newParagraph}James Craig is a former Detroit deputy mayor and police chief. He grew up on the westside and graduated from Cass Technical High School.{newParagraph}He’s <a href="https://www.chiefcraigformayor.com/vision">running on a platform</a> of expanding community policing efforts, revitalizing neighborhoods and cutting red tape for businesses.{newParagraph}Contact: <a href="https://www.chiefcraigformayor.com/">Website</a> · <a href="https://www.facebook.com/@james.craig.18">Facebook</a> · <a href="mailto:info@chiefcraigformayor.com">Email</a>',
+    bio: 'James Craig is a former Detroit deputy mayor and police chief. He grew up on the westside and graduated from Cass Technical High School.{newParagraph}He’s <a href="https://www.chiefcraigformayor.com/vision">running on a platform</a> of expanding community policing efforts, revitalizing neighborhoods and cutting red tape for businesses.{newParagraph}Contact: <a href="https://www.chiefcraigformayor.com/">Website</a> · <a href="https://www.facebook.com/@james.craig.18">Facebook</a> · <a href="mailto:info@chiefcraigformayor.com">Email</a>',
+    age: "68",
+    neighborhood: "Marina District",
     quote1:
       "Violence intervention | “Violence intervention isn't the responsibility of just one group. But if I had to choose who should be most responsible, I’d say it starts at home with family and then a broader partnership, with community and police,” Craig wrote in response to Outlier Media’s candidate questionnaire.{newParagraph}“Families and neighbors are also on the front lines. When communities are strong, when people care and watch out for one another, crime drops.”",
     quote2:
@@ -290,7 +308,9 @@ export const candidateContent = {
   },
   candidateArnold: {
     name: "Arnold Boyd",
-    bio: 'Age: 45 · Lives in: Westside{newParagraph}Arnold Boyd grew up in Southwest Detroit and graduated from River Rouge High School. He founded the Student Transportation Services Co.{newParagraph}Boyd is <a href="https://www.arnoldboyd.com/initiatives">running on a platform</a> of repairing relationships between community and police, creating affordable housing and supporting small businesses.{newParagraph}Contact: <a href="https://www.arnoldboyd.com/">Website</a> · <a href="https://www.instagram.com/thearnoldboyd/">Instagram</a> · <a href="mailto:campaign@arnoldboyd.com">Email</a>',
+    bio: 'Arnold Boyd grew up in Southwest Detroit and graduated from River Rouge High School. He founded the Student Transportation Services Co.{newParagraph}Boyd is <a href="https://www.arnoldboyd.com/initiatives">running on a platform</a> of repairing relationships between community and police, creating affordable housing and supporting small businesses.{newParagraph}Contact: <a href="https://www.arnoldboyd.com/">Website</a> · <a href="https://www.instagram.com/thearnoldboyd/">Instagram</a> · <a href="mailto:campaign@arnoldboyd.com">Email</a>',
+    age: "45",
+    neighborhood: "Westside",
     quote1:
       "Immigration | “Detroit should focus on building trust with all residents,” Boyd wrote in response to Outlier Media’s candidate questionnaire. “We shouldn't use city resources for immigration enforcement but will cooperate when a valid warrant exists. This balances public safety with protecting immigrant communities from fear and discrimination.”",
     quote2:
@@ -322,7 +342,9 @@ export const candidateContent = {
   },
   candidateFred: {
     name: "Fred Durhal III",
-    bio: 'Age: 41 · Lives in: Westside{newParagraph}Fred Durhal grew up on the city’s eastside and westside, and graduated from the Detroit School of Arts. He is a former state legislator and current city councilmember for District 7.{newParagraph}Durhal is running on a platform of property tax reform, job creation and housing affordability.{newParagraph}Contact: <a href="https://durhalfordetroit.com/">Website</a> · <a href="https://www.instagram.com/durhaldelivers/">Instagram</a> · <a href="https://www.facebook.com/durhaldelivers">Facebook</a> · <a href="mailto:fdurhalcampaign@gmail.com">Email</a>',
+    bio: 'Fred Durhal grew up on the city’s eastside and westside, and graduated from the Detroit School of Arts. He is a former state legislator and current city councilmember for District 7.{newParagraph}Durhal is running on a platform of property tax reform, job creation and housing affordability.{newParagraph}Contact: <a href="https://durhalfordetroit.com/">Website</a> · <a href="https://www.instagram.com/durhaldelivers/">Instagram</a> · <a href="https://www.facebook.com/durhaldelivers">Facebook</a> · <a href="mailto:fdurhalcampaign@gmail.com">Email</a>',
+    age: "41",
+    neighborhood: "Westside",
     quote1:
       "Community benefits ordinance | Durhal said the community benefits ordinance (CBO) is too onerous for developers.{newParagraph}“Detroit’s CBO helps bring resources to neighborhoods as new developments rise,” he stated in response to Outlier Media’s candidate questionnaire.“To make it work, we must balance the needs of residents and developers, ensuring the ordinance delivers real benefits while keeping Detroit attractive to private investment and driving our city’s resurgence forward.”",
     quote2:

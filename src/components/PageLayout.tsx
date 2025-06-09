@@ -190,19 +190,14 @@ const Analytics = () => (
     {/* Google Analytics & Google Tag Manager: */}
     <Script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-G0ZNNV3GTX"
+      src="https://www.googletagmanager.com/gtag/js?id=GT-T5MGVZ8"
     />
     <Script>
       {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-G0ZNNV3GTX');
-        dataLayer.push({
-          'Author': 'Alyssa Katz:Mia Hollie:Sam Rabiyah:Richard Kim',
-          'Primary_Group': 'Campaign 2023',
-          'Type': 'Interactive'
-        });`}
+        gtag('config', 'GT-T5MGVZ8');`}
     </Script>
     {/* Parse.ly Analytics: */}
     <Script id="parsely-cfg" src="//cdn.parsely.com/keys/thecity.nyc/p.js" />
@@ -239,7 +234,7 @@ export const PageLayout: React.FC<{
 
   const siteName = customMetadata?.siteName || process.env.GATSBY_SITE_NAME;
   const shareImage = `${process.env.GATSBY_DOMAIN}${process.env.GATSBY_SLUG}/${
-    customMetadata?.shareImageFilename || "meet-your-mayor.jpg"
+    customMetadata?.shareImageFilename || "social-image.png"
   }`;
   const seoHeadline =
     customMetadata?.seoHeadline || process.env.GATSBY_SEO_HEADLINE;
@@ -296,8 +291,8 @@ export const PageLayout: React.FC<{
           "description": "${seoDescription}",
           "publisher": {
               "@type": "Organization",
-              "name": "THE CITY",
-              "url": "https://www.thecity.nyc/"
+              "name": "Outlier Media",
+              "url": "https://outliermedia.org/"
           },
           "author": ${author}
         }`}</script>

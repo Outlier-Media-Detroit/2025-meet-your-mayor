@@ -158,7 +158,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         <h2 className="subhed">Favorite song with a Detroit connection</h2>
         {candidateInfo.spotifyId && (
           <SpotifyEmbed
-            title="Signed, Sealed, Delivered"
+            title={candidateInfo.songTitle}
             id={candidateInfo.spotifyId}
           />
         )}
@@ -167,7 +167,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             width="100%"
             height="315"
             src={`https://youtube.com/embed/${candidateInfo.youtubeId}`}
-            title=""
+            title={candidateInfo.songTitle}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen

@@ -12,6 +12,7 @@ export const candidateContent = {
     quote3:
       "Transit | As mayor, Barlow wants to increase the frequency of all bus routes. “Frequency is the core driver of trust and usability in public transit,” he wrote. “Reliable, frequent transit is essential to equitable access to jobs, health care and education — especially Detroiters without a vehicle.”",
     spotifyId: "5RKQ5NdjSh2QzD4MaunT91",
+    songTitle: "“Don’t Stop Believin’” by Journey.",
     quizResponse1: "2",
     quizResponse2: "3",
     quizResponse3: "1",
@@ -46,6 +47,7 @@ export const candidateContent = {
     quote3:
       "Electricity affordability | Landin wants to explore publicly owned renewable energy initiatives to reduce the cost of electricity.{newParagraph}“The city could contribute to the entire scope of promoting innovation in alternative energy and sustainability, while creating a competitive environment for existing providers. This would impact education, workforce training, entrepreneurship, and make the city a very real partner in our new innovation economy.”",
     spotifyId: "0WfMlP2YNlbQZBxtyYVJO5",
+    songTitle: "“Welcome 2 Detroit” by Trick Trick, featuring Eminem.",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "1",
@@ -80,6 +82,8 @@ export const candidateContent = {
     quote3:
       "Affordable housing | “More affordable housing is essential, but as cost of living rises, we have to consider rent control,” Jenkins wrote. “More affordable housing is a long-term solution, but rent control is doable in the near term.”",
     youtubeId: "gcZf2CLxbgA",
+    songTitle:
+      "Detroit Academy of Arts and Sciences Choir’s rendition of “Empire State of Mind” by Jay-Z.",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -114,6 +118,7 @@ export const candidateContent = {
     quote3:
       "Transit | “Improving frequency and reliability across all bus routes is the most immediate way to restore trust in the city’s transit system and ensure Detroiters can access work, school, health care and daily needs without delay or hardship,” Perkins wrote.",
     spotifyId: "3qvuhGBr6BSdGPQsdf2gLr",
+    songTitle: "“Living for the City” by Stevie Wonder.",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -148,6 +153,7 @@ export const candidateContent = {
     quote3:
       "Water affordability | “Having water is a right, not an option!” Haashiim wrote. “Residents should only pay for sewage.”",
     spotifyId: "687YZan9Gol1UVvbpUSO6Y",
+    songTitle: "“I Wish” by Stevie Wonder.",
     quizResponse1: "1",
     quizResponse2: "3",
     quizResponse3: "3",
@@ -182,6 +188,7 @@ export const candidateContent = {
     quote3:
       "Community benefits ordinance | “CBA enforcement is lacking. Developers rarely comply, and tracking is poor,” Sheffield wrote{newParagraph}“My administration will create a dedicated Mayor’s Office capacity to track compliance. We won’t prioritize development ‘at all costs.’ Developers will understand that incentives must balance with realistic, trackable community benefits developed with neighborhoods, avoiding overpromising.”",
     youtubeId: "f9kiXtK2-vw",
+    songTitle: "“Hello Detroit” by Sammy Davis Jr.",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -216,6 +223,7 @@ export const candidateContent = {
     quote3:
       "Right to renew | Simpson supports a requirement for landlords to offer lease renewals, with some protections for landlords. “Some tenants do not deserve right to renew,” Simpson said.",
     youtubeId: "f9kiXtK2-vw",
+    songTitle: "“Hello Detroit” by Sammy Davis Jr.",
     quizResponse1: "1",
     quizResponse2: "2",
     quizResponse3: "3",
@@ -250,6 +258,7 @@ export const candidateContent = {
     quote3:
       "Sidewalk repair | “We have to make Detroit walkable,” Kinloch wrote. “Last year, Detroit was named one of the most dangerous cities in the country for pedestrians.{newParagraph}“My administration will identify hotspots for pedestrian accidents and fatalities and improve the walking infrastructure in those areas, things like expanding sidewalks and increasing the frequency of crosswalks. We will also prioritize sidewalks used the most.”",
     spotifyId: "62aEe7mLn8wdWr0o26shwx",
+    songTitle: "Aretha Franklin’s live rendition of “Amazing Grace.”",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -284,6 +293,7 @@ export const candidateContent = {
     quote3:
       "Community benefits ordinance | “It’s a valuable tool for ensuring that large-scale developments contribute positively to our neighborhoods. I support its goal of fostering community engagement and delivering tangible benefits,” Craig wrote.{newParagraph}“However, to maintain Detroit’s appeal to developers and ensure projects proceed smoothly, we must strike a balance that supports both community interests and economic growth.”",
     spotifyId: "4N0TP4Rmj6QQezWV88ARNJ",
+    songTitle: "“Superstition” by Stevie Wonder.",
     quizResponse1: "3",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -318,6 +328,7 @@ export const candidateContent = {
     quote3:
       "Water affordability | Boyd said the city should devote more of its money to helping people pay for water if they can’t afford it; however, he said it should not ban shut-offs.{newParagraph}“Water is a basic human right. The city must invest more in helping residents afford their bills while balancing fiscal responsibility. Shut-offs should be the last resort, with strong assistance programs ensuring no family goes without water due to poverty,” he said.",
     spotifyId: "2w5fsswM1MlJu5rV44Qsf1",
+    songTitle: "“Lose Yourself” by Eminem.",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",
@@ -352,6 +363,7 @@ export const candidateContent = {
     quote3:
       "Overassessments | “Although making direct payments or reimbursements to overassessed residents is unconstitutional, I will create a Detroit Property Tax Relief Fund to develop a trust that would allow for reimbursement and/or tax rebates in some form,” Durhal wrote.{newParagraph}“Reimbursement will take legislative action in Lansing which my administration will make a priority to ensure residents who were overassessed are made whole.”",
     spotifyId: "3LwwCSGgp8QkLsSgmx5iRf",
+    songTitle: "“Ain’t No Mountain High Enough” as sung by Diana Ross.",
     quizResponse1: "2",
     quizResponse2: "2",
     quizResponse3: "2",

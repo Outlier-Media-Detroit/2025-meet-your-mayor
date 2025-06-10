@@ -39,7 +39,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
 
   if (!candidateInfo) return <></>;
 
-  const { bio, quotes } = candidateInfo;
+  const { age, neighborhood, bio, quotes } = candidateInfo;
 
   return (
     <PageLayout
@@ -105,8 +105,8 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
       </div>
       <div className="container candidate-page-content">
         <div className="copy mt-5 pt-5">
-          <span className="has-text-weight-bold">Age:</span> 37 &bull;{" "}
-          <span className="has-text-weight-bold">Lives in:</span> Lafayette Park
+          <span className="has-text-weight-bold">Age:</span> {age} &bull;{" "}
+          <span className="has-text-weight-bold">Lives in:</span> {neighborhood}
         </div>
         <div className="copy">{formatContent(bio)}</div>
         <div className="eyebrow has-text-left mt-5 is-flex is-align-items-center">

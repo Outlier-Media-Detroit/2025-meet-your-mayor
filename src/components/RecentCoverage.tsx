@@ -1,6 +1,5 @@
 import React from "react";
 import { OutboundLink } from "./Links";
-import { track } from "@amplitude/analytics-browser";
 
 const THE_CITY_DONATION_URL = "https://donorbox.org/nycdonate";
 
@@ -41,9 +40,6 @@ export const RecentCoverage: React.FC = () => {
         <div
           className="button is-white is-small mt-3"
           aria-label="Donate to THE CITY"
-          onClick={() => {
-            track("Clicked THE CITY Donate button");
-          }}
         >
           Donate
         </div>

@@ -8,9 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import "../styles/app.scss";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Script } from "gatsby";
-import { init } from "@amplitude/analytics-browser";
 
-const AMPLITUDE_PUBLIC_KEY = "cd8c6e9c6e26111a843bec73acf6fc28";
 
 const OUTLIER_SITE_LINKS = {
   website: "https://outliermedia.org/",
@@ -199,8 +197,6 @@ const Analytics = () => (
 
         gtag('config', 'GT-T5MGVZ8');`}
     </Script>
-    {/* Parse.ly Analytics: */}
-    <Script id="parsely-cfg" src="//cdn.parsely.com/keys/thecity.nyc/p.js" />
   </>
 );
 
@@ -245,11 +241,6 @@ export const PageLayout: React.FC<{
   const socialDescription =
     customMetadata?.socialDescription || process.env.GATSBY_SOCIAL_DESCRIPTION;
   const author = customMetadata?.author || process.env.GATSBY_AUTHOR;
-
-  // Initialize Amplitude Tracking:
-  useEffect(() => {
-    init(AMPLITUDE_PUBLIC_KEY);
-  });
 
   return (
     <article id="main">

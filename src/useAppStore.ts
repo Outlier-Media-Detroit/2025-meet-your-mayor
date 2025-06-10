@@ -2,7 +2,6 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { QuizInput, ScoreCard } from "./components/QuizContent";
 import { questionContent } from "./question-content";
-import { track } from "@amplitude/analytics-browser";
 
 /**
  * A blank template to keep track of user's
@@ -48,7 +47,6 @@ export const useAppStore = create<AppState>()(
       setHighestVisibleQuestion: (highestVisibleQuestion) =>
         set({ highestVisibleQuestion }),
       resetAnswers: () => {
-        track(`Reset answers`);
         set({
           answers: blankAnswersList,
           favoriteTopics: [],

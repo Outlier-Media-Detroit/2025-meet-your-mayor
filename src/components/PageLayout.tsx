@@ -9,7 +9,6 @@ import "../styles/app.scss";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Script } from "gatsby";
 
-
 const OUTLIER_SITE_LINKS = {
   website: "https://outliermedia.org/",
   instagram: "https://www.instagram.com/media_outlier",

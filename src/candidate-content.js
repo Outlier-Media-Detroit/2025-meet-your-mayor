@@ -6,7 +6,7 @@ export const candidateContent = {
     age: "40",
     neighborhood: "Southwest Detroit",
     instagram: "https://www.instagram.com/votebarlow/",
-    email: "info@votebarlow.com",
+    email: "mailto:info@votebarlow.com",
     quote1:
       "Electricity affordability | Barlow said, as mayor, he would explore publicly owned renewable energy initiatives to reduce the cost of electricity. “By investing in community-owned renewable energy, Detroit can create long-term resilience, energy independence and affordability,” he stated in response to Outlier Media’s candidate questionnaire.",
     quote2:
@@ -41,7 +41,7 @@ export const candidateContent = {
     name: "Rogelio Landin",
     bio: 'Rogelio Landin is running as a write-in candidate for mayor. The Southwest Detroit native graduated from Cass Technical High School and now lives downtown.{newParagraph}He’s a longtime activist and businessman who in recent years has served on five neighborhood advisory councils — which are responsible for negotiating with developers on major projects. He’s also on the newly formed Tenants’ Rights Commission.{newParagraph}Landin is <a href="https://landinformayor.com/vision">running on a platform</a> of annexing 28 “distressed” communities surrounding Detroit, giving the mayor greater control over the city’s public school district, and building a World Trade Center in Detroit.',
     website: "https://landinformayor.com/",
-    email: "landinformayor@gmail.com",
+    email: "mailto:landinformayor@gmail.com",
     age: "71",
     neighborhood: "Downtown",
     quote1:
@@ -78,7 +78,7 @@ export const candidateContent = {
     name: "Saunteel Jenkins",
     bio: 'Saunteel Jenkins grew up on Detroit’s westside and graduated from Cass Technical High School. She now lives on the eastside.{newParagraph}She served as chief of staff for former City Council President Maryann Mahaffey and later became council president herself. She resigned during her second term, as the city was emerging from bankruptcy, to become CEO of The Heat and Warmth Fund, where she worked for 10 years.{newParagraph}Jenkins is <a href="https://www.saunteeljenkins.com/saunteel-six">running on a platform</a> of a master plan for each of the city’s seven districts and providing resources for jobs, apprenticeships and businesses.',
     website: "https://www.saunteeljenkins.com/",
-    email: "info@saunteeljenkins.com",
+    email: "mailto:info@saunteeljenkins.com",
     age: "54",
     neighborhood: "Elmwood Park",
     quote1:
@@ -116,7 +116,7 @@ export const candidateContent = {
     name: "Todd Perkins",
     bio: 'Todd Perkins grew up on the eastside and still lives there. He graduated from University of Detroit Jesuit High School. Perkins is a lawyer and plans to step down from the law firm he runs if he’s elected mayor.{newParagraph}Perkins is <a href="https://perkinsforthepeople.com/vision/">running on a platform</a> of fiscal responsibility and accountability.',
     website: "https://perkinsforthepeople.com/",
-    email: "info@perkinsforthepeople.com",
+    email: "mailto:info@perkinsforthepeople.com",
     age: "55",
     neighborhood: "North End",
     quote1:
@@ -153,7 +153,7 @@ export const candidateContent = {
     name: "Joel Haashiim",
     bio: 'Joel Haashiim is an entrepreneur and wholesaler who graduated from Thomas M. Cooley High School. He grew up on the city’s eastside.{newParagraph}Haashiim is <a href="https://joelhformayor.com/issues.html">running on a platform</a> of ordering a forensic audit of city finances and budget, creating a “true” policy for community benefits agreements and restoring citizen’s district councils.',
     website: "https://joelhformayor.com/",
-    email: "info@joelhformayor.com",
+    email: "mailto:info@joelhformayor.com",
     age: "75",
     neighborhood: "Northwest Detroit",
     quote1:
@@ -191,7 +191,7 @@ export const candidateContent = {
     bio: 'Mary Sheffield is the Detroit City Council president, representing District 5. She grew up on the westside and graduated from Southfield-Lathrup High School.{newParagraph}Sheffield is <a href="https://www.marysheffield.com/vision">running on a platform</a> of addressing root causes of crime, restoring neighborhoods through development and homeownership, and creating more opportunities for jobs and entrepreneurship.',
     website: "https://www.marysheffield.com/background",
     instagram: "https://www.instagram.com/marysheffield/",
-    email: "mary@marysheffield.com",
+    email: "mailto:mary@marysheffield.com",
     age: "37",
     neighborhood: "Lafayette Park",
     quote1:
@@ -227,7 +227,7 @@ export const candidateContent = {
   candidateDanetta: {
     name: "DaNetta Simpson",
     bio: "DaNetta Simpson grew up on the eastside and graduated from Kettering High School. She’s a retired cosmetologist. This is her third time running for mayor.{newParagraph}Simpson is running on a platform of neighborhood development and stricter gun laws.",
-    email: "danettasimpson1552@gmail.com",
+    email: "mailto:danettasimpson1552@gmail.com",
     age: "53",
     neighborhood: "Eastside",
     quote1:
@@ -265,7 +265,7 @@ export const candidateContent = {
     bio: 'Solomon Kinloch is the pastor of Triumph Church. He intends to step down from day-to-day operations if elected mayor, but said he would continue to preach on Sundays. He grew up on Detroit’s westside and graduated from Northwestern High School.{newParagraph}Kinloch is <a href="https://www.kinlochformayor.com/">running on a platform</a> of creating workforce training and new jobs, helping open 10 new grocery stores and building 10,000 affordable housing units.',
     website: "https://www.kinlochformayor.com/",
     instagram: "https://www.instagram.com/kinloch4mayor/",
-    email: "info@kinlochformayor.com",
+    email: "mailto:info@kinlochformayor.com",
     age: "51",
     neighborhood: "Downtown",
     quote1:
@@ -303,7 +303,7 @@ export const candidateContent = {
     bio: 'James Craig is a former Detroit deputy mayor and police chief. He grew up on the westside and graduated from Cass Technical High School.{newParagraph}He’s <a href="https://www.chiefcraigformayor.com/vision">running on a platform</a> of expanding community policing efforts, revitalizing neighborhoods and cutting red tape for businesses.',
     website: "https://www.chiefcraigformayor.com/",
     facebook: "https://www.facebook.com/@james.craig.18",
-    email: "info@chiefcraigformayor.com",
+    email: "mailto:info@chiefcraigformayor.com",
     age: "68",
     neighborhood: "Marina District",
     quote1:
@@ -341,7 +341,7 @@ export const candidateContent = {
     bio: 'Arnold Boyd grew up in Southwest Detroit and graduated from River Rouge High School. He founded the Student Transportation Services Co.{newParagraph}Boyd is <a href="https://www.arnoldboyd.com/initiatives">running on a platform</a> of repairing relationships between community and police, creating affordable housing and supporting small businesses.',
     website: "https://www.arnoldboyd.com/",
     instagram: "https://www.instagram.com/thearnoldboyd/",
-    email: "campaign@arnoldboyd.com",
+    email: "mailto:campaign@arnoldboyd.com",
     age: "45",
     neighborhood: "Westside",
     quote1:
@@ -380,7 +380,7 @@ export const candidateContent = {
     website: "https://durhalfordetroit.com/",
     instagram: "https://www.instagram.com/durhaldelivers/",
     facebook: "https://www.facebook.com/durhaldelivers",
-    email: "fdurhalcampaign@gmail.com",
+    email: "mailto:fdurhalcampaign@gmail.com",
     age: "41",
     neighborhood: "Westside",
     quote1:

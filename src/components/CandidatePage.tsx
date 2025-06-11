@@ -40,7 +40,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
   if (!candidateInfo) return <></>;
 
   const { age, neighborhood, bio, quotes } = candidateInfo;
-  const contacts = ["website", "instagram", "facebook", "instagram"]
+  const contacts = ["website", "instagram", "facebook", "email"]
     .filter((c) => !!candidateInfo[c])
     .map((contact) => ({
       label: contact.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase()),
@@ -115,15 +115,16 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           <span className="has-text-weight-bold">Lives in:</span> {neighborhood}
         </div>
         <div className="copy">{formatContent(bio)}</div>
-        <div className="copy mt-5 pt-5">
-          {/* TODO: Fix color */}
-          <span className="has-text-weight-bold">Contact:</span>{" "}
-          {contacts.map(({ label, value }, index) => (
-            <>
-              <a href={value}>{label}</a>{" "}
-              {index < contacts.length - 1 ? <>&bull; </> : null}
-            </>
-          ))}
+        <div className="copy mt-5">
+          <p>
+            <span className="has-text-weight-bold">Contact:</span>{" "}
+            {contacts.map(({ label, value }, index) => (
+              <>
+                <a href={value}>{label}</a>{" "}
+                {index < contacts.length - 1 ? <>&bull; </> : null}
+              </>
+            ))}
+          </p>
         </div>
       </div>
       <div

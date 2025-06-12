@@ -229,7 +229,7 @@ export const PageLayout: React.FC<{
 
   const siteName = customMetadata?.siteName || process.env.GATSBY_SITE_NAME;
   const shareImage = `${process.env.GATSBY_DOMAIN}${process.env.GATSBY_SLUG}/${
-    customMetadata?.shareImageFilename || "social-image.png"
+    customMetadata?.shareImageFilename || "social-image.jpg"
   }`;
   const seoHeadline =
     customMetadata?.seoHeadline || process.env.GATSBY_SEO_HEADLINE;

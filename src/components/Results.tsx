@@ -31,7 +31,7 @@ export const getQuestionsLeftToAnswer = () => {
 /**
  * Maximum number of favorite topics a user can select.
  */
-const MAX_FAVORITE_TOPICS = 3;
+const MAX_FAVORITE_TOPICS = 2;
 
 /**
  * Minimum number of matching candidates we should show users in their quiz results.

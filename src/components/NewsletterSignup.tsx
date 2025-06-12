@@ -61,15 +61,18 @@ export const NewsletterSignupBanner: React.FC = () => {
         >
           <div className="field ">
             <div className="eyebrow mb-2 has-text-centered">
-              Send me election updates from Outlier Media:
+              How to Detroit Newsletter
             </div>
+            <p className="mb-2 has-text-centered">
+              Get the essential email to help you demystify Detroit, from
+              candidates to Coneys:
+            </p>
             <div className="is-flex is-align-items-center">
               <div className="control mr-3 is-flex-grow-1">
                 <input
                   className="input is-small"
                   type="email"
                   aria-label="Input your email for election updates"
-                  placeholder="e.g. mayor@detroitmi.gov"
                   value={email}
                   onChange={handleChange}
                   required

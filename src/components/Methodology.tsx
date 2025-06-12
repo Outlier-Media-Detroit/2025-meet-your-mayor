@@ -1,61 +1,66 @@
 import React from "react";
 import { OutboundLink } from "./Links";
 
-// TODO: Update
 export const Methodology = () => (
   <div className="copy">
     <p className="mt-2">
-      THE CITY and Gothamist chose a field of 12 candidates based on their poll
-      standings, their presence at community forums and other appearances that
-      provide a broad record of their positions and their history of public
-      service. Most but not all candidates on the ballot are part of Meet Your
-      Mayor.
+      When you take the quiz below, you can choose how you’d want the next mayor
+      to address key areas of concern, then see how candidates answered.
     </p>
     <p className="mt-2">
-      In March, we sent each of the campaigns a multiple-choice survey asking
-      them to make tough choices between pressing policy alternatives. We also
-      checked their statements and stances against what the candidates have
-      actually been saying on the campaign trail.
+      In May, we sent a matching survey to candidates, including the two
+      write-in candidates who had filed by June 1. All 11 candidates completed
+      the survey.
     </p>
     <p className="mt-2">
-      Of the 12, only Eric Adams and Jim Walden did not respond to the survey.
-      Meet Your Mayor has assigned responses based on their policies and public
-      statements.
-    </p>
-    <p className="mt-2">
-      In the quiz, candidates score 1 point for each question on which their
-      answer matches the answer that a voter provides. A response of “no
-      position” does not count toward a candidate’s score.
-    </p>
-    <p className="mt-2">
-      At the end of the quiz, voters select up to three issues of top interest,
-      and each 1-point score in those categories counts as 2 points in the final
-      tally.
-    </p>
-    <p className="mt-2">
-      Meet Your Mayor does not collect any personal data from users. We do
-      collect quiz responses anonymously to improve this resource and track
-      aggregate results.
-    </p>
-    <p className="mt-2">
-      As in 2021, we are pleased to make our code available on{" "}
-      <OutboundLink to="https://github.com/Outlier-Media-Detroit/2025-meet-your-mayor">
-        Github
-      </OutboundLink>{" "}
-      for use by other organizations. So far our project has been adapted for
-      mayoral races in{" "}
-      <OutboundLink to="https://projects.laist.com/meet-your-mayor-2022-general/">
-        Los Angeles
-      </OutboundLink>{" "}
-      and{" "}
-      <OutboundLink to="https://phillymayorquiz.com/">
-        Philadelphia
-      </OutboundLink>
-      . Could your city be next?{" "}
-      <OutboundLink to="mailto:meetyourmayor@thecity.nyc">
-        Drop us a line
+      The questions don’t address every issue you might care about, but are
+      focused on four categories most frequently identified by Detroiters who
+      responded to questions Outlier Media commissioned from the{" "}
+      <OutboundLink to="https://outliermedia.org/detroit-community-concerns-public-safety-neighborhood-conditions/">
+        Detroit Metro Area Communities Survey
       </OutboundLink>
       .
+    </p>
+    <p className="mt-2">
+      Candidates were asked to answer every question and could only choose one
+      answer. This made for some tough choices — and that’s the point! Detroit’s
+      next mayor will have to make difficult decisions and balance competing
+      interests, and our quiz is intended to help voters discern differences
+      between candidates.
+    </p>
+    <p className="mt-2">
+      You get to answer those same questions. (You can also skip any question!)
+      Each question you answer the same as a candidate initially scores them 1
+      point. At the end of the quiz, you can select up to two issues that matter
+      most to you. Each of your matching answers in those categories scores an
+      additional point. Candidates’ total scores will be used to rank your
+      matches.
+    </p>
+    <p className="mt-2">
+      Your quiz answers are private, though we do collect anonymous data in
+      aggregate.
+    </p>
+    <p className="mt-2">
+      Outlier was able to create this quiz thanks to the generosity of{" "}
+      <OutboundLink to="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">
+        The City
+      </OutboundLink>{" "}
+      in New York City, which came up with the idea and{" "}
+      <OutboundLink to="https://github.com/thecityny/2025-meet-your-mayor">
+        made the code open source
+      </OutboundLink>{" "}
+      for all to use.
+    </p>
+    <p className="mt-2">
+      If you have any questions about the quiz, the candidates, the election or
+      anything else, please reach out to Outlier’s Civic Life Reporter Briana
+      Rice at{" "}
+      <a href="mailto:briana@outliermedia.org">briana@outliermedia.org</a>.
+    </p>
+    <p className="mt-2">
+      If you’re part of a Detroit newsroom that wants to republish this quiz,
+      contact Product Director Kate Abbey-Lambertz at{" "}
+      <a href="mailto:kate@outliermedia.org">kate@outliermedia.org</a>.
     </p>
   </div>
 );

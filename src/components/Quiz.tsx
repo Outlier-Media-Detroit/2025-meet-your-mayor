@@ -13,6 +13,7 @@ import { BallotStatus, useAppStore } from "../useAppStore";
 import { Methodology } from "./Methodology";
 import { scroller } from "react-scroll";
 import { Bobblehead } from "./Illustration";
+import { OutboundLink } from "./Links";
 
 export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
   <div
@@ -69,13 +70,13 @@ const Quiz = () => {
 
   const ballotSelectorButtons: BallotSelectorButton[] = [
     {
-      label: "Candidates on the Ballot",
+      label: "Candidates on the ballot",
       ballotStatus: "ballot",
       candidates: ballotCandidates,
     },
 
     {
-      label: "All Candidates",
+      label: "All candidates",
       ballotStatus: "writein",
       candidates: writeInCandidates,
     },
@@ -115,14 +116,32 @@ const Quiz = () => {
                 The Meet Your Mayor Quiz
               </h1>
               <p className="copy has-text-left mt-5">
-                Voters of Detroit: Can’t decide who to put on your ballot for
-                mayor? This quiz will help you decide by matching your responses
-                to 18 questions with how candidates answered the same questions
-                on urgent issues facing Detroiters. The primary is on June 24,
-                and early voting starts on June 14. The general election is on
-                November 4, 2025.
+                This quiz will help you sort through the crowded{" "}
+                <OutboundLink to="https://outliermedia.org/detroit-mayoral-election-candidates-guide/">
+                  field of mayoral hopefuls
+                </OutboundLink>{" "}
+                by matching you with the candidates who share your views about
+                urgent issues facing Detroiters, including housing,
+                transportation and safety.
               </p>
+              <p className="copy has-text-left mt-2">
+                There are 11 mayoral candidates. Nine are on the ballot in the
+                Aug. 5 primary, and two people have certified as write-ins. The
+                two highest vote-getters will face off in the general election
+                on Nov. 4.
+              </p>
+              <div className="mb-5 mt-2">
+                <button
+                  key="x"
+                  className="eyebrow is-link is-inline-block"
+                  onClick={() => toggleMethodology()}
+                >
+                  How Meet Your Mayor Works{" "}
+                  <span>{methodologyVisible ? "-" : "+"}</span>
+                </button>
 
+                {methodologyVisible && <Methodology />}
+              </div>
               <div
                 className="pt-3 pb-3"
                 style={{
@@ -233,18 +252,6 @@ const Quiz = () => {
                     ))}
                   </>
                 )}
-                <div className="mb-5">
-                  <button
-                    key="x"
-                    className="eyebrow is-link is-inline-block"
-                    onClick={() => toggleMethodology()}
-                  >
-                    How Meet Your Mayor Works{" "}
-                    <span>{methodologyVisible ? "-" : "+"}</span>
-                  </button>
-
-                  {methodologyVisible && <Methodology />}
-                </div>
               </div>
             </div>
           </div>

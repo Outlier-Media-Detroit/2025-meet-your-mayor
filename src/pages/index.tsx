@@ -10,6 +10,7 @@ import { NewsletterSignupBanner } from "../components/NewsletterSignup";
 import { navigate } from "gatsby";
 import { getQuestionsLeftToAnswer } from "../components/Results";
 import { useAppStore } from "../useAppStore";
+import { OutboundLink } from "../components/Links";
 
 const getDateUpdated = () => {
   const timestamp = process.env.GATSBY_UPDATE_DATE;
@@ -19,7 +20,7 @@ const getDateUpdated = () => {
     const date = new Date(timestamp.replace(/-/g, "/"));
     const dateFormatted = date.toLocaleDateString("en-us", {
       year: "numeric",
-      month: "long",
+      month: "short",
       day: "numeric",
     });
     return dateFormatted;
@@ -46,9 +47,13 @@ const Homepage = () => {
                   Updated: {getDateUpdated()}
                 </p>
                 <p className="deck has-text-left" style={{ maxWidth: "600px" }}>
-                  Who should you rank on your ballot to be the next mayor of
-                  Detroit? Take the same quiz the candidates did and find your
-                  closest match.
+                  This year, Detroit voters will pick the city’s next mayor, the
+                  first new person to hold the office{" "}
+                  <OutboundLink to="https://outliermedia.org/detroit-mayoral-race-election-guide/">
+                    in more than a decade
+                  </OutboundLink>
+                  . Need help deciding who to vote for? Take our quiz to find
+                  your match.
                 </p>
                 <div className="is-flex is-flex-direction-column my-6">
                   <SmoothScroll

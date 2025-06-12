@@ -69,9 +69,9 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           </Link>
         </div>
         <div className="candidate-page-intro candidate-page-content">
-          <h1 className="headline has-text-left my-2">{candidateName}</h1>
+          <h1 className="headline has-text-left my-5">{candidateName}</h1>
           <figure
-            className="image"
+            className="image mb-5"
             style={{
               // This reduces the flickr affect when the photo is still loading
               // by maintaining a certain height on the container

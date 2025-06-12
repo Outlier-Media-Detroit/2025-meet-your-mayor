@@ -32,13 +32,13 @@ const Homepage = () => {
   const questionsLeftToAnswer = getQuestionsLeftToAnswer();
 
   return (
-    <PageLayout>
+    <PageLayout home>
       <div className="hero is-fullheight-with-navbar has-color-background">
         <IntroAnimation isMobile />
         <div className="hero-body pt-6">
           <div className="columns" style={{ width: "100%" }}>
             <div className="column is-half">
-              <h1 className="headline has-text-left mt-0">
+              <h1 className="headline has-text-left mt-0 uppercase">
                 Meet Your Mayor 2025
               </h1>
               <div className="attribution">
@@ -123,7 +123,7 @@ const Homepage = () => {
                 className="headline has-text-left mt-2 mb-4"
                 style={{ maxWidth: "500px" }}
               >
-                About the Candidates
+                About the candidates
               </h1>
               <CandidateSelectorMenu />
             </div>

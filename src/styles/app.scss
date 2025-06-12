@@ -241,6 +241,10 @@ details {
     box-shadow: 0 calc(0.9rem - 4px) 0 -0.5rem;
     transform: translate(0, 0);
 
+    &.social-icon {
+      box-shadow: none;
+    }
+
     // TODO: Retain the spread-out effect?
     &.is-white {
       box-shadow: 0 2px 0px colors.$outlier-black;
@@ -558,10 +562,37 @@ $full-color-image-filter: contrast(1);
   border-bottom-width: 2px;
 }
 
-.quiz-progress-desktop {
+.outlier-callout-box {
+  padding: 20px 30px;
   background-color: colors.$outlier-white;
   border: solid 2px colors.$outlier-black;
   box-shadow: 0 .9rem 0 -0.5rem colors.$outlier-black;
+
+  a {
+    color: colors.$outlier-red;
+  }
+}
+
+.outlier-donate-button {
+  background-color: colors.$outlier-red;
+  color: colors.$outlier-white;
+  text-transform: uppercase;
+  border: 1.5px solid colors.$outlier-black;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  transition: none;
+
+  &:hover {
+    background-color: colors.$outlier-yellow;
+    color: colors.$outlier-black;
+    outline: 4px solid colors.$outlier-black;
+    text-decoration: none;
+  }
+  &:active,
+  &:focus {
+    outline: 4px solid colors.$outlier-black;
+    outline-offset: 0;
+  }
 }
 
 // CANDIDATE PAGES:

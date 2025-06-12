@@ -1,12 +1,11 @@
 import React from "react";
 import { PageLayout } from "./PageLayout";
 import { Link } from "gatsby";
-import { OutboundLink } from "./Links";
 import { formatCandidateContent } from "./QuizContent";
 import { convertToHtml, formatContent, kebabCase } from "../utils";
 import { CandidateSelectorMenu } from "./CandidateSelectorMenu";
 import { SocialShareButtons } from "./SocialShareButtons";
-import { RecentCoverage } from "./RecentCoverage";
+import { VoterInfo } from "./VoterInfo";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { NewsletterSignupBanner } from "./NewsletterSignup";
 import { useAppStore } from "../useAppStore";
@@ -191,8 +190,8 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         <CandidateSelectorMenu />
       </div>
       <div className="container pt-5 mb-5" style={{ maxWidth: "600px" }}>
-        <h1 className="headline has-text-left mt-6">Election Coverage</h1>
-        <RecentCoverage />
+        <h1 className="headline has-text-left mt-6">Detroit voter info</h1>
+        <VoterInfo />
         <div className="mt-6">
           <NewsletterSignupBanner />
         </div>

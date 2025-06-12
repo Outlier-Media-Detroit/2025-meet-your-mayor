@@ -4,7 +4,7 @@ import Quiz from "../components/Quiz";
 import { CandidateSelectorMenu } from "../components/CandidateSelectorMenu";
 import { SocialShareButtons } from "../components/SocialShareButtons";
 import { SmoothScroll } from "../components/Links";
-import { RecentCoverage } from "../components/RecentCoverage";
+import { VoterInfo } from "../components/VoterInfo";
 import { IntroAnimation } from "../components/IntroAnimation";
 import { NewsletterSignupBanner } from "../components/NewsletterSignup";
 import { navigate } from "gatsby";
@@ -123,8 +123,10 @@ const Homepage = () => {
             </div>
             <div className="column">
               <div className="eyebrow is-inline-block"> </div>
-              <h1 className="headline has-text-left mt-1">Recent News</h1>
-              <RecentCoverage />
+              <h1 className="headline has-text-left mt-1">
+                Detroit voter info
+              </h1>
+              <VoterInfo />
             </div>
           </div>
         </div>

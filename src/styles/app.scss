@@ -428,7 +428,7 @@ $full-color-image-filter: contrast(1);
 }
 
 .matching-candidates {
-  margin-left: 2rem;
+  // margin-left: 2rem; // TODO: Double check on this
   animation: slideIn 1s ease-out forwards;
   opacity: 0;
   max-height: 0px;
@@ -457,6 +457,9 @@ $full-color-image-filter: contrast(1);
   border-radius: 100%;
   background-color: colors.$outlier-black;
   color: colors.$outlier-white;
+  font-weight: bold;
+  font-size: 14px;
+
   @media screen and (max-width: $mobile-breakpoint) {
     position: relative;
     transform: translate(0px, -5px);
@@ -547,6 +550,18 @@ $full-color-image-filter: contrast(1);
       margin-right: 1rem;
     }
   }
+}
+
+.quiz-progress-mobile {
+  background-color: colors.$outlier-white;
+  border: solid 0 colors.$outlier-black;
+  border-bottom-width: 2px;
+}
+
+.quiz-progress-desktop {
+  background-color: colors.$outlier-white;
+  border: solid 2px colors.$outlier-black;
+  box-shadow: 0 .9rem 0 -0.5rem colors.$outlier-black;
 }
 
 // CANDIDATE PAGES:

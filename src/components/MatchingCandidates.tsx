@@ -43,65 +43,19 @@ export const MatchingCandidates: FC<{
    */
   isSkipped: boolean;
 }> = ({ candidates, isUserSelection, isSkipped }) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const handleClick = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
     <div
       className={classnames(
         "is-flex",
         "is-flex-wrap-wrap",
-        isExpanded ? "is-flex-direction-column" : "is-flex-direction-row"
+        "is-flex-direction-row"
       )}
     >
       {candidates.map((candidate, i) => {
-        const { name, quote, source } = candidate;
+        const { name } = candidate;
         const abbreviatedName = abbreviateName(name);
 
-        return isExpanded ? (
-          <div
-            key={i}
-            className="expanded-candidate-responses is-flex is-flex-direction-row mb-4"
-          >
-            <div className="is-flex is-flex-direction-column is-align-items-center mr-3">
-              <Bobblehead candidateName={name} size="is-64x64" showBustOnly />
-              <span className="label">{abbreviatedName}</span>
-            </div>
-
-            <div className="mb-5 mt-4">
-              <p className="label">
-                {!!quote ? (
-                  quote
-                ) : isSkipped ? (
-                  <span>
-                    {abbreviatedName} skipped this response <br />
-                    in our survey.
-                  </span>
-                ) : (
-                  <span>
-                    {abbreviatedName} selected this response <br />
-                    in our survey.
-                  </span>
-                )}
-              </p>
-              {!!source && (
-                <div className="label mt-1">
-                  {formatContent(" — " + source)}
-                </div>
-              )}
-            </div>
-            {i === 0 && (
-              <button
-                className="eyebrow is-link is-inline-block is-float-right mt-3 ml-5 no-wrap"
-                onClick={handleClick}
-              >
-                Hide -
-              </button>
-            )}
-          </div>
-        ) : isUserSelection ? (
+        return isUserSelection ? (
           <div key={i}>
             <div
               key={i}
@@ -116,7 +70,7 @@ export const MatchingCandidates: FC<{
         );
       })}
 
-      {!isExpanded && candidates.length > 0 && (
+      {candidates.length > 0 && (
         <div
           className={classnames(
             "mx-2 is-inline-block ",
@@ -128,17 +82,10 @@ export const MatchingCandidates: FC<{
               <ListOfCandidates candidates={candidates} />
             </span>
           )}
-          <button
-            key="x"
-            className="eyebrow is-link is-inline-block"
-            onClick={handleClick}
-          >
-            See <span className="no-wrap">details +</span>
-          </button>
         </div>
       )}
 
-      {candidates.length === 0 && (
+      {!isSkipped && candidates.length === 0 && (
         <div
           className={classnames(
             "label has-text-left ml-4",

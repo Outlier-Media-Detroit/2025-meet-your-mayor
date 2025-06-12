@@ -262,7 +262,7 @@ const Quiz = () => {
           <div>
             <div>
               <div
-                className="container is-hidden-desktop has-color-background p-0"
+                className="container is-hidden-desktop quiz-progress-mobile p-0"
                 style={{
                   position: "sticky",
                   top: 0,
@@ -484,7 +484,7 @@ const Quiz = () => {
 
                 <div className="column is-hidden-touch is-one-quarter">
                   <div
-                    className="has-color-background is-flex is-flex-direction-column has-text-right p-3"
+                    className="quiz-progress-desktop is-flex is-flex-direction-column has-text-right p-3"
                     style={{
                       position: "sticky",
                       top: "6rem",
@@ -497,6 +497,10 @@ const Quiz = () => {
                     {Object.entries(questions).map((questionGroup, i) => {
                       const questionGroupSeen =
                         questionGroup[1][0].number <= highestVisibleQuestion;
+                      const groupNameMap = {
+                        "Neighborhood conditions": "Neighborhoods",
+                        "Economy and affordability": "Affordability",
+                      };
 
                       return (
                         <div
@@ -513,7 +517,7 @@ const Quiz = () => {
                             }}
                             to={`section-${questionGroup[0].toLowerCase()}`}
                           >
-                            {questionGroup[0]}
+                            {groupNameMap[questionGroup[0]] || questionGroup[0]}
                           </SmoothScroll>
                           {questionGroup[1].map((question, i) => {
                             const questionAnswered = answers.find(

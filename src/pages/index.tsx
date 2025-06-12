@@ -81,10 +81,10 @@ const Homepage = () => {
                   <button
                     className="button is-white"
                     onClick={() =>
-                      // Since we use the #learn container to smooth scroll to the #results
+                      // Since we use the #candidates container to smooth scroll to the #results
                       // section from a Candidate page, we need to make sure this button here
-                      // clears the location state so that it indeed goes to #learn.
-                      navigate("#learn", { replace: true })
+                      // clears the location state so that it indeed goes to #candidates.
+                      navigate("#candidates", { replace: true })
                     }
                     style={{ width: "100%", maxWidth: "350px" }}
                   >
@@ -107,22 +107,11 @@ const Homepage = () => {
       <Quiz />
       <NewsletterSignupBanner />
       <div className="hero is-fullheight-with-navbar pt-6">
-        <div className="container mt-6 pt-5" id="learn">
+        <div className="container mt-6 pt-5" id="candidates">
           <div className="columns">
             <div className="column is-two-thirds">
               <div className="eyebrow">
-                <a href="#quiz">
-                  <div
-                    className="mr-1"
-                    style={{
-                      display: "inline-block",
-                      transform: "translateY(-2px) rotate(-90deg)",
-                    }}
-                  >
-                    ↗
-                  </div>
-                  Take our quiz
-                </a>
+                <a href="#quiz">Take our quiz →</a>
               </div>
               <h1
                 className="headline has-text-left mt-2 mb-4"

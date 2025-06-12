@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { CircleIcon } from "./Quiz";
 import { Bobblehead } from "./Illustration";
 import { useAppStore } from "../useAppStore";
+import { abbreviateName } from "./MatchingCandidates";
 
 export const getQuestionsLeftToAnswer = () => {
   const favoriteTopics = useAppStore((state) => state.favoriteTopics);
@@ -217,13 +218,13 @@ const Results: React.FC = () => {
               style={{ minHeight: "100vh" }}
             >
               <h2 className="headline has-text-left">
-                Now, pick which topics matter most to you
+                Which issues matter most to you?
               </h2>
               <h3 className="deck has-text-left">
                 <div className="tag question-number-tag">★</div>
-                Choose between 1 and {MAX_FAVORITE_TOPICS}. The candidates that
-                matched with you on those questions will get extra points toward
-                their total score.
+                You can select 1 to {MAX_FAVORITE_TOPICS} topics. Candidates who
+                have the same answers as you for questions in those categories
+                will get extra points toward their total score.
               </h3>
               <div className="buttons mt-5">
                 {Object.entries(questionContent).map((questionGroup, i) => (
@@ -262,12 +263,12 @@ const Results: React.FC = () => {
                       <span className="mr-1">E</span>
                       <span>M</span>
                       <span className="mr-1">Y</span>
-                      <span>R</span>
-                      <span>E</span>
-                      <span>S</span>
-                      <span>U</span>
-                      <span>L</span>
+                      <span>M</span>
+                      <span>A</span>
                       <span>T</span>
+                      <span>C</span>
+                      <span>H</span>
+                      <span>E</span>
                       <span className="mr-1">S</span>
                       <span>★</span>
                     </button>
@@ -322,7 +323,7 @@ const Results: React.FC = () => {
 
                 <a href="#main" onClick={() => resetAnswers()}>
                   <button className="button is-link is-white">
-                    Take Quiz Again
+                    Retake quiz
                   </button>
                 </a>
               </div>
@@ -427,7 +428,7 @@ const Results: React.FC = () => {
                                   (candidate.totalScore / totalPossiblePoints) *
                                     100
                                 )}
-                                % Match
+                                % match
                               </div>
                             </span>
                           </div>
@@ -437,7 +438,7 @@ const Results: React.FC = () => {
                             {Math.round(
                               (candidate.totalScore / totalPossiblePoints) * 100
                             )}
-                            % Match
+                            % match
                           </h2>
                         </div>
                       </summary>
@@ -493,7 +494,8 @@ const Results: React.FC = () => {
                         <div className="buttons mt-5 ml-4">
                           <button className="button">
                             <Link to={kebabCase(candidate.candidateName)}>
-                              Learn more about {candidate.candidateName}
+                              More about{" "}
+                              {abbreviateName(candidate.candidateName)}
                             </Link>{" "}
                           </button>
                         </div>

@@ -58,124 +58,123 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer has-color-background">
+    <footer className="footer">
       <div
         className="container is-flex is-flex-direction-column is-align-items-center p-0"
         style={{ maxWidth: "750px" }}
       >
-        <div className="eyebrow">Adapted for Detroit by</div>
-        <div className="eyebrow mb-5">
-          <OutboundLink
-            to={OUTLIER_SITE_LINKS.website}
-            aria-label="Outlier Media"
-          >
-            Outlier Media
-          </OutboundLink>{" "}
-        </div>
-        <div className="eyebrow mb-5">
-          {Object.entries(OUTLIER_SITE_LINKS)
-            .filter((link) => link[0] !== "website")
-            .map((link, i) => (
-              <SocialButton
-                url={link[1]}
-                key={i}
-                ariaLabel={`Share on ${link[0]}`}
-              />
-            ))}
-        </div>
-        <div className="eyebrow">Made with ♥ in NYC by</div>
-        <div className="eyebrow mb-5">
-          <OutboundLink to={THE_CITY_SITE_LINKS.website} aria-label="THE CITY">
-            THE CITY
-          </OutboundLink>{" "}
-          <div className="has-text-weight-bold is-size-6 is-inline-block">
-            ×
-          </div>{" "}
-          <OutboundLink
-            to={GOTHAMIST_SITE_LINKS.website}
-            aria-label="GOTHAMIST"
-          >
-            Gothamist
+        <p className="uppercase mb-4 has-text-weight-bold">Credits:</p>
+        <p className="mb-2">
+          <OutboundLink to="https://outliermedia.org/author/briana-rice/">
+            Briana Rice
           </OutboundLink>
-        </div>
-        <div className="eyebrow">
-          {Object.entries(THE_CITY_SITE_LINKS)
-            .filter((link) => link[0] !== "website")
-            .map((link, i) => (
-              <SocialButton
-                url={link[1]}
-                key={i}
-                ariaLabel={`Share on ${link[0]}`}
-              />
-            ))}
-          {"• "}
-          {Object.entries(GOTHAMIST_SITE_LINKS)
-            .filter((link) => link[0] !== "website")
-            .map((link, i) => (
-              <SocialButton
-                url={link[1]}
-                key={i}
-                ariaLabel={`Share on ${link[0]}`}
-              />
-            ))}
-        </div>
-        <div className="eyebrow mt-6 mb-2 has-text-centered">
-          By{" "}
-          {byline.map((author: any, i: number) => (
-            <span key={i} className="author">
-              <OutboundLink to={author.url}>{author.name}</OutboundLink>
-              {i < byline.length - 2
-                ? ", "
-                : i < byline.length - 1
-                ? " and "
-                : ""}
-            </span>
-          ))}
-          . Design and development by{" "}
-          <OutboundLink to="https://www.samrabiyah.com">
+          , civic life reporter
+        </p>
+        <p className="mb-2">
+          Photography:{" "}
+          <OutboundLink to="https://outliermedia.org/author/cydni-elledge/">
+            Cydni Elledge
+          </OutboundLink>{" "}
+          &bull; Illustrations:{" "}
+          <OutboundLink to="https://dajahcallen.com/">
+            Dajah Callen
+          </OutboundLink>{" "}
+          &bull; Development: Patrick Sier
+        </p>
+        <p className="mb-2">
+          Editing and design:{" "}
+          <OutboundLink to="https://outliermedia.org/author/sarah-hulett/">
+            Sarah Hulett
+          </OutboundLink>
+          ,{" "}
+          <OutboundLink to="https://outliermedia.org/author/dan-ignacio/">
+            Dan Ignacio
+          </OutboundLink>
+          ,{" "}
+          <OutboundLink to="https://outliermedia.org/author/kate-abbey-lambertz/">
+            Kate Abbey-Lambertz
+          </OutboundLink>
+        </p>
+        <p className="mt-2 mb-5">
+          Adapted from{" "}
+          <OutboundLink to="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">
+            The City
+          </OutboundLink>
+          . Special thanks to Richard Kim and{" "}
+          <OutboundLink to="https://www.samrabiyah.com/">
             Sam Rabiyah
-          </OutboundLink>
-          . Illustrations by{" "}
-          <OutboundLink to="https://patrick-leger.com/">
-            Patrick Léger
-          </OutboundLink>
-          . Photos by{" "}
-          <OutboundLink to="https://www.thecity.nyc/author/ben-fractenberg/">
-            Ben Fractenberg
           </OutboundLink>{" "}
-          and courtesy of the Curtis Sliwa and Jim Walden campaigns. Design
-          support from Tember Hopkins. Development support from Sam Guzik.
-        </div>
-
-        <div className="eyebrow mt-5 has-text-centered">
-          View source code on{" "}
-          <OutboundLink to="https://github.com/thecityny/2025-meet-your-mayor">
-            Github
+          for their guidance.
+        </p>
+        <p className="mt-5 mb-5">
+          Follow Outlier Media:{" "}
+          <SocialButton
+            black
+            url="https://bsky.app/profile/outliermedia.org"
+            ariaLabel="Bluesky"
+          />
+          <SocialButton
+            black
+            url="https://www.facebook.com/mediaoutlier"
+            ariaLabel="Facebook"
+          />
+          <SocialButton
+            black
+            url="https://www.instagram.com/media_outlier/"
+            ariaLabel="Instagram"
+          />
+          <SocialButton
+            black
+            url="https://www.linkedin.com/company/outlier-media/"
+            ariaLabel="LinkedIn"
+          />
+          <SocialButton
+            black
+            url="https://www.threads.net/@media_outlier"
+            ariaLabel="Threads"
+          />
+          <SocialButton
+            black
+            url="https://www.tiktok.com/@media_outlier"
+            ariaLabel="TikTok"
+          />
+          <SocialButton
+            black
+            url="https://www.youtube.com/@media_outlier"
+            ariaLabel="YouTube"
+          />
+        </p>
+        <p className="mb-2">
+          Text <span className="has-text-weight-bold">DETROIT</span> to{" "}
+          <span className="has-text-weight-bold">67485</span> to get critical
+          info or talk to an Outlier reporter via{" "}
+          <OutboundLink to="https://outliermedia.org/txt-outlier/">
+            TXT OUTLIER
+          </OutboundLink>
+          .*
+        </p>
+        <p className="mb-5">
+          * Message and data rates may apply. Message frequency varies based on
+          your usage. Text HELP for help or STOP to cancel. Read our{" "}
+          <OutboundLink to="https://outliermedia.org/about/privacy-policy/">
+            terms and privacy policy
           </OutboundLink>
           .
-        </div>
-
-        <ul className="footer-links">
-          <li>
-            <OutboundLink
-              to="https://www.thecity.nyc/contact/"
-              className="button-link"
-            >
-              Contact
-            </OutboundLink>
-          </li>
-          <li>
-            <OutboundLink
-              to="https://www.thecity.nyc/privacy-policy/"
-              className="button-link"
-            >
-              Privacy Notice
-            </OutboundLink>
-          </li>
-        </ul>
-        <div className="copyright">
-          © {year}, THE CITY REPORT, INC. All Rights Reserved.{" "}
-        </div>
+        </p>
+        <p className="mt-5 mb-2">
+          <OutboundLink to="https://outliermedia.org/about/privacy-policy/">
+            Privacy Policy
+          </OutboundLink>{" "}
+          &bull;{" "}
+          <OutboundLink to="https://outliermedia.org/about/">
+            About Us
+          </OutboundLink>{" "}
+          &bull;{" "}
+          <OutboundLink to="https://outliermedia.org/about/contact/">
+            Contact
+          </OutboundLink>
+        </p>
+        <p>© {year} Outlier Media</p>
       </div>
     </footer>
   );

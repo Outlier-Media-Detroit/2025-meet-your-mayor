@@ -45,7 +45,7 @@ export const VoterInfo: React.FC = () => {
           </OutboundLink>
         </p>
       </div>
-      <div className="outlier-callout-box my-5">
+      <div className="outlier-callout-box my-6">
         <p className="copy">
           Are you unsure how to get an absentee ballot, curious about a
           candidate’s policy positions or in need of other help? Text{" "}

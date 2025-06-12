@@ -10,19 +10,20 @@ type ScoreShareDetails = {
   matchScore: number;
 };
 
-export const SocialButton: React.FC<{ url: string; ariaLabel?: string }> = ({
-  url,
-  ariaLabel,
-}) => (
+export const SocialButton: React.FC<{
+  url: string;
+  ariaLabel?: string;
+  black?: boolean;
+}> = ({ url, ariaLabel, black }) => (
   <SocialIcon
-    className="button is-icon mr-2 p-0"
+    className="social-button is-icon p-0"
     target="_blank"
     rel="noopener noreferrer"
     aria-label={ariaLabel || "Share this link"}
-    bgColor="#000000"
+    bgColor={black ? "#000000" : undefined}
     style={{
-      width: "25px",
-      height: "25px",
+      width: "32px",
+      height: "32px",
     }}
     url={url}
   />

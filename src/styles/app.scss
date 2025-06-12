@@ -270,6 +270,10 @@ details {
   }
 }
 
+.social-button {
+  margin-right: 0.5rem;
+}
+
 .button-link {
   font-family: fonts.$sans;
   font-size: 1rem;
@@ -592,6 +596,22 @@ $full-color-image-filter: contrast(1);
   &:focus {
     outline: 4px solid colors.$outlier-black;
     outline-offset: 0;
+  }
+}
+
+.footer {
+  background-color: colors.$outlier-black;
+  color: colors.$outlier-white;
+  text-align: center;
+
+  p,
+  p a,
+  .has-text-weight-bold {
+    color: colors.$outlier-white;
+  }
+
+  .social-button {
+    margin-right: 0;
   }
 }
 

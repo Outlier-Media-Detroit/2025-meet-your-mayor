@@ -1,14 +1,22 @@
 import { questionContent } from "../question-content";
 import { candidateContent } from "../candidate-content";
 import { groupBy, kebabCase } from "../utils";
+import { BallotStatus, useAppStore } from "../useAppStore";
 
 /**
  * This function takes our raw JSON content from `candidate-content.js`
  * and formats it into a organized JS object that keeps track of all
  * candidates' responses to quiz questions, with explanations.
  */
-export const formatCandidateContent = () => {
-  const candidates = candidateContent;
+export const formatCandidateContent = (ballotStatus: BallotStatus) => {
+  const candidates =
+    ballotStatus === "ballot"
+      ? Object.fromEntries(
+          Object.entries(candidateContent).filter(
+            (candidate) => candidate[1].ballotStatus === "ballot"
+          )
+        )
+      : candidateContent;
 
   const splitCandidateInfo = (text: string) => text.split("|");
 
@@ -63,6 +71,7 @@ export const generateListOfCandidates = () => {
     .map((candidate) => ({
       name: candidate.name,
       slug: kebabCase(candidate.name),
+      ballotStatus: candidate.ballotStatus,
     }));
 };
 
@@ -73,7 +82,8 @@ export const generateListOfCandidates = () => {
  * quiz question responses.
  */
 export const formatQuestionContent = () => {
-  const candidates = formatCandidateContent();
+  const ballotStatus = useAppStore((state) => state.ballotStatus);
+  const candidates = formatCandidateContent(ballotStatus);
   const findMatchingCandidates = (questionIndex: number, quizOption: string) =>
     candidates
       .filter((c) => c.responses[questionIndex].optionNumber === quizOption)

@@ -2,16 +2,17 @@ import React, { FC, useState } from "react";
 import classnames from "classnames";
 import Results, { getQuestionsLeftToAnswer } from "./Results";
 import { formatContent, smoothScrollToCenter } from "../utils";
-import { formatQuestionContent } from "./QuizContent";
+import { formatQuestionContent, generateListOfCandidates } from "./QuizContent";
 import {
   ANCHOR_LINK_DURATION,
   QUESTION_ANCHOR_LINK_OFFSET,
   SmoothScroll,
 } from "./Links";
-import { MatchingCandidates } from "./MatchingCandidates";
-import { useAppStore } from "../useAppStore";
+import { abbreviateName, MatchingCandidates } from "./MatchingCandidates";
+import { BallotStatus, useAppStore } from "../useAppStore";
 import { Methodology } from "./Methodology";
 import { scroller } from "react-scroll";
+import { Bobblehead } from "./Illustration";
 
 export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
   <div
@@ -27,6 +28,8 @@ export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
 );
 
 const Quiz = () => {
+  const ballotStatus = useAppStore((state) => state.ballotStatus);
+  const setBallotStatus = useAppStore((state) => state.setBallotStatus);
   const answers = useAppStore((state) => state.answers);
   const setAnswers = useAppStore((state) => state.setAnswers);
 
@@ -47,6 +50,36 @@ const Quiz = () => {
     const currentVisibility = methodologyVisible;
     setMethodologyVisible(!currentVisibility);
   };
+
+  const candidates = generateListOfCandidates();
+  const ballotCandidates = candidates.filter(
+    (c) => c.ballotStatus === "ballot"
+  );
+  const writeInCandidates = candidates.filter(
+    (c) => c.ballotStatus !== "ballot"
+  );
+
+  type BallotSelectorButton = {
+    label: string;
+
+    ballotStatus: BallotStatus;
+
+    candidates: { name: string; slug: string }[];
+  };
+
+  const ballotSelectorButtons: BallotSelectorButton[] = [
+    {
+      label: "Candidates on the Ballot",
+      ballotStatus: "ballot",
+      candidates: ballotCandidates,
+    },
+
+    {
+      label: "All Candidates",
+      ballotStatus: "writein",
+      candidates: writeInCandidates,
+    },
+  ];
 
   const recordAnswer = (questionNumber: number, answer: string | null) => {
     const updatedAnswers = answers.map((answerObj) => {
@@ -136,28 +169,69 @@ const Quiz = () => {
                     </>
                   </div>
                 ) : (
-                  <div className="my-4">
-                    <h2 className="deck has-text-left">Start the quiz:</h2>
-                    <div className="field is-grouped">
-                      <button
-                        className="button mb-1"
-                        onClick={() => {
-                          setMethodologyVisible(false);
-                          setHighestVisibleQuestion(1);
-                          setTimeout(() => {
-                            scroller.scrollTo("question-1", {
-                              duration: ANCHOR_LINK_DURATION,
-                              delay: 0,
-                              smooth: true,
-                              offset: QUESTION_ANCHOR_LINK_OFFSET, // optional, to adjust for headers etc.
-                            });
-                          }, 100); // wait until content has re-rendered
-                        }}
-                      >
-                        Start
-                      </button>
-                    </div>
-                  </div>
+                  <>
+                    <h2 className="deck has-text-left">Choose a contest:</h2>
+                    {ballotSelectorButtons.map((button, i) => (
+                      <div key={i} className="mt-5 mb-4">
+                        <button
+                          className="control"
+                          onClick={() => {
+                            setMethodologyVisible(false);
+                            setTimeout(() => {
+                              scroller.scrollTo("question-1", {
+                                duration: ANCHOR_LINK_DURATION,
+                                delay: 0,
+                                smooth: true,
+                                offset: QUESTION_ANCHOR_LINK_OFFSET, // optional, to adjust for headers etc.
+                              });
+                            }, 100); // wait until content has re-rendered
+
+                            // If the user is selecting a ballot, we want to scroll to the first question
+                            // after a short delay, so that the user doesn't see the content change
+                            // inside the quiz intro section
+                            setBallotStatus(
+                              button.ballotStatus,
+                              ANCHOR_LINK_DURATION
+                            );
+                          }}
+                        >
+                          <div
+                            className="button"
+                            onClick={() => setMethodologyVisible(false)}
+                          >
+                            {button.label}
+                          </div>
+
+                          <div className="is-flex is-flex-wrap-wrap is-flex-direction-row is-align-items-center my-3">
+                            {button.ballotStatus === "writein" && (
+                              <span className="copy is-inline-block m-0 mr-2">
+                                Add
+                              </span>
+                            )}
+
+                            {button.candidates.map((candidate, i) => (
+                              <div key={i}>
+                                <div
+                                  key={i}
+                                  className="is-flex is-flex-direction-column is-align-items-center mr-1"
+                                >
+                                  <Bobblehead
+                                    candidateName={candidate.name}
+                                    size="is-48x48"
+                                    showBustOnly
+                                  />
+
+                                  <span className="label has-text-centered">
+                                    {abbreviateName(candidate.name)}
+                                  </span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </button>
+                      </div>
+                    ))}
+                  </>
                 )}
                 <div className="mb-5">
                   <button

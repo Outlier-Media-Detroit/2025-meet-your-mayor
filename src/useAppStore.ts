@@ -14,7 +14,11 @@ export const blankAnswersList = Object.entries(questionContent).map(
   })
 );
 
+export type BallotStatus = "ballot" | "writein" | null;
+
 type AppState = {
+  ballotStatus: BallotStatus;
+  setBallotStatus: (ballotStatus: BallotStatus, delay?: number) => void;
   favoriteTopics: string[];
   setFavoriteTopics: (favoriteTopics: string[]) => void;
   answers: QuizInput[];
@@ -33,6 +37,17 @@ type AppState = {
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
+      ballotStatus: null,
+      setBallotStatus: (ballotStatus, delay) => {
+        const highestVisibleQuestion = get().highestVisibleQuestion;
+        const setHighestVisibleQuestion = get().setHighestVisibleQuestion;
+        if (highestVisibleQuestion === 0 && !!ballotStatus) {
+          setHighestVisibleQuestion(1);
+        }
+        setTimeout(() => {
+          set({ ballotStatus });
+        }, delay || 0);
+      },
       favoriteTopics: [],
       setFavoriteTopics: (favoriteTopics) => {
         set({ favoriteTopics });
@@ -51,6 +66,7 @@ export const useAppStore = create<AppState>()(
           answers: blankAnswersList,
           favoriteTopics: [],
           highestVisibleQuestion: 0,
+          ballotStatus: null,
         });
       },
     }),

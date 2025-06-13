@@ -33,7 +33,7 @@ const Homepage = () => {
   const questionsLeftToAnswer = getQuestionsLeftToAnswer();
 
   return (
-    <PageLayout home>
+    <PageLayout>
       <div className="hero is-fullheight-with-navbar has-color-background">
         <IntroAnimation isMobile />
         <div className="hero-body pt-6">

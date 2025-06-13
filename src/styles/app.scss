@@ -39,11 +39,6 @@ $tablet-breakpoint: 1025px;
   background-color: colors.$outlier-white;
   border: solid 0 colors.$outlier-black;
   border-bottom-width: 2px;
-
-  &.home {
-    background-color: colors.$outlier-yellow-light;
-    border-bottom-width: 0;
-  }
 }
 
 .nav-container {

@@ -38,8 +38,8 @@ const byline = process.env.GATSBY_AUTHOR
   ? JSON.parse(process.env.GATSBY_AUTHOR)
   : ([] as any);
 
-const Header = ({ home }: { home: boolean }) => (
-  <nav className={`nav ${home ? "home" : ""}`}>
+const Header = () => (
+  <nav className="nav">
     <div className="nav-container">
       <div className="nav-logo" style={{ width: "80px" }}>
         <OutboundLink
@@ -222,8 +222,7 @@ type MetadataProps = {
 export const PageLayout: React.FC<{
   children: React.ReactNode;
   customMetadata?: MetadataProps;
-  home: boolean;
-}> = ({ children, customMetadata, home = false }) => {
+}> = ({ children, customMetadata }) => {
   const slug = customMetadata?.slug || process.env.GATSBY_SLUG;
   const url = `${process.env.GATSBY_DOMAIN}${slug}/`;
 
@@ -243,7 +242,7 @@ export const PageLayout: React.FC<{
 
   return (
     <article id="main">
-      <Header home={home} />
+      <Header />
       <Helmet>
         <title>{`${siteName}`}</title>
         <meta name="theme-color" content="#000000" />

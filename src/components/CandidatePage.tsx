@@ -102,7 +102,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             </button>
           </Link>
 
-          <div className="eyebrow has-text-left mt-5 mb-2 is-flex is-align-items-center">
+          <div className="eyebrow has-text-left mt-3 mb-2 is-flex is-align-items-center">
             <div className="mr-3 is-flex-shrink-2">Share Meet Your Mayor:</div>{" "}
             <SocialShareButtons />
           </div>
@@ -139,7 +139,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             return (
               <div className="column" key={i}>
                 <div
-                  className="container px-6 pt-6 pb-5 has-color-background"
+                  className="container outlier-callout-box"
                   style={{
                     height: "100%",
                   }}
@@ -187,6 +187,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         )}
       </div>
       <div className="container pt-5 is-flex is-flex-direction-column is-align-items-center">
+        <h1 className="headline mb-4">About the candidates</h1>
         <CandidateSelectorMenu />
       </div>
       <div className="container pt-5 mb-5" style={{ maxWidth: "600px" }}>

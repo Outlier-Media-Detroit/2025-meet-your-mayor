@@ -113,13 +113,9 @@ body {
 }
 
 .subhed {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 20px;
   line-height: 1.2;
-
-  @media screen and (min-width: 420px) {
-    font-size: 36px;
-  }
 }
 
 .deck {

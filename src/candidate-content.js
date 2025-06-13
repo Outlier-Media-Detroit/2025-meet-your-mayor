@@ -155,7 +155,7 @@ export const candidateContent = {
   },
   candidateJoel: {
     name: "Joel Haashiim",
-    bio: 'Joel Haashiim is an entrepreneur and wholesaler who graduated from Thomas M. Cooley High School. He grew up on the city’s eastside.{newParagraph}Haashiim is <a href="https://joelhformayor.com/issues.html">running on a platform</a> of ordering a forensic audit of city finances and budget, creating a “true” policy for community benefits agreements and restoring citizen’s district councils.',
+    bio: 'Joel Haashiim is an entrepreneur and wholesaler who graduated from Thomas M. Cooley High School. He grew up on the city’s eastside.{newParagraph}Haashiim is <a href="https://joelhformayor.com/issues.html">running on a platform</a> of ordering a forensic audit of city finances and budget, creating a “true” policy for community benefits agreements and restoring citizens’ district councils.',
     ballotStatus: "ballot",
     website: "https://joelhformayor.com/",
     email: "mailto:info@joelhformayor.com",

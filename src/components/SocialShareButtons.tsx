@@ -30,7 +30,7 @@ export const SocialButton: React.FC<{
 );
 
 const getShareText = (
-  platform: "bluesky" | "whatsapp" | "email",
+  platform: "bluesky" | "whatsapp" | "threads" | "email",
   results?: ScoreShareDetails
 ) => {
   const outlierHandle =
@@ -55,6 +55,13 @@ export const SocialShareButtons: React.FC<{
           results
         )} ${shareUrl}`}
         ariaLabel="Share on Bluesky"
+      />
+      <SocialButton
+        url={`https://threads.net/intent/post?text=${getShareText(
+          "threads",
+          results
+        )} ${shareUrl}`}
+        ariaLabel="Share on Threads"
       />
       <SocialButton
         url={`https://wa.me/?text=${getShareText(

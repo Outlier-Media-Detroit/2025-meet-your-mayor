@@ -205,6 +205,10 @@ details {
 
   @media screen and (max-width: $mobile-breakpoint) {
     font-size: 1rem;
+
+    &.contest-button {
+      padding: 0.15rem 1rem;
+    }
   }
 
   &.is-small {
@@ -569,6 +573,12 @@ $full-color-image-filter: contrast(1);
 
   a {
     color: colors.$outlier-red;
+  }
+}
+
+.quiz-progress-desktop {
+  div a {
+    color: colors.$outlier-black;
   }
 }
 

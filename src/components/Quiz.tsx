@@ -215,7 +215,7 @@ const Quiz = () => {
                           }}
                         >
                           <div
-                            className="button"
+                            className="button contest-button"
                             onClick={() => setMethodologyVisible(false)}
                           >
                             {button.label}
@@ -484,7 +484,7 @@ const Quiz = () => {
 
                 <div className="column is-hidden-touch is-one-quarter">
                   <div
-                    className="outlier-callout-box is-flex is-flex-direction-column has-text-right p-3"
+                    className="outlier-callout-box quiz-progress-desktop is-flex is-flex-direction-column has-text-right p-3"
                     style={{
                       position: "sticky",
                       top: "6rem",

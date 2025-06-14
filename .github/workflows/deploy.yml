@@ -98,6 +98,8 @@ jobs:
 
       - name: Reload content if manual dispatch event
         if: github.event_name == 'workflow_dispatch'
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
         run: |
           FILENAME=candidate DOCID=${{ vars.DOCID_CANDIDATES }} npm run download-content
           FILENAME=question DOCID=${{ vars.DOCID_QUESTIONS }} npm run download-content

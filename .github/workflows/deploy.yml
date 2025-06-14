@@ -96,12 +96,18 @@ jobs:
             // If we get this far, we're good to go.
             return slug.trim();
 
-      # TODO: Rebuild candidate, question content as well?
+      - name: Reload content if manual dispatch event
+        if: github.event_name == "workflow_dispatch"
+        run: |
+          FILENAME=candidate DOCID=${{ vars.DOCID_CANDIDATES }} npm run download-content
+          FILENAME=question DOCID=${{ vars.DOCID_QUESTIONS }} npm run download-content
+
       - id: npm-build
         name: Build project distribution
         run: PREFIX=/${{ env.GATSBY_SLUG }} npm run build
         env:
           PATH_PREFIX: ${{ steps.get-slug.outputs.result }}
+          GATSBY_DOMAIN: ${{ env.ENVIRONMENT == 'production' && vars.DOMAIN_PRODUCTION || vars.DOMAIN_STAGING }}
 
       - id: configure-aws
         name: Configure AWS credentials
@@ -116,7 +122,6 @@ jobs:
           DISTRIBUTION: ${{ env.environment == 'production' && vars.CLOUDFRONT_DISTRIBUTION_PRODUCTION || vars.CLOUDFRONT_DISTRIBUTION_STAGING }}
           PATHS: ${{ format('/{0}/*', steps.get-slug.outputs.result) }}
 
-      # TODO: Add Slack notification back in?
       - id: npm-deploy
         name: Upload the prepared files
         uses: datadesk/delivery-deploy-action@v1

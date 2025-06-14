@@ -1,8 +1,9 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import { OutboundLink } from "./Links";
 
-// TODO: Customize
-const EMAIL_LIST_NAME = "Newsletter";
+// TODO: Change with more permanent domain
+const NEWSLETTER_API_URL =
+  "https://4e9f5glzjb.execute-api.us-east-1.amazonaws.com/newsletter/meet-your-mayor-2025";
 
 const FALLBACK_NEWSLETTER_LINK = "https://outliermedia.org/newsletters/";
 
@@ -16,19 +17,16 @@ export const NewsletterSignupBanner: React.FC = () => {
     e.preventDefault();
     setStatus("loading");
     try {
-      const response = await fetch(
-        "", // TODO:
-        {
-          method: "POST",
-          headers: {
-            accept: "application/json",
-            "content-type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-          }),
-        }
-      );
+      const response = await fetch(NEWSLETTER_API_URL, {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      });
 
       if (response.ok) {
         setStatus("success");

@@ -180,7 +180,6 @@ const Footer = () => {
   );
 };
 
-// TODO: Update
 const Analytics = () => (
   <>
     {/* Google Analytics & Google Tag Manager: */}

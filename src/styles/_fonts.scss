@@ -1,9 +1,7 @@
-$font-base-url: "https://s3.amazonaws.com/static.thecity.nyc/fonts/";
-
-// TODO: Clean this up, host outside of Newspack
+$font-base-url: "https://outlier-projects-assets-production.s3.us-east-1.amazonaws.com/fonts/";
 @font-face {
   font-family: "Anton";
-  src: url("https://outliermedia.org/wp-content/uploads/fonts/outlier-media-anton-2-116.woff2");
+  src: url($font-base-url + "outlier-media-anton-2-116.woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,7 +12,7 @@ $font-base-url: "https://s3.amazonaws.com/static.thecity.nyc/fonts/";
   font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
-  src: url("https://outliermedia.org/wp-content/plugins/newspack-plugin/dist/fonts/InterVariable.a0e477f2.woff2") format("woff2")
+  src: url($font-base-url + "InterVariable.a0e477f2.woff2") format("woff2")
 }
 
 @font-face {
@@ -22,7 +20,7 @@ $font-base-url: "https://s3.amazonaws.com/static.thecity.nyc/fonts/";
   font-family: Inter;
   font-style: italic;
   font-weight: 100 900;
-  src: url("https://outliermedia.org/wp-content/plugins/newspack-plugin/dist/fonts/InterVariable-Italic.e295f70f.woff2") format("woff2")
+  src: url($font-base-url + "InterVariable-Italic.e295f70f.woff2") format("woff2")
 }
 
 $sans: "Inter", Helvetica, sans-serif;

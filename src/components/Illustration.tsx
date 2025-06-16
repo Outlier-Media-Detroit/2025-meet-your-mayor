@@ -39,43 +39,28 @@ export const Bobblehead: React.FC<{
         customClassNames
       )}
     >
-      <LazyLoadImage
-        src={`${imgPathPrefix}-head.png`}
-        className={classnames("illustration", candidatePath)}
-        style={{
-          animationDelay: animationDelay,
-        }}
-        wrapperClassName={classnames("image-wrapper", candidatePath, "top")}
-        effect={loadWithBlurEffect ? "blur" : undefined}
-        visibleByDefault
-        alt={candidateName}
-      />
-      <LazyLoadImage
-        src={`${imgPathPrefix}-body.png`}
-        className={classnames("illustration", candidatePath)}
-        wrapperClassName={classnames("image-wrapper", candidatePath, "bottom")}
-        effect={loadWithBlurEffect ? "blur" : undefined}
-        visibleByDefault
-        alt={candidateName}
-      />
-      {candidateName === "Jessica Ramos" && (
-        <LazyLoadImage
-          src={`${imgPathPrefix}-head-back.png`}
-          className={classnames("illustration", candidatePath)}
-          wrapperClassName={classnames(
-            "image-wrapper",
-            "top",
-            candidatePath,
-            "background"
-          )}
-          style={{
-            animationDelay: animationDelay,
-          }}
-          effect={loadWithBlurEffect ? "blur" : undefined}
-          visibleByDefault
-          alt={candidateName}
-        />
-      )}
+      <span className="image-wrapper top">
+        <picture>
+          <source srcSet={`${imgPathPrefix}-head.webp`} type="image/webp" />
+          <img
+            src={`${imgPathPrefix}-head.png`}
+            className="illustration"
+            style={{ animationDelay: animationDelay }}
+            alt={candidateName}
+          />
+        </picture>
+      </span>
+      <span className="image-wrapper bottom">
+        <picture>
+          <source srcSet={`${imgPathPrefix}-body.webp`} type="image/webp" />
+          <img
+            src={`${imgPathPrefix}-body.png`}
+            className="illustration"
+            style={{ animationDelay: animationDelay }}
+            alt={candidateName}
+          />
+        </picture>
+      </span>
     </figure>
   );
 };

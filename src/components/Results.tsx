@@ -33,6 +33,7 @@ export const getQuestionsLeftToAnswer = () => {
  * Maximum number of favorite topics a user can select.
  */
 const MAX_FAVORITE_TOPICS = 2;
+const MAX_FAVORITE_TOPICS_WORD = "two";
 
 /**
  * Minimum number of matching candidates we should show users in their quiz results.
@@ -222,9 +223,9 @@ const Results: React.FC = () => {
               </h2>
               <h3 className="deck has-text-left">
                 <div className="tag question-number-tag">★</div>
-                You can select 1 to {MAX_FAVORITE_TOPICS} topics. Candidates who
-                have the same answers as you for questions in those categories
-                will get extra points toward their total score.
+                You can select one to {MAX_FAVORITE_TOPICS_WORD} topics.
+                Candidates who have the same answers as you for questions in
+                those categories will get extra points toward their total score.
               </h3>
               <div className="buttons mt-5">
                 {Object.entries(questionContent).map((questionGroup, i) => (

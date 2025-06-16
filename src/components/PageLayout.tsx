@@ -63,7 +63,7 @@ const Footer = () => {
         className="container is-flex is-flex-direction-column is-align-items-center p-0"
         style={{ maxWidth: "750px" }}
       >
-        <p className="uppercase mb-4 has-text-weight-bold">Credits:</p>
+        <p className="uppercase mb-4">Credits:</p>
         <p className="mb-2">
           <OutboundLink to="https://outliermedia.org/author/briana-rice/">
             Briana Rice
@@ -96,15 +96,15 @@ const Footer = () => {
           </OutboundLink>
         </p>
         <p className="mt-2 mb-5">
-          Adapted from{" "}
+          Meet Your Mayor concept:{" "}
           <OutboundLink to="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">
-            The City
+            THE CITY
           </OutboundLink>
-          . Special thanks to Richard Kim and{" "}
+          . Original design:{" "}
           <OutboundLink to="https://www.samrabiyah.com/">
             Sam Rabiyah
           </OutboundLink>{" "}
-          for their guidance.
+          and THE CITY
         </p>
         <p className="mt-5 mb-5">
           Follow Outlier Media:{" "}

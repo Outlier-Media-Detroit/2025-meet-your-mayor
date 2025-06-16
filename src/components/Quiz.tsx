@@ -484,13 +484,13 @@ const Quiz = () => {
 
                 <div className="column is-hidden-touch is-one-quarter">
                   <div
-                    className="outlier-callout-box quiz-progress-desktop is-flex is-flex-direction-column has-text-right p-3"
+                    className="outlier-callout-box quiz-progress-desktop is-flex is-flex-direction-column has-text-right"
                     style={{
                       position: "sticky",
                       top: "6rem",
                       left: "100vw",
                       marginBottom: "60vh", // To avoid overlap with the next section
-                      maxWidth: "235px",
+                      maxWidth: "250px",
                     }}
                   >
                     <p className="has-text-left eyebrow mb-2">PROGRESS:</p>

@@ -58,11 +58,9 @@ export const NewsletterSignupBanner: React.FC = () => {
           className="is-flex is-justify-content-center"
         >
           <div className="field ">
-            <div className="eyebrow mb-2 has-text-centered">
-              How to Detroit Newsletter
-            </div>
+            <div className="eyebrow mb-2 has-text-centered">How to Detroit</div>
             <p className="mb-2 has-text-centered">
-              Get the essential email to help you demystify Detroit, from
+              Get the essential newsletter to help you demystify Detroit, from
               candidates to Coneys:
             </p>
             <div className="is-flex is-align-items-center">

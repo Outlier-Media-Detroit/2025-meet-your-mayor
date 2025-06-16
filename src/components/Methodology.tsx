@@ -43,7 +43,7 @@ export const Methodology = () => (
     <p className="mt-2">
       Outlier was able to create this quiz thanks to the generosity of{" "}
       <OutboundLink to="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">
-        The City
+        THE CITY
       </OutboundLink>{" "}
       in New York City, which came up with the idea and{" "}
       <OutboundLink to="https://github.com/thecityny/2025-meet-your-mayor">

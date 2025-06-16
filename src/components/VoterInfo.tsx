@@ -29,7 +29,7 @@ export const VoterInfo: React.FC = () => {
             🔄 Track your absentee ballot
           </OutboundLink>
         </p>
-        <p className="copy mb-4">
+        <p className="copy mb-0">
           <OutboundLink to="https://mvic.sos.state.mi.us/Voter/Index">
             🔎 See what’s on your ballot
           </OutboundLink>
@@ -41,7 +41,7 @@ export const VoterInfo: React.FC = () => {
         </p>
         <p className="copy mb-4">
           <OutboundLink to="https://outliermedia.org/detroit-mayoral-race-election-guide/">
-            💭How Outlier covers elections
+            💭 How Outlier covers elections
           </OutboundLink>
         </p>
       </div>
@@ -65,14 +65,14 @@ export const VoterInfo: React.FC = () => {
           to share your two cents.
         </p>
       </div>
-      <p className="copy mt-5 mb-3">
+      <p className="copy mt-5 mb-3 has-text-centered italics">
         Outlier is a nonprofit newsroom designed to center and respond to
         Detroiters’ needs. Support our work:
       </p>
       <div className="is-flex is-justify-content-center">
         <OutboundLink
           className="outlier-donate-button"
-          to="https://outliermedia.donorsupport.co/-/XGZBSJFF"
+          to="https://outliermedia.donorsupport.co/-/XMLSKFPN"
         >
           ♥ Donate
         </OutboundLink>

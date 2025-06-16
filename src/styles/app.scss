@@ -703,10 +703,6 @@ $bust-only-cropping-factor: -15%;
       padding: 0 5px;
     }
 
-    &.bottom:not(.adrienne-adams) {
-      transform: scale(80%) translateY(8.5%);
-    }
-
     &.top {
       z-index: 10;
 

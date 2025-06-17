@@ -63,7 +63,7 @@ const Footer = () => {
         className="container is-flex is-flex-direction-column is-align-items-center p-0"
         style={{ maxWidth: "750px" }}
       >
-        <p className="uppercase mb-4">Credits:</p>
+        <p className="has-text-weight-bold uppercase">Credits:</p>
         <p>
           <OutboundLink to="https://outliermedia.org/author/briana-rice/">
             Briana Rice
@@ -144,7 +144,7 @@ const Footer = () => {
             ariaLabel="YouTube"
           />
         </p>
-        <p>
+        <p className="mb-4">
           Text <span className="has-text-weight-bold">DETROIT</span> to{" "}
           <span className="has-text-weight-bold">67485</span> to get critical
           info or talk to an Outlier reporter via{" "}
@@ -161,7 +161,7 @@ const Footer = () => {
           </OutboundLink>
           .
         </p>
-        <p className="mt-5">
+        <p className="small">
           <OutboundLink to="https://outliermedia.org/about/privacy-policy/">
             Privacy Policy
           </OutboundLink>{" "}
@@ -174,7 +174,7 @@ const Footer = () => {
             Contact
           </OutboundLink>
         </p>
-        <p>© {year} Outlier Media</p>
+        <p className="small">© {year} Outlier Media</p>
       </div>
     </footer>
   );

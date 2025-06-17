@@ -194,6 +194,10 @@ const Analytics = () => (
 
         gtag('config', 'GT-T5MGVZ8');`}
     </Script>
+    <Script
+      id="parsely-cfg"
+      src="//cdn.parsely.com/keys/outliermedia.org/p.js"
+    />
   </>
 );
 

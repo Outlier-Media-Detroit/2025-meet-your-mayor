@@ -114,6 +114,14 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           <span className="has-text-weight-bold">Lives in:</span> {neighborhood}
         </div>
         <div className="copy">{formatContent(bio)}</div>
+        {candidateInfo.correction && (
+          <div className="copy mt-2 italics">
+            <p>
+              <span className="has-text-weight-bold">Correction:</span>
+              {candidateInfo.correction}
+            </p>
+          </div>
+        )}
         <div className="copy mt-5">
           <p>
             <span className="has-text-weight-bold">Contact:</span>{" "}

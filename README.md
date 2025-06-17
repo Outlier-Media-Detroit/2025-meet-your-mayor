@@ -26,6 +26,7 @@
 ├── candidate-content.js  # JS object with each candidate's info and question responses
 ├── candidate-list.json   # A JSON list of each candidate and their full name
 ├── question-content.js   # JS object with each quiz question and set of responses
+├── correction-content.js # JS object with any corrections
 ├── gatsby-config.js      # Gatsby configuration
 ├── gatsby-node.js        # Gatsby Node APIs
 ├── package.json          # Project metadata and dependencies

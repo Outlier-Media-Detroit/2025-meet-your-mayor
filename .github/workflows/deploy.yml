@@ -103,6 +103,7 @@ jobs:
         run: |
           FILENAME=candidate DOCID=${{ vars.DOCID_CANDIDATES }} npm run download-content
           FILENAME=question DOCID=${{ vars.DOCID_QUESTIONS }} npm run download-content
+          FILENAME=correction DOCID=${{ vars.DOCID_CORRECTIONS }} npm run download-content
 
       - id: npm-build
         name: Build project distribution

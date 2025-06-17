@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import classnames from "classnames";
 import Results, { getQuestionsLeftToAnswer } from "./Results";
 import { formatContent, smoothScrollToCenter } from "../utils";
+import { correctionContent } from "../correction-content";
 import { formatQuestionContent, generateListOfCandidates } from "./QuizContent";
 import {
   ANCHOR_LINK_DURATION,
@@ -130,6 +131,23 @@ const Quiz = () => {
                 two highest vote-getters will face off in the general election
                 on Nov. 4.
               </p>
+              {Object.keys(correctionContent).length > 0 && (
+                <>
+                  {Object.entries(correctionContent).map(
+                    ([correctionKey, { content }]) => (
+                      <p
+                        key={correctionKey.toString()}
+                        className="italics copy has-text-left mt-2"
+                      >
+                        <span className="has-text-weight-bold">
+                          Correction:
+                        </span>{" "}
+                        {content}
+                      </p>
+                    )
+                  )}
+                </>
+              )}
               <div className="mb-5 mt-2">
                 <button
                   key="x"

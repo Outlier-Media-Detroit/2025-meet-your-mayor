@@ -64,13 +64,13 @@ const Footer = () => {
         style={{ maxWidth: "750px" }}
       >
         <p className="uppercase mb-4">Credits:</p>
-        <p className="mb-2">
+        <p>
           <OutboundLink to="https://outliermedia.org/author/briana-rice/">
             Briana Rice
           </OutboundLink>
           , civic life reporter
         </p>
-        <p className="mb-2">
+        <p>
           Photography:{" "}
           <OutboundLink to="https://outliermedia.org/author/cydni-elledge/">
             Cydni Elledge
@@ -81,7 +81,7 @@ const Footer = () => {
           </OutboundLink>{" "}
           &bull; Development: Patrick Sier
         </p>
-        <p className="mb-2">
+        <p>
           Editing and design:{" "}
           <OutboundLink to="https://outliermedia.org/author/sarah-hulett/">
             Sarah Hulett
@@ -95,7 +95,7 @@ const Footer = () => {
             Kate Abbey-Lambertz
           </OutboundLink>
         </p>
-        <p className="mt-2 mb-5">
+        <p>
           Meet Your Mayor concept:{" "}
           <OutboundLink to="https://projects.thecity.nyc/meet-your-mayor-2025-election-quiz-candidates/">
             THE CITY
@@ -144,7 +144,7 @@ const Footer = () => {
             ariaLabel="YouTube"
           />
         </p>
-        <p className="mb-2">
+        <p>
           Text <span className="has-text-weight-bold">DETROIT</span> to{" "}
           <span className="has-text-weight-bold">67485</span> to get critical
           info or talk to an Outlier reporter via{" "}
@@ -153,7 +153,7 @@ const Footer = () => {
           </OutboundLink>
           .*
         </p>
-        <p className="mb-5">
+        <p className="small">
           * Message and data rates may apply. Message frequency varies based on
           your usage. Text HELP for help or STOP to cancel. Read our{" "}
           <OutboundLink to="https://outliermedia.org/about/privacy-policy/">
@@ -161,7 +161,7 @@ const Footer = () => {
           </OutboundLink>
           .
         </p>
-        <p className="mt-5 mb-2">
+        <p className="mt-5">
           <OutboundLink to="https://outliermedia.org/about/privacy-policy/">
             Privacy Policy
           </OutboundLink>{" "}

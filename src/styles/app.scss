@@ -608,11 +608,16 @@ $full-color-image-filter: contrast(1);
   background-color: colors.$outlier-black;
   color: colors.$outlier-white;
   text-align: center;
+  font-size: 0.9rem;
 
   p,
   p a,
   .has-text-weight-bold {
     color: colors.$outlier-white;
+  }
+
+  .small {
+    font-size: 0.8rem;
   }
 
   .social-button {

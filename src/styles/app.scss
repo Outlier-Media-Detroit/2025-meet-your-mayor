@@ -54,6 +54,14 @@ $tablet-breakpoint: 1025px;
   background-color: colors.$outlier-white;
 }
 
+.hero .main-headline {
+  font-size: 48px;
+
+  @media screen and (min-width: 420px) {
+    font-size: 52px;
+  }
+}
+
 // TEXT:
 
 .deck,
@@ -271,6 +279,7 @@ details {
 
 .social-button {
   margin-right: 0.5rem;
+  flex-shrink: 0;
 }
 
 .button-link {

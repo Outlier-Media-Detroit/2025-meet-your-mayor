@@ -39,7 +39,7 @@ const Homepage = () => {
         <div className="hero-body pt-6">
           <div className="columns" style={{ width: "100%" }}>
             <div className="column is-half">
-              <h1 className="headline has-text-left mt-0 uppercase">
+              <h1 className="headline main-headline has-text-left mt-0 uppercase">
                 Meet Your Mayor 2025
               </h1>
               <div className="attribution">

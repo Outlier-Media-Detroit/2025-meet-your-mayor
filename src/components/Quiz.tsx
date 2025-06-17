@@ -508,7 +508,7 @@ const Quiz = () => {
                       top: "6rem",
                       left: "100vw",
                       marginBottom: "60vh", // To avoid overlap with the next section
-                      maxWidth: "250px",
+                      maxWidth: "260px",
                     }}
                   >
                     <p className="has-text-left eyebrow mb-2">PROGRESS:</p>

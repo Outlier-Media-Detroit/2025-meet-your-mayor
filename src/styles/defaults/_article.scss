@@ -103,12 +103,12 @@ body {
 .subhed {
   @include fonts.boldface();
   text-align: center;
-  font-size: 50px;
+  font-size: 32px;
   margin: 40px 0 32px 0;
   line-height: 1.2em;
 
   @media screen and (min-width: 420px) {
-    font-size: 56px;
+    font-size: 48px;
   }
 }
 

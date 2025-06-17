@@ -183,6 +183,12 @@ details {
 
 .newsletter-signup {
   background-color: colors.$outlier-yellow;
+
+  @media screen and (max-width: 420px) {
+    .button {
+        padding: 0.15rem 0.5rem;
+    }
+  }
 }
 
 // BUTTONS:
@@ -245,16 +251,11 @@ details {
   &:active,
   &.is-selected,
   &:focus {
-    box-shadow: 0 calc(0.9rem - 4px) 0 -0.5rem;
+    box-shadow: 0 2px 0px colors.$outlier-black;
     transform: translate(0, 0);
 
     &.social-icon {
       box-shadow: none;
-    }
-
-    // TODO: Retain the spread-out effect?
-    &.is-white {
-      box-shadow: 0 2px 0px colors.$outlier-black;
     }
   }
 

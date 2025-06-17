@@ -80,7 +80,7 @@ export const NewsletterSignupBanner: React.FC = () => {
                   type="submit"
                   disabled={status === "loading"}
                 >
-                  {status === "loading" ? "Submitting..." : "Sign Up"}
+                  Sign Up
                 </button>
               </div>
             </div>

@@ -77,7 +77,7 @@ const Quiz = () => {
     },
 
     {
-      label: "All candidates",
+      label: "Include write-in candidates",
       ballotStatus: "writein",
       candidates: writeInCandidates,
     },
@@ -207,7 +207,9 @@ const Quiz = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 className="deck has-text-left">Choose a contest:</h2>
+                    <h2 className="deck has-text-left has-text-weight-bold">
+                      Match me with:
+                    </h2>
                     {ballotSelectorButtons.map((button, i) => (
                       <div key={i} className="mt-5 mb-4">
                         <button

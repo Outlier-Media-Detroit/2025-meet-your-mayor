@@ -122,10 +122,21 @@ const Homepage = () => {
           <div className="columns">
             <div className="column is-two-thirds">
               <div className="eyebrow">
-                <a href="#quiz">Take our quiz →</a>
+                <a href="#quiz">
+                  <div
+                    className="mr-1"
+                    style={{
+                      display: "inline-block",
+                      transform: "rotate(-135deg)",
+                    }}
+                  >
+                    ↗
+                  </div>
+                  Take our quiz
+                </a>
               </div>
               <h1
-                className="headline has-text-left mt-2 mb-4"
+                className="headline has-text-left mt-2"
                 style={{ maxWidth: "500px" }}
               >
                 About the candidates

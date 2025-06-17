@@ -59,7 +59,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
               className="mr-1"
               style={{
                 display: "inline-block",
-                transform: "translateY(-2px) rotate(-135deg)",
+                transform: "rotate(-135deg)",
               }}
             >
               ↗

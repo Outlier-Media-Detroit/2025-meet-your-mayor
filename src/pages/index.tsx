@@ -13,17 +13,28 @@ import { useAppStore } from "../useAppStore";
 import { OutboundLink } from "../components/Links";
 
 const getDateUpdated = () => {
+  const months = [
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "June",
+    "July",
+    "Aug.",
+    "Sept.",
+    "Oct.",
+    "Nov.",
+    "Dec.",
+  ];
   const timestamp = process.env.GATSBY_UPDATE_DATE;
   if (!timestamp) {
     throw new Error("No publication date defined in .env file!");
   } else {
     const date = new Date(timestamp.replace(/-/g, "/"));
-    const dateFormatted = date.toLocaleDateString("en-us", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-    return dateFormatted;
+    return `${
+      months[date.getMonth()]
+    } ${date.getDate()}, ${date.getFullYear()}`;
   }
 };
 

@@ -51,6 +51,10 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
       customMetadata={{
         siteName: `${candidateName} | ${process.env.GATSBY_SITE_NAME}`,
         shareImageFilename: `social/${kebabCase(candidateName)}-social.jpg`,
+        seoHeadline: `${candidateName} | Detroit Meet Your Mayor Quiz`,
+        socialHeadline: `${candidateName} | Detroit Meet Your Mayor Quiz`,
+        socialDescription: `${candidateName} is running for Detroit mayor in the 2025 primary. Take Outlier's Meet Your Mayor quiz to find the candidates you match with on the issues.`,
+        seoDescription: `${candidateName} is running for Detroit mayor in the 2025 primary. Take Outlier's Meet Your Mayor quiz to find the candidates you match with on the issues.`,
       }}
     >
       <div className="container pt-6" style={{ maxWidth: "1100px" }}>

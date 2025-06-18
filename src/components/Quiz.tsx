@@ -139,9 +139,6 @@ const Quiz = () => {
                         key={correctionKey.toString()}
                         className="italics copy has-text-left mt-2"
                       >
-                        <span className="has-text-weight-bold">
-                          Correction:
-                        </span>{" "}
                         {content}
                       </p>
                     )

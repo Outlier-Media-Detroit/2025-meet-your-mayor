@@ -382,15 +382,15 @@ const Results: React.FC = () => {
 
                 const resultsSections = [
                   {
-                    title: "You agreed with them fully about...",
+                    title: "You agreed with them fully about ...",
                     content: fullyMatchedSubjects,
                   },
                   {
-                    title: "You agreed with them partially about...",
+                    title: "You agreed with them partially about ...",
                     content: partiallyMatchedSubjects,
                   },
                   {
-                    title: "You disagreed with them about...",
+                    title: "You disagreed with them about ...",
                     content: nonMatchedSubjects,
                   },
                 ];

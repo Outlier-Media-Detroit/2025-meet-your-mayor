@@ -380,9 +380,12 @@ const Quiz = () => {
                                 {!!tellMeMore && (
                                   <details className="mb-5">
                                     <summary className="eyebrow is-link">
-                                      Tell me{" "}
-                                      <span className="open-text">more +</span>
-                                      <span className="close-text">less -</span>
+                                      <span className="open-text">
+                                        Tell me more +
+                                      </span>
+                                      <span className="close-text">
+                                        Tell me less -
+                                      </span>
                                     </summary>
                                     <div className="details-content copy mt-2">
                                       {formatContent(tellMeMore)}

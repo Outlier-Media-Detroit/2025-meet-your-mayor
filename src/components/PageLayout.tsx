@@ -46,7 +46,11 @@ const Header = () => (
           to={OUTLIER_SITE_LINKS.website}
           aria-label="Outlier Media"
         >
-          <StaticImage src={"../assets/logo.png"} alt="Outlier Media logo" />
+          <StaticImage
+            src={"../assets/logo.png"}
+            alt="Outlier Media logo"
+            loading="eager"
+          />
         </OutboundLink>
       </div>
       <div className="nav-title"></div>
@@ -246,7 +250,7 @@ export const PageLayout: React.FC<{
   return (
     <article id="main">
       <Header />
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: "en" }}>
         <title>{`${siteName}`}</title>
         <meta name="theme-color" content="#000000" />
         <meta name="description" content={seoDescription} />

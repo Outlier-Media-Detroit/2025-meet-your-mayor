@@ -11,7 +11,7 @@ $font-base-url: "https://outlier-projects-assets-production.s3.us-east-1.amazona
   font-display: swap;
   font-family: Inter;
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 100 bold;
   src: url($font-base-url + "InterVariable.a0e477f2.woff2") format("woff2")
 }
 
@@ -19,7 +19,7 @@ $font-base-url: "https://outlier-projects-assets-production.s3.us-east-1.amazona
   font-display: swap;
   font-family: Inter;
   font-style: italic;
-  font-weight: 100 900;
+  font-weight: 100 bold;
   src: url($font-base-url + "InterVariable-Italic.e295f70f.woff2") format("woff2")
 }
 
@@ -31,12 +31,12 @@ $mono: "Courier", monospace;
 
 @mixin boldface() {
   font-family: $sans;
-  font-weight: 900;
+  font-weight: bold;
 }
 
 @mixin boldface-ital() {
   font-family: $sans;
-  font-weight: 900;
+  font-weight: bold;
   font-style: italic;
 }
 

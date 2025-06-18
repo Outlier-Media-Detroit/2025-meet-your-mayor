@@ -77,7 +77,7 @@ const Quiz = () => {
     },
 
     {
-      label: "Include write-in candidates",
+      label: "Include write-ins",
       ballotStatus: "writein",
       candidates: writeInCandidates,
     },

@@ -124,7 +124,7 @@ const Homepage = () => {
               <div className="eyebrow">
                 <a href="#quiz">
                   <div
-                    className="mr-1"
+                    className="mr-2"
                     style={{
                       display: "inline-block",
                       transform: "rotate(-135deg)",

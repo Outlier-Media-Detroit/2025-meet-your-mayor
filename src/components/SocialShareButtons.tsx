@@ -35,7 +35,7 @@ const getShareText = (
 ) => {
   if (!results) {
     if (platform === "bluesky") {
-      return  "Having trouble sorting through Detroit's crowded mayoral race? @outliermedia.org got you.%0A%0ATake their Meet Your Mayor quiz to find out which candidate matches your priorities. go.outliermedia.org/mayor-quiz #DetroitMayorMatch";
+      return "Having trouble sorting through Detroit's crowded mayoral race? @outliermedia.org got you.%0A%0ATake their Meet Your Mayor quiz to find out which candidate matches your priorities. go.outliermedia.org/mayor-quiz #DetroitMayorMatch";
     } else if (platform === "threads") {
       return "There are 11+ candidates in the Detroit mayoral primary. You can only vote for one.%0A%0A@media_outlier made a quiz to help you find out which candidates share your values. Take it here: go.outliermedia.org/mayor-quiz #DetroitMayorMatch";
     } else {

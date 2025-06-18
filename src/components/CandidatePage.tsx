@@ -61,7 +61,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         <div className="eyebrow">
           <Link to="/">
             <div
-              className="mr-1"
+              className="mr-2"
               style={{
                 display: "inline-block",
                 transform: "rotate(-135deg)",
@@ -107,7 +107,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             </button>
           </Link>
 
-          <div className="eyebrow has-text-left mt-3 mb-2 is-flex is-align-items-center">
+          <div className="eyebrow has-text-left mt-5 mb-2 is-flex is-align-items-center">
             <div className="mr-3 is-flex-shrink-2">Share Meet Your Mayor:</div>{" "}
             <SocialShareButtons />
           </div>
@@ -140,7 +140,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
         </div>
       </div>
       <div
-        className="container candidate-page-content mt-5 pt-5"
+        className="container candidate-page-content pt-5"
         style={{ margin: "auto" }}
       >
         <h2 className="subhed">Notable responses</h2>
@@ -158,7 +158,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
                   }}
                 >
                   <div
-                    className="eyebrow has-white-background mb-4 px-1 is-inline-flex"
+                    className="eyebrow has-color-background mb-4 px-1 is-inline-flex"
                     style={{ borderRadius: "10%" }}
                   >
                     ON: {subject}
@@ -199,9 +199,14 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           />
         )}
       </div>
-      <div className="container pt-5 is-flex is-flex-direction-column is-align-items-center">
-        <h1 className="headline mb-4">About the candidates</h1>
-        <CandidateSelectorMenu />
+      <div
+        className="container pt-5 is-flex is-flex-direction-column"
+        style={{ maxWidth: "600px" }}
+      >
+        <h1 className="headline has-text-left">About the candidates</h1>
+        <div className="is-flex is-flex-direction-column is-align-items-center">
+          <CandidateSelectorMenu />
+        </div>
       </div>
       <div className="container pt-5 mb-5" style={{ maxWidth: "600px" }}>
         <h1 className="headline has-text-left mt-6">Detroit voter info</h1>

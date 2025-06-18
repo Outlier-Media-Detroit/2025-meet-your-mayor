@@ -184,6 +184,12 @@ details {
 .newsletter-signup {
   background-color: colors.$outlier-yellow;
 
+  input.input.is-small {
+    font-size: 16px;
+    padding: 0.25em 0.75em;
+    height: 34px;
+  }
+
   @media screen and (max-width: 420px) {
     .button {
         padding: 0.15rem 0.5rem;

@@ -33,11 +33,23 @@ const getShareText = (
   platform: "bluesky" | "whatsapp" | "threads" | "email",
   results?: ScoreShareDetails
 ) => {
-  const outlierHandle =
-    platform === "bluesky" ? "@outliermedia.org" : "Outlier Media";
-  return !!results
-    ? `I'm a ${results.matchScore}%25 match with ${results.topCandidate} on the Meet Your Mayor quiz! Find your own match, powered by ${outlierHandle}:`
-    : `Check out the Meet Your Mayor quiz from ${outlierHandle}!`;
+  if (!results) {
+    if (platform === "bluesky") {
+      return  "Having trouble sorting through Detroit's crowded mayoral race? @outliermedia.org got you.%0A%0ATake their Meet Your Mayor quiz to find out which candidate matches your priorities. go.outliermedia.org/mayor-quiz #DetroitMayorMatch";
+    } else if (platform === "threads") {
+      return "There are 11+ candidates in the Detroit mayoral primary. You can only vote for one.%0A%0A@media_outlier made a quiz to help you find out which candidates share your values. Take it here: go.outliermedia.org/mayor-quiz #DetroitMayorMatch";
+    } else {
+      return "Having trouble sorting through Detroit's crowded mayoral race? Take Outlier Media's Meet Your Mayor quiz to find out which candidates share your values: go.outliermedia.org/mayor-quiz";
+    }
+  } else {
+    if (platform === "bluesky") {
+      return `I took the Detroit Meet Your Mayor quiz, and guess what? I'm a ${results.matchScore}%25 match with ${results.topCandidate}!%0A%0AFind your mayoral match with this quiz by @outliermedia.org: go.outliermedia.org/mayor-quiz #DetroitMayorMatch`;
+    } else if (platform === "threads") {
+      return `I'm a ${results.matchScore}%25 match with ${results.topCandidate}! Find your match for Detroit mayor with the Meet Your Mayor quiz by @media_outlier: go.outliermedia.org/mayor-quiz #DetroitMayorMatch`;
+    } else {
+      return `I'm a ${results.matchScore}%25 match with ${results.topCandidate} for the Detroit mayoral race this August. Find your own match with the Meet Your Mayor quiz from Outlier Media: go.outliermedia.org/mayor-quiz`;
+    }
+  }
 };
 
 export const SocialShareButtons: React.FC<{
@@ -71,7 +83,7 @@ export const SocialShareButtons: React.FC<{
         ariaLabel="Share on Whatsapp"
       />
       <SocialButton
-        url={`mailto:?subject=Meet Your Mayor: 2025&body=${getShareText(
+        url={`mailto:?subject=Detroit Meet Your Mayor Quiz&body=${getShareText(
           "email",
           results
         )} ${shareUrl}`}

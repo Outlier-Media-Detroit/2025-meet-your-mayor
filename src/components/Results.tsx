@@ -239,6 +239,9 @@ const Results: React.FC = () => {
                           "is-selected"
                       )}
                       onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "form_submit", {});
+                        }
                         changeFavoriteTopics(questionGroup[0]);
                       }}
                       disabled={

@@ -62,7 +62,9 @@ export const MatchingCandidates: FC<{
               className="is-flex is-flex-direction-column is-align-items-center mr-3"
             >
               <Bobblehead candidateName={name} size="is-64x64" showBustOnly />
-              <span aria-hidden="true" className="label has-text-centered">{abbreviatedName}</span>
+              <span aria-hidden="true" className="label has-text-centered">
+                {abbreviatedName}
+              </span>
             </div>
           </div>
         ) : (

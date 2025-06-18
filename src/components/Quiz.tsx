@@ -212,6 +212,9 @@ const Quiz = () => {
                         <button
                           className="control"
                           onClick={() => {
+                            if (window.gtag) {
+                              window.gtag("event", "form_start", {});
+                            }
                             setMethodologyVisible(false);
                             setTimeout(() => {
                               scroller.scrollTo("question-1", {
@@ -257,7 +260,10 @@ const Quiz = () => {
                                     showBustOnly
                                   />
 
-                                  <span aria-hidden="true" className="label has-text-centered">
+                                  <span
+                                    aria-hidden="true"
+                                    className="label has-text-centered"
+                                  >
                                     {abbreviateName(candidate.name)}
                                   </span>
                                 </div>

@@ -105,6 +105,7 @@ const Quiz = () => {
       <div
         className="hero mb-6"
         id="quiz"
+        tabIndex={-1}
         style={{
           minHeight: "110vh", // Make sure this section stays a consistent height
           // even when the content changes
@@ -280,7 +281,7 @@ const Quiz = () => {
           </div>
         </div>
       </div>
-      <div className="section p-0" id="questions">
+      <div className="section p-0" id="questions" tabIndex={-1}>
         {highestVisibleQuestion > 0 && (
           <div>
             <div>
@@ -328,6 +329,7 @@ const Quiz = () => {
                     {Object.entries(questions).map((questionGroup, i) => (
                       <div
                         key={i}
+                        tabIndex={-1}
                         id={`section-${questionGroup[0].toLowerCase()}`}
                       >
                         {questionGroup[1].map((question, i) => {
@@ -376,7 +378,10 @@ const Quiz = () => {
                                     : "30vh 0",
                                 }}
                               >
-                                <h3 className="deck has-text-left mb-2">
+                                <h3
+                                  className="deck has-text-left mb-2"
+                                  tabIndex={-1}
+                                >
                                   <div className="tag question-number-tag">
                                     {number}
                                   </div>

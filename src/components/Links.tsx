@@ -67,7 +67,15 @@ export const SmoothScroll: React.FC<{
           : QUESTION_ANCHOR_LINK_OFFSET) + (extraOffset || 0)
       }
       to={to}
-      onClick={onClick}
+      onClick={() => {
+        if (onClick) onClick();
+        setTimeout(() => {
+          const el = to.startsWith("question-")
+            ? document.querySelector(`#${to} h3`)
+            : document.getElementById(to);
+          el?.focus();
+        }, 1000);
+      }}
     >
       {children}
     </AnchorLink>

@@ -215,6 +215,7 @@ const Results: React.FC = () => {
           <div className="column is-half" style={{ maxWidth: "600px" }}>
             <div
               id={`question-${answers.length + 1}`}
+              tabIndex={-1}
               className="container p-0 mb-5"
               style={{ minHeight: "100vh" }}
             >
@@ -271,6 +272,7 @@ const Results: React.FC = () => {
       <div
         className="container has-color-background p-6 mb-6"
         id="results"
+        tabIndex={-1}
         style={{ maxWidth: "1100px" }}
       >
         {questionsLeftToAnswer.length > 0 ? (

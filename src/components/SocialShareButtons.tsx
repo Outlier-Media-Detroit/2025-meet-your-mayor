@@ -58,35 +58,31 @@ export const SocialShareButtons: React.FC<{
    */
   results?: ScoreShareDetails;
 }> = ({ results }) => {
-  const shareUrl = `${process.env.GATSBY_DOMAIN}${process.env.GATSBY_SLUG}`;
   return (
     <>
       <SocialButton
         url={`https://bsky.app/intent/compose?text=${getShareText(
           "bluesky",
           results
-        )} ${shareUrl}`}
+        )}`}
         ariaLabel="Share on Bluesky"
       />
       <SocialButton
         url={`https://threads.net/intent/post?text=${getShareText(
           "threads",
           results
-        )} ${shareUrl}`}
+        )}`}
         ariaLabel="Share on Threads"
       />
       <SocialButton
-        url={`https://wa.me/?text=${getShareText(
-          "whatsapp",
-          results
-        )} ${shareUrl}`}
+        url={`https://wa.me/?text=${getShareText("whatsapp", results)}`}
         ariaLabel="Share on Whatsapp"
       />
       <SocialButton
         url={`mailto:?subject=Detroit Meet Your Mayor Quiz&body=${getShareText(
           "email",
           results
-        )} ${shareUrl}`}
+        )}`}
         ariaLabel="Share via Email"
       />
     </>

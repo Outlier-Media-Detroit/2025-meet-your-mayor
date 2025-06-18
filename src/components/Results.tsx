@@ -257,22 +257,7 @@ const Results: React.FC = () => {
               {favoriteTopics.length > 0 && (
                 <div className="question-controls">
                   <SmoothScroll to="results">
-                    <button className="button py-5 is-extra-dark see-my-results">
-                      <span className="mr-1">★</span>
-                      <span>S</span>
-                      <span>E</span>
-                      <span className="mr-1">E</span>
-                      <span>M</span>
-                      <span className="mr-1">Y</span>
-                      <span>M</span>
-                      <span>A</span>
-                      <span>T</span>
-                      <span>C</span>
-                      <span>H</span>
-                      <span>E</span>
-                      <span className="mr-1">S</span>
-                      <span>★</span>
-                    </button>
+                    <button className="button">See my results</button>
                   </SmoothScroll>
                 </div>
               )}
@@ -291,7 +276,7 @@ const Results: React.FC = () => {
             <p className="copy">
               Oops! You're not finished with the quiz yet. Please go back to{" "}
               <b>
-                {questionsLeftToAnswer[0] === 19
+                {questionsLeftToAnswer[0] === 22
                   ? "select your most important topics"
                   : `question ${questionsLeftToAnswer[0]}`}
               </b>

@@ -86,6 +86,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
               src={`../photos/${kebabCase(candidateName)}-square.jpg`}
               effect="blur"
               alt={candidateName}
+              fetchPriority="high"
               style={{
                 maxWidth: "275px",
                 maxHeight: "275px",
@@ -103,7 +104,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
             <button className="button is-white mb-1">
               {questionsLeftToAnswer.length === 0
                 ? `Revisit the quiz`
-                : "See if you're a match"}
+                : "See if you’re a match"}
             </button>
           </Link>
 

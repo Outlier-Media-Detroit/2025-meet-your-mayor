@@ -50,6 +50,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
     <PageLayout
       customMetadata={{
         siteName: `${candidateName} | ${process.env.GATSBY_SITE_NAME}`,
+        shareImageFilename: `social/${kebabCase(candidateName)}-social.jpg`,
       }}
     >
       <div className="container pt-6" style={{ maxWidth: "1100px" }}>

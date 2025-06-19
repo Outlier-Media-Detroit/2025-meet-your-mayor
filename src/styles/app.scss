@@ -773,8 +773,11 @@ $bust-only-cropping-factor: -15%;
 // HELPERS:
 
 hr {
-  background-color: unset;
-  border: 1px dashed #11111155;
+  background-color: #ccc;
+  height: 1px;
+  width: 100px;
+  margin: 2rem auto;
+  margin-top: 4rem;
 }
 
 .no-wrap {

@@ -197,8 +197,9 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           />
         )}
       </div>
+      <hr />
       <div
-        className="container pt-5 is-flex is-flex-direction-column"
+        className="container is-flex is-flex-direction-column"
         style={{ maxWidth: "600px" }}
       >
         <h1 className="headline has-text-left">About the candidates</h1>

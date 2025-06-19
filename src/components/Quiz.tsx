@@ -337,7 +337,6 @@ const Quiz = () => {
                     {Object.entries(questions).map((questionGroup, i) => (
                       <div
                         key={i}
-                        tabIndex={-1}
                         id={`section-${questionGroup[0].toLowerCase()}`}
                       >
                         {questionGroup[1].map((question, i) => {
@@ -369,12 +368,14 @@ const Quiz = () => {
 
                           return (
                             <div key={i}>
-                              {isFirstQuestionInSection &&
-                                isQuestionVisible && (
-                                  <h2 className="headline has-text-left pt-5">
-                                    {questionGroup[0]}
-                                  </h2>
-                                )}
+                              {isFirstQuestionInSection && isQuestionVisible && (
+                                <h2
+                                  className="headline has-text-left pt-5"
+                                  tabIndex={-1}
+                                >
+                                  {questionGroup[0]}
+                                </h2>
+                              )}
                               <div
                                 key={number}
                                 id={`question-${number}`}

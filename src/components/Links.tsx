@@ -70,10 +70,13 @@ export const SmoothScroll: React.FC<{
       onClick={() => {
         if (onClick) onClick();
         setTimeout(() => {
-          const el = to.startsWith("question-")
-            ? document.querySelector(`#${to} h3`)
-            : document.getElementById(to);
-          el?.focus();
+          if (to.startsWith("question-")) {
+            document.querySelector(`#${to} h3`)?.focus();
+          } else if (to.startsWith("section-")) {
+            document.querySelector(`#${to} h2`)?.focus();
+          } else {
+            document.getElementById(to)?.focus();
+          }
         }, 1000);
       }}
     >

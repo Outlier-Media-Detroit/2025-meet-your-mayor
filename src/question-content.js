@@ -108,20 +108,6 @@ export const questionContent = {
     option4: "Put more money into housing nonprofits or community land trusts",
     option5: "Property speculation isn’t a problem in Detroit",
   },
-  question10: {
-    title: "How should the mayor address car insurance affordability?",
-    subject: "Economy and affordability",
-    tellMeMore:
-      'Detroiters <a href="https://outliermedia.org/michigan-car-insurance-reform-higher-rates-black-drivers/">pay more for car insurance</a> than any other city in the nation. These high costs stem largely from insurers’ reliance on the driver’s home address, <a href="https://outliermedia.org/detroit-car-insurance-rates-crime-theft/">not crime data</a>, to set rates.',
-    option1:
-      "The mayor has little power to change insurance prices, which are dictated by the market and state regulators",
-    option2:
-      "Reducing crime and blight is the main way to lower insurance rates",
-    option3:
-      "The mayor should make reducing insurance rates for Detroiters a top priority",
-    option4: "",
-    option5: "",
-  },
   question11: {
     title:
       "What is the city’s responsibility to homeowners whose properties were overassessed?",

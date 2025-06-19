@@ -15,6 +15,7 @@ import { Methodology } from "./Methodology";
 import { scroller } from "react-scroll";
 import { Bobblehead } from "./Illustration";
 import { OutboundLink } from "./Links";
+import { kebabCase } from "../utils";
 
 export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
   <div
@@ -329,7 +330,7 @@ const Quiz = () => {
                     {Object.entries(questions).map((questionGroup, i) => (
                       <div
                         key={i}
-                        id={`section-${questionGroup[0].toLowerCase()}`}
+                        id={`section-${kebabCase(questionGroup[0])}`}
                       >
                         {questionGroup[1].map((question, i) => {
                           const {
@@ -540,7 +541,7 @@ const Quiz = () => {
                             style={{
                               pointerEvents: questionGroupSeen ? "all" : "none",
                             }}
-                            to={`section-${questionGroup[0].toLowerCase()}`}
+                            to={`section-${kebabCase(questionGroup[0])}`}
                           >
                             {groupNameMap[questionGroup[0]] || questionGroup[0]}
                           </SmoothScroll>

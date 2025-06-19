@@ -94,6 +94,8 @@ const Quiz = () => {
                 </OutboundLink>{" "}
                 would tackle urgent issues facing Detroiters. You’ll be matched
                 with ones who share your views about housing, safety and more.
+                Two candidates — Rogelio Landin and Arnold Boyd — are write-ins,
+                so their names won’t be printed on the ballot.
               </p>
               {Object.keys(correctionContent).length > 0 && (
                 <>
@@ -185,7 +187,7 @@ const Quiz = () => {
                         }, 100);
                       }}
                     >
-                      Take the quiz
+                      Start
                     </button>
                   </>
                 )}

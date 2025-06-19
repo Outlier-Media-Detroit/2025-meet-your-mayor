@@ -3,10 +3,7 @@ import { PageLayout } from "../components/PageLayout";
 import Quiz from "../components/Quiz";
 import { CandidateSelectorMenu } from "../components/CandidateSelectorMenu";
 import { SocialShareButtons } from "../components/SocialShareButtons";
-import {
-  ANCHOR_LINK_DURATION,
-  QUESTION_ANCHOR_LINK_OFFSET,
-} from "../components/Links";
+import { SmoothScroll } from "../components/Links";
 import { VoterInfo } from "../components/VoterInfo";
 import { IntroAnimation } from "../components/IntroAnimation";
 import { NewsletterSignupBanner } from "../components/NewsletterSignup";
@@ -45,9 +42,6 @@ const getDateUpdated = () => {
 const Homepage = () => {
   const answers = useAppStore((state) => state.answers);
   const hasStartedQuestions = answers.some(({ answer }) => answer !== null);
-  const setHighestVisibleQuestion = useAppStore(
-    (state) => state.setHighestVisibleQuestion
-  );
   const questionsLeftToAnswer = getQuestionsLeftToAnswer();
 
   return (
@@ -74,40 +68,23 @@ const Homepage = () => {
                   your match.
                 </p>
                 <div className="is-flex is-flex-direction-column my-6">
-                  <button
+                  <SmoothScroll
                     className="mb-4 button is-extra-dark"
                     style={{ width: "100%", maxWidth: "350px" }}
-                    onClick={() => {
-                      const scrollProps = {
-                        duration: ANCHOR_LINK_DURATION,
-                        delay: 0,
-                        smooth: true,
-                        offset: QUESTION_ANCHOR_LINK_OFFSET,
-                      };
-                      if (questionsLeftToAnswer.length === 0) {
-                        scroller.scrollTo("results", scrollProps);
-                      } else if (hasStartedQuestions) {
-                        scroller.scrollTo(
-                          `question-${questionsLeftToAnswer[0]}`,
-                          scrollProps
-                        );
-                      } else {
-                        if (window.gtag) {
-                          window.gtag("event", "form_start", {});
-                        }
-                        setHighestVisibleQuestion(1);
-                        setTimeout(() => {
-                          scroller.scrollTo("question-1", scrollProps);
-                        }, 100);
-                      }
-                    }}
+                    to={
+                      questionsLeftToAnswer.length === 0
+                        ? "results"
+                        : hasStartedQuestions
+                        ? `question-${questionsLeftToAnswer[0]}`
+                        : "quiz"
+                    }
                   >
                     {questionsLeftToAnswer.length === 0
                       ? "View my results"
                       : hasStartedQuestions
                       ? "Continue the quiz"
                       : "Take the quiz"}
-                  </button>
+                  </SmoothScroll>
 
                   <button
                     className="button is-white"

@@ -83,7 +83,7 @@ export const convertToHtml = (text: string) => {
   );
 
   // Fix double spaces and non-spaced commas:
-  formattedText = formattedText.replace("  ", " ").replace(",", ", ");
+  formattedText = formattedText.replace("  ", " ");
 
   return parse(formattedText);
 };

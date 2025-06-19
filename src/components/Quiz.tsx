@@ -171,13 +171,18 @@ const Quiz = () => {
                     </h2>
 
                     <div className="field is-grouped">
-                      <SmoothScroll to="results" className="control">
-                        <button className="button mb-1">See my Results</button>
+                      <SmoothScroll
+                        to="results"
+                        className="control button mb-1"
+                      >
+                        See my Results
                       </SmoothScroll>
-                      <SmoothScroll to="quiz" onClick={() => resetAnswers()}>
-                        <button className="button is-white mb-1">
-                          Reset Answers
-                        </button>
+                      <SmoothScroll
+                        to="quiz"
+                        onClick={() => resetAnswers()}
+                        className="button is-white mb-1"
+                      >
+                        Reset Answers
                       </SmoothScroll>
                     </div>
                   </div>
@@ -191,14 +196,16 @@ const Quiz = () => {
                       <div className="field is-grouped">
                         <SmoothScroll
                           to={`question-${questionsLeftToAnswer[0]}`}
-                          className="control"
+                          className="control button mb-1"
                         >
-                          <button className="button mb-1">Continue</button>
+                          Continue
                         </SmoothScroll>
-                        <SmoothScroll to="quiz" onClick={() => resetAnswers()}>
-                          <button className="button is-white mb-1">
-                            Reset Answers
-                          </button>
+                        <SmoothScroll
+                          className="button is-white mb-1"
+                          to="quiz"
+                          onClick={() => resetAnswers()}
+                        >
+                          Reset Answers
                         </SmoothScroll>
                       </div>
                     </>
@@ -206,7 +213,8 @@ const Quiz = () => {
                 ) : (
                   <>
                     <h2 className="deck has-text-left has-text-weight-bold">
-                      Match me with:
+                      Ready to take the quiz? Choose who you want to be matched
+                      with:
                     </h2>
                     {ballotSelectorButtons.map((button, i) => (
                       <div key={i} className="mt-5 mb-4">

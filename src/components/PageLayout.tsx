@@ -270,7 +270,7 @@ export const PageLayout: React.FC<{
         <meta property="twitter:card" content="summary_large_image" />
 
         <script type="application/ld+json">{`{
-          "@type": "NewsArticle",
+          "@type": "Post",
           "@context": "http://schema.org",
           "headline": "${seoHeadline}",
           "image": {
@@ -282,7 +282,7 @@ export const PageLayout: React.FC<{
           "dateCreated": "${process.env.GATSBY_PUB_DATE}",
           "datePublished": "${process.env.GATSBY_PUB_DATE}",
           "dateModified": "${process.env.GATSBY_UPDATE_DATE}",
-          "articleSection": "News Apps",
+          "articleSection": "Democracy and Elections",
           "mainEntityOfPage": "${url}",
           "description": "${seoDescription}",
           "publisher": {
@@ -290,7 +290,9 @@ export const PageLayout: React.FC<{
               "name": "Outlier Media",
               "url": "https://outliermedia.org/"
           },
-          "author": ${author}
+          "author": "Briana Rice",
+          "creator": "Briana Rice",
+          "keywords": ["detroit mayor", "2025 election", "election", "voting", "detroit voting guide"]
         }`}</script>
       </Helmet>
       <Analytics />

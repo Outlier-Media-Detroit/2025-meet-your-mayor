@@ -452,7 +452,6 @@ $full-color-image-filter: contrast(1);
 }
 
 .matching-candidates {
-  // margin-left: 2rem; // TODO: Double check on this
   animation: slideIn 1s ease-out forwards;
   opacity: 0;
   max-height: 0px;

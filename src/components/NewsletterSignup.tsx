@@ -1,11 +1,7 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { OutboundLink } from "./Links";
 
-// TODO: Change with more permanent domain
 const NEWSLETTER_API_URL =
-  "https://4e9f5glzjb.execute-api.us-east-1.amazonaws.com/newsletter/meet-your-mayor-2025";
-
-const FALLBACK_NEWSLETTER_LINK = "https://outliermedia.org/newsletters/";
+  "https://projects-api.outliermedia.org/newsletter/meet-your-mayor-2025";
 
 type RequestStatus = "idle" | "loading" | "success" | "error";
 

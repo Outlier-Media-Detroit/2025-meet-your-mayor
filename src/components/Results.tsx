@@ -88,7 +88,6 @@ const Results: React.FC = () => {
         const userAnswer = answers.find(
           (answer) => answer.questionNumber === number
         );
-        // TODO: Simplify
         scorecard.forEach((candidate, i) => {
           if (
             userAnswer?.answer === "1" &&

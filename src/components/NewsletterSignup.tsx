@@ -90,11 +90,9 @@ export const NewsletterSignupBanner: React.FC = () => {
           <p className="label mt-2 has-text-centered">You're signed up!</p>
         ) : status === "error" ? (
           <p className="label mt-2 has-text-centered">
-            Something went wrong. Sign up manually via{" "}
-            <OutboundLink to={FALLBACK_NEWSLETTER_LINK}>
-              Outlier Media
-            </OutboundLink>
-            .
+            Oops! Something went wrong. Email{" "}
+            <a href="mailto:kate@outliermedia.org">kate@outliermedia.org</a> for
+            help
           </p>
         ) : (
           <></>

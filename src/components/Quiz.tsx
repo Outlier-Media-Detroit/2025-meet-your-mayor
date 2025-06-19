@@ -140,7 +140,7 @@ const Quiz = () => {
               )}
 
               <div
-                className="pt-3 pb-3"
+                className="pb-3"
                 style={{
                   minHeight: "500px",
                 }}
@@ -193,7 +193,7 @@ const Quiz = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 className="deck has-text-left has-text-weight-bold">
+                    <h2 className="deck has-text-left has-text-weight-bold mt-0">
                       Ready to take the quiz? Choose who you want to be matched
                       with:
                     </h2>

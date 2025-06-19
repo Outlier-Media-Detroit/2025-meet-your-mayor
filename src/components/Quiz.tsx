@@ -63,9 +63,7 @@ const Quiz = () => {
 
   type BallotSelectorButton = {
     label: string;
-
     ballotStatus: BallotStatus;
-
     candidates: { name: string; slug: string }[];
   };
 
@@ -219,7 +217,7 @@ const Quiz = () => {
                     {ballotSelectorButtons.map((button, i) => (
                       <div key={i} className="mt-5 mb-4">
                         <button
-                          className="control"
+                          className="button contest-button"
                           onClick={() => {
                             if (window.gtag) {
                               window.gtag("event", "form_start", {});
@@ -243,43 +241,37 @@ const Quiz = () => {
                             );
                           }}
                         >
-                          <div
-                            className="button contest-button"
-                            onClick={() => setMethodologyVisible(false)}
-                          >
-                            {button.label}
-                          </div>
-
-                          <div className="is-flex is-flex-wrap-wrap is-flex-direction-row is-align-items-center my-3">
-                            {button.ballotStatus === "writein" && (
-                              <span className="copy is-inline-block m-0 mr-2">
-                                Add
-                              </span>
-                            )}
-
-                            {button.candidates.map((candidate, i) => (
-                              <div key={i}>
-                                <div
-                                  key={i}
-                                  className="is-flex is-flex-direction-column is-align-items-center mr-1"
-                                >
-                                  <Bobblehead
-                                    candidateName={candidate.name}
-                                    size="is-48x48"
-                                    showBustOnly
-                                  />
-
-                                  <span
-                                    aria-hidden="true"
-                                    className="label has-text-centered"
-                                  >
-                                    {abbreviateName(candidate.name)}
-                                  </span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
+                          {button.label}
                         </button>
+                        <div className="is-flex is-flex-wrap-wrap is-flex-direction-row is-align-items-center my-3">
+                          {button.ballotStatus === "writein" && (
+                            <span className="copy is-inline-block m-0 mr-2">
+                              Add
+                            </span>
+                          )}
+
+                          {button.candidates.map((candidate, i) => (
+                            <div key={i}>
+                              <div
+                                key={i}
+                                className="is-flex is-flex-direction-column is-align-items-center mr-1"
+                              >
+                                <Bobblehead
+                                  candidateName={candidate.name}
+                                  size="is-48x48"
+                                  showBustOnly
+                                />
+
+                                <span
+                                  aria-hidden="true"
+                                  className="label has-text-centered"
+                                >
+                                  {abbreviateName(candidate.name)}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </>
@@ -499,17 +491,10 @@ const Quiz = () => {
                                   <div className="field is-grouped mt-6 question-controls is-flex is-flex-direction-column">
                                     <SmoothScroll
                                       to={`question-${number + 1}`}
-                                      className="control"
+                                      className="button is-link"
+                                      style={{ maxWidth: "350px" }}
                                     >
-                                      <button
-                                        className="button is-link"
-                                        style={{
-                                          width: "100%",
-                                          maxWidth: "350px",
-                                        }}
-                                      >
-                                        Next Question
-                                      </button>
+                                      Next Question
                                     </SmoothScroll>
                                   </div>
                                 )}

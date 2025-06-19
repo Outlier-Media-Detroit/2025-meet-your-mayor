@@ -68,7 +68,8 @@ const Homepage = () => {
                 </p>
                 <div className="is-flex is-flex-direction-column my-6">
                   <SmoothScroll
-                    className="mb-4"
+                    className="mb-4 button is-extra-dark"
+                    style={{ width: "100%", maxWidth: "350px" }}
                     to={
                       questionsLeftToAnswer.length === 0
                         ? "results"
@@ -77,16 +78,11 @@ const Homepage = () => {
                         : "quiz"
                     }
                   >
-                    <button
-                      className="button is-extra-dark"
-                      style={{ width: "100%", maxWidth: "350px" }}
-                    >
-                      {questionsLeftToAnswer.length === 0
-                        ? "View my results"
-                        : !!hasStartedQuestions
-                        ? "Continue the quiz"
-                        : "Take the quiz"}
-                    </button>
+                    {questionsLeftToAnswer.length === 0
+                      ? "View my results"
+                      : !!hasStartedQuestions
+                      ? "Continue the quiz"
+                      : "Take the quiz"}
                   </SmoothScroll>
 
                   <button

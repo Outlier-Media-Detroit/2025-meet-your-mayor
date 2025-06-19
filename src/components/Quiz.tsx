@@ -117,19 +117,12 @@ const Quiz = () => {
                 The Meet Your Mayor Quiz
               </h1>
               <p className="copy has-text-left mt-5">
-                This quiz will help you sort through the crowded{" "}
+                Take this 21-question quiz to see how{" "}
                 <OutboundLink to="https://outliermedia.org/detroit-mayoral-election-candidates-guide/">
-                  field of mayoral hopefuls
+                  Detroit’s 11 mayoral candidates
                 </OutboundLink>{" "}
-                by matching you with the candidates who share your views about
-                urgent issues facing Detroiters, including housing,
-                transportation and safety.
-              </p>
-              <p className="copy has-text-left mt-2">
-                There are 11 mayoral candidates. Nine are on the ballot in the
-                Aug. 5 primary, and two people have certified as write-ins. The
-                two highest vote-getters will face off in the general election
-                on Nov. 4.
+                would tackle urgent issues facing Detroiters. You’ll be matched
+                with ones who share your views about housing, safety and more.
               </p>
               {Object.keys(correctionContent).length > 0 && (
                 <>
@@ -145,18 +138,7 @@ const Quiz = () => {
                   )}
                 </>
               )}
-              <div className="mb-5 mt-2">
-                <button
-                  key="x"
-                  className="eyebrow is-link is-inline-block"
-                  onClick={() => toggleMethodology()}
-                >
-                  How Meet Your Mayor Works{" "}
-                  <span>{methodologyVisible ? "-" : "+"}</span>
-                </button>
 
-                {methodologyVisible && <Methodology />}
-              </div>
               <div
                 className="pt-3 pb-3"
                 style={{
@@ -277,6 +259,18 @@ const Quiz = () => {
                     ))}
                   </>
                 )}
+                <div className="mb-5 mt-2">
+                  <button
+                    key="x"
+                    className="eyebrow is-link is-inline-block"
+                    onClick={() => toggleMethodology()}
+                  >
+                    How Meet Your Mayor Works{" "}
+                    <span>{methodologyVisible ? "-" : "+"}</span>
+                  </button>
+
+                  {methodologyVisible && <Methodology />}
+                </div>
               </div>
             </div>
           </div>

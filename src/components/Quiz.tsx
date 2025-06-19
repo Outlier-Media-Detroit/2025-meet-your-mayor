@@ -9,11 +9,10 @@ import {
   QUESTION_ANCHOR_LINK_OFFSET,
   SmoothScroll,
 } from "./Links";
-import { abbreviateName, MatchingCandidates } from "./MatchingCandidates";
-import { BallotStatus, useAppStore } from "../useAppStore";
+import { MatchingCandidates } from "./MatchingCandidates";
+import { useAppStore } from "../useAppStore";
 import { Methodology } from "./Methodology";
 import { scroller } from "react-scroll";
-import { Bobblehead } from "./Illustration";
 import { OutboundLink } from "./Links";
 import { kebabCase } from "../utils";
 
@@ -31,8 +30,6 @@ export const CircleIcon: FC<{ filledIn?: boolean }> = ({ filledIn }) => (
 );
 
 const Quiz = () => {
-  const ballotStatus = useAppStore((state) => state.ballotStatus);
-  const setBallotStatus = useAppStore((state) => state.setBallotStatus);
   const answers = useAppStore((state) => state.answers);
   const setAnswers = useAppStore((state) => state.setAnswers);
 
@@ -55,32 +52,6 @@ const Quiz = () => {
   };
 
   const candidates = generateListOfCandidates();
-  const ballotCandidates = candidates.filter(
-    (c) => c.ballotStatus === "ballot"
-  );
-  const writeInCandidates = candidates.filter(
-    (c) => c.ballotStatus !== "ballot"
-  );
-
-  type BallotSelectorButton = {
-    label: string;
-    ballotStatus: BallotStatus;
-    candidates: { name: string; slug: string }[];
-  };
-
-  const ballotSelectorButtons: BallotSelectorButton[] = [
-    {
-      label: "Candidates on the ballot",
-      ballotStatus: "ballot",
-      candidates: ballotCandidates,
-    },
-
-    {
-      label: "Include write-ins",
-      ballotStatus: "writein",
-      candidates: writeInCandidates,
-    },
-  ];
 
   const recordAnswer = (questionNumber: number, answer: string | null) => {
     const updatedAnswers = answers.map((answerObj) => {
@@ -194,69 +165,28 @@ const Quiz = () => {
                 ) : (
                   <>
                     <h2 className="deck has-text-left has-text-weight-bold mt-0">
-                      Ready to take the quiz? Choose who you want to be matched
-                      with:
+                      Ready to take the quiz?
                     </h2>
-                    {ballotSelectorButtons.map((button, i) => (
-                      <div key={i} className="mt-5 mb-4">
-                        <button
-                          className="button contest-button"
-                          onClick={() => {
-                            if (window.gtag) {
-                              window.gtag("event", "form_start", {});
-                            }
-                            setMethodologyVisible(false);
-                            setTimeout(() => {
-                              scroller.scrollTo("question-1", {
-                                duration: ANCHOR_LINK_DURATION,
-                                delay: 0,
-                                smooth: true,
-                                offset: QUESTION_ANCHOR_LINK_OFFSET, // optional, to adjust for headers etc.
-                              });
-                            }, 100); // wait until content has re-rendered
-
-                            // If the user is selecting a ballot, we want to scroll to the first question
-                            // after a short delay, so that the user doesn't see the content change
-                            // inside the quiz intro section
-                            setBallotStatus(
-                              button.ballotStatus,
-                              ANCHOR_LINK_DURATION
-                            );
-                          }}
-                        >
-                          {button.label}
-                        </button>
-                        <div className="is-flex is-flex-wrap-wrap is-flex-direction-row is-align-items-center my-3">
-                          {button.ballotStatus === "writein" && (
-                            <span className="copy is-inline-block m-0 mr-2">
-                              Add
-                            </span>
-                          )}
-
-                          {button.candidates.map((candidate, i) => (
-                            <div key={i}>
-                              <div
-                                key={i}
-                                className="is-flex is-flex-direction-column is-align-items-center mr-1"
-                              >
-                                <Bobblehead
-                                  candidateName={candidate.name}
-                                  size="is-48x48"
-                                  showBustOnly
-                                />
-
-                                <span
-                                  aria-hidden="true"
-                                  className="label has-text-centered"
-                                >
-                                  {abbreviateName(candidate.name)}
-                                </span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
+                    <button
+                      className="button"
+                      onClick={() => {
+                        if (window.gtag) {
+                          window.gtag("event", "form_start", {});
+                        }
+                        setMethodologyVisible(false);
+                        setHighestVisibleQuestion(1);
+                        setTimeout(() => {
+                          scroller.scrollTo("question-1", {
+                            duration: ANCHOR_LINK_DURATION,
+                            delay: 0,
+                            smooth: true,
+                            offset: QUESTION_ANCHOR_LINK_OFFSET,
+                          });
+                        }, 100);
+                      }}
+                    >
+                      Take the quiz
+                    </button>
                   </>
                 )}
                 <div className="mb-5 mt-2">

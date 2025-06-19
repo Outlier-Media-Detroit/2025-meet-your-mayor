@@ -96,7 +96,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
           </figure>
           {questionsLeftToAnswer.length === 0 && (
             <div className="eyebrow is-align-items-center mb-5">
-              Based on your quiz results, you're a{" "}
+              Based on your quiz results, you’re a{" "}
               <b>{candidateScore}% match</b>
             </div>
           )}
@@ -155,10 +155,7 @@ const CandidatePage: React.FC<{ pageContext: any }> = ({ pageContext }) => {
                     height: "100%",
                   }}
                 >
-                  <div
-                    className="eyebrow has-color-background mb-4 px-1 is-inline-flex"
-                    style={{ borderRadius: "10%" }}
-                  >
+                  <div className="eyebrow has-color-background mb-4 px-1 is-inline-flex">
                     ON: {subject}
                   </div>
                   <div className="mb-5">

@@ -279,7 +279,7 @@ const Results: React.FC = () => {
           <div>
             <h1 className="headline has-text-left is-inline-block">Results</h1>
             <p className="copy">
-              Oops! You're not finished with the quiz yet. Please go back to{" "}
+              Oops! You’re not finished with the quiz yet. Please go back to{" "}
               <b>
                 {questionsLeftToAnswer[0] === 22
                   ? "select your most important topics"

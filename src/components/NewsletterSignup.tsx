@@ -87,7 +87,7 @@ export const NewsletterSignupBanner: React.FC = () => {
           </div>
         </form>
         {status === "success" ? (
-          <p className="label mt-2 has-text-centered">You're signed up!</p>
+          <p className="label mt-2 has-text-centered">You’re signed up!</p>
         ) : status === "error" ? (
           <p className="label mt-2 has-text-centered">
             Oops! Something went wrong. Email{" "}

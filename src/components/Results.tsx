@@ -223,7 +223,7 @@ const Results: React.FC = () => {
               </h2>
               <h3 className="deck has-text-left">
                 <div className="tag question-number-tag">★</div>
-                You can select one to {MAX_FAVORITE_TOPICS_WORD} topics.
+                You can select one or {MAX_FAVORITE_TOPICS_WORD} topics.
                 Candidates who have the same answers as you for questions in
                 those categories will get extra points toward their total score.
               </h3>
@@ -239,9 +239,6 @@ const Results: React.FC = () => {
                           "is-selected"
                       )}
                       onClick={() => {
-                        if (window.gtag) {
-                          window.gtag("event", "form_submit", {});
-                        }
                         changeFavoriteTopics(questionGroup[0]);
                       }}
                       disabled={
@@ -259,7 +256,15 @@ const Results: React.FC = () => {
               </div>
               {favoriteTopics.length > 0 && (
                 <div className="question-controls">
-                  <SmoothScroll className="button" to="results">
+                  <SmoothScroll
+                    className="button"
+                    to="results"
+                    onClick={() => {
+                      if (window.gtag) {
+                        window.gtag("event", "form_submit", {});
+                      }
+                    }}
+                  >
                     See my results
                   </SmoothScroll>
                 </div>

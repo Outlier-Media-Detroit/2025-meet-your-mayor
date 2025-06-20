@@ -51,6 +51,7 @@ export const SmoothScroll: React.FC<{
       className={className}
       style={style}
       activeClass={enableActiveClass ? "has-text-weight-bold" : ""}
+      href=""
       spy={true}
       smooth={true}
       duration={ANCHOR_LINK_DURATION}

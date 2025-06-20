@@ -185,6 +185,9 @@ const Quiz = () => {
                             offset: QUESTION_ANCHOR_LINK_OFFSET,
                           });
                         }, 100);
+                        setTimeout(() => {
+                          document.querySelector("#question-1 h3")?.focus();
+                        }, 1000);
                       }}
                     >
                       Start

@@ -235,8 +235,8 @@ export const questionContent = {
     subject: "Leadership",
     tellMeMore: "",
     option1:
-      "The decider: Stick to centralized decision-making decided by the mayor and close advisors",
-    option2: "The partner: Collaborate and make decisions with City Council",
+      "The decider: Stick to centralized decision-making by the mayor and close advisors",
+    option2: "The partner: Work with City Council to make decisions",
     option3:
       "The collaborator: Build consensus with folks outside of city government",
     option4:

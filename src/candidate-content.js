@@ -338,7 +338,7 @@ export const candidateContent = {
   },
   candidateArnold: {
     name: "Arnold Boyd",
-    bio: 'Arnold Boyd grew up in Southwest Detroit and graduated from River Rouge High School. He founded the Student Transportation Services Co.{newParagraph}Boyd is <a href="https://www.arnoldboyd.com/initiatives">running on a platform</a> of repairing relationships between community and police, creating affordable housing and supporting small businesses.',
+    bio: 'Arnold Boyd is running as a write-in candidate for mayor. He grew up in Southwest Detroit and graduated from River Rouge High School, and he founded the Student Transportation Services Co.{newParagraph}Boyd is <a href="https://www.arnoldboyd.com/initiatives">running on a platform</a> of repairing relationships between community and police, creating affordable housing and supporting small businesses.',
     ballotStatus: "writein",
     website: "https://www.arnoldboyd.com/",
     instagram: "https://www.instagram.com/thearnoldboyd/",
@@ -385,7 +385,7 @@ export const candidateContent = {
     age: "41",
     neighborhood: "Westside",
     quote1:
-      "Community benefits ordinance | Durhal said the community benefits ordinance (CBO) is too onerous for developers.{newParagraph}“Detroit’s CBO helps bring resources to neighborhoods as new developments rise,” he stated in response to Outlier Media’s candidate questionnaire.“To make it work, we must balance the needs of residents and developers, ensuring the ordinance delivers real benefits while keeping Detroit attractive to private investment and driving our city’s resurgence forward.”",
+      "Community benefits ordinance | Durhal said the community benefits ordinance (CBO) is too onerous for developers.{newParagraph}“Detroit’s CBO helps bring resources to neighborhoods as new developments rise,” he stated in response to Outlier Media’s candidate questionnaire. “To make it work, we must balance the needs of residents and developers, ensuring the ordinance delivers real benefits while keeping Detroit attractive to private investment and driving our city’s resurgence forward.”",
     quote2:
       "Property speculation | “Speculators and negligent landowners are holding Detroit back. As mayor, I’ll deliver comprehensive tax reform — raising taxes on blight and lowering them for families and small businesses,” Durhal wrote. “My plan will unlock vacant land for safe, walkable neighborhoods with thriving main streets, all while balancing the budget and improving quality of life citywide.”",
     quote3:
